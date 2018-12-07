@@ -12,12 +12,12 @@ Fältet går både att låsa helt `disabled`, tillåtas att kopieras/läsas `rea
 ## Kryssrutor
 
 Kryssrytor låter användaren göra ett eller flera val från en lista.
-Namnkonvention med `.custom-control` är baserad på Bootstrap 4 men har anpassats för att möta [BEM](#konventioner).
+Namnkonvention med `.custom-control` är baserad på Bootstrap 4 men har anpassats för att möta BEM.
 
 ## Radioknappar
 
 Radioknappar låter användaren göra ett val från en synlig lista.
-Namnkonvention med `.custom-control` är baserad på Bootstrap 4 men har anpassats för att möta [BEM](#konventioner).
+Namnkonvention med `.custom-control` är baserad på Bootstrap 4 men har anpassats för att möta BEM.
 
 ## Rullgardinsmenyer
 
