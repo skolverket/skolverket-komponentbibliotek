@@ -3,7 +3,7 @@
 
 ## För utvecklare
 
-Efter man har inkluderat [inline-svg](/components/detail/inline-svg) på sidan kan vi nu rendera ut ikoner med hjälp av denna komponent.
+Efter man har inkluderat [inline-svg](components/detail/inline-svg) på sidan kan vi nu rendera ut ikoner med hjälp av denna komponent.
 
 Alla ikoner som finns tillgängliga med denna komponent finns i menyn till vänster.
 

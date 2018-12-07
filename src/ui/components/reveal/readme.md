@@ -26,7 +26,7 @@ Innehållet lyssnar inte längre på knapptryck
 | <strong>body</strong>            | En html-sträng som är innehållet som rendreras i behållaren. |
 
 ### No-js
-Om man har stängt av javascript så skall man fortfarande kunna ta till sig innehållet. Detta görs genom att inkludera `/css/no-js.min.css` i [headern](http://localhost:3000/components/detail/head) i en noscript-tag.
+Om man har stängt av javascript så skall man fortfarande kunna ta till sig innehållet. Detta görs genom att inkludera `/css/no-js.min.css` i [headern](components/detail/head) i en noscript-tag.
 
 ### Print
 När man skriver ut sidan så visar vi allt innehåll som om komponenten är utfälld. Vi tar även bort knapptexten.

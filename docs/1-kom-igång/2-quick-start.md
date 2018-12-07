@@ -23,4 +23,4 @@ skolverket-bundle-v1.0.0.tgz
 
 ## Bidra
 
-Mer ingående information kring hur vi utvecklar styleguiden kan du hitta under [Utveckling](/docs/kom-igang/utveckling).
+Mer ingående information kring hur vi utvecklar styleguiden kan du hitta under [Utveckling](docs/kom-igang/utveckling).
