@@ -4,7 +4,7 @@ Sektioner används för att skapa en tydlig och lättöverskådlig struktur på 
 
 ## Begränsningar
 
-- Sektioner används uteslutande inom en [box](components/detail/box).
+- Sektioner används uteslutande inom en [box](/styleguide/components/detail/box).
 
 ## Tillgänglighet och semantik
 

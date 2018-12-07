@@ -4,7 +4,6 @@ const files = [
     path: '../../node_modules/@frctl/fractal/src/core/mixins/entity.js',
     patches: [
       {
-        // TODO: THIS DOESNT MATCH!!! MUST COME AFTER NAME PROP. FIX HEADLINE FOR DOCS in /Users/adarland/Development/creuna/skolverket/styleguide/node_modules/@frctl/fractal/src/api/docs/doc.js. Titile should use displayName
         pattern: `this.name = utils.slugify(name.toLowerCase());\n        this.handle`,
         replace: `this.name = utils.slugify(name.toLowerCase());\n        this.displayName = name.charAt(0).toUpperCase() + name.substr(1).replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, ' ').toLowerCase();\n        this.handle`
       }
@@ -17,6 +16,24 @@ const files = [
       {
         pattern: `return config.title || this.label;`,
         replace: `return config.title || this.displayName;`
+      }
+    ]
+  },
+  {
+    note: 'Fractals routes is now prefixed with "/styleguide/" during development',
+    path: '../../node_modules/@frctl/mandelbrot/src/theme.js',
+    patches: [
+      {
+        pattern: `module.exports = function(options){`,
+        replace: `module.exports = function(options, rootUrl){`
+      },
+      {
+        pattern: `theme.addRoute('`,
+        replace: `theme.addRoute(rootUrl + '`
+      },
+      {
+        pattern: `theme.addRoute(rootUrl + '/', {`,
+        replace: `theme.addRoute('/', {`
       }
     ]
   },

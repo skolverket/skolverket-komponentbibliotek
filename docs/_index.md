@@ -20,6 +20,6 @@
 </style>
 
 <div class="navigation-container">
-  <a class="large-button" href="docs/kom-igang/snabbstart">Kom igång!</a>
+  <a class="large-button" href="/styleguide/docs/kom-igang/snabbstart">Kom igång!</a>
   <a class="large-button" href="https://github.com/skolverket/styleguide/issues/new" target="_blank">Rapportera en bugg!</a>
 </div>
