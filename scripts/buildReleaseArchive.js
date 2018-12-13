@@ -7,9 +7,9 @@ const pkg = require('../package.json')
 
 const archiveName = `skolverket-bundle-${pkg.version}`;
 const files = {
-  'dist/js/main.min.js': 'main.min.js',
-  'dist/css/main.min.css': 'main.min.css',
-  'dist/css/no-js.min.css': 'no-js.min.css',
+  'dist/js/main.min.js': '/js/main.min.js',
+  'dist/css/main.min.css': '/css/main.min.css',
+  'dist/css/no-js.min.css': '/css/no-js.min.css',
   'dist/assets/': 'assets/',
   'README.md': 'README.md'
 }

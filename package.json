@@ -1,6 +1,5 @@
 {
   "name": "skolverket-styleguide",
-  "license": "MIT",
   "version": "1.0.0",
   "engines": {
     "node": "^8.12.0",
