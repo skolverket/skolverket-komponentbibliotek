@@ -2,9 +2,9 @@
   const Reveal = function(el) {
     this.root = el
     this.header = el.querySelector('[data-js-reveal-header]')
-    this.trigger = el.querySelector('[data-js-reveal-trigger]')
+    this.triggers = el.querySelectorAll('[data-js-reveal-trigger]')
     this.container = el.querySelector('[data-js-reveal-container]')
-    this.isExpanded = this.trigger.getAttribute('aria-expanded') === 'true'
+    this.isExpanded = this.triggers[0].getAttribute('aria-expanded') === 'true'
 
     this.registerEvents()
   }
@@ -25,9 +25,12 @@
       this.onTransitionEnd    = this.onTransitionEnd.bind(this)
       this.preventFocusScroll = this.preventFocusScroll.bind(this)
 
-      this.trigger.addEventListener('click', this.onTriggerClick)
       this.container.addEventListener('transitionend', this.onTransitionEnd)
       this.container.addEventListener('keyup', this.onKeyUp)
+
+      for(var i=0; i < this.triggers.length; i++) {
+        this.triggers[i].addEventListener('click', this.onTriggerClick)
+      }
     },
 
     onTriggerClick() {
@@ -50,17 +53,23 @@
     },
 
     setUiClose() {
-      this.trigger.setAttribute('aria-expanded', false)
+
+      for(var i=0; i < this.triggers.length; i++) {
+        this.triggers[i].setAttribute('aria-expanded', false)
+      }
+
       this.container.style.maxHeight = `${this.container.scrollHeight}px`
 
       setTimeout(() => { // Wait for the DOM to set the containers max-height
         this.container.style.maxHeight = '0px'
-        this.trigger.focus()
+        this.triggers[0].focus()
       }, 50)
     },
 
     setUiOpen() {
-      this.trigger.setAttribute('aria-expanded', true)
+      for(var i=0; i < this.triggers.length; i++) {
+        this.triggers[i].setAttribute('aria-expanded', true)
+      }
       this.header.classList.add(this.classList.headerOpen)
 
       this.container.style.display = 'block'
