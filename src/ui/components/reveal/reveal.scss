@@ -17,10 +17,6 @@ $reveal-transition-duration: 300ms;
 .skv-reveal {
   margin: 16px 0;
 
-  @include media-print {
-    page-break-inside: avoid;
-  }
-
   &__header {
     display: flex;
     justify-content: space-between;
@@ -72,8 +68,18 @@ $reveal-transition-duration: 300ms;
     cursor: pointer;
     overflow: hidden; // Due to focus outline jank during animation in Chrome.
 
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px $color-yellow;
+    }
+
     @include media-print {
       display: none;
+    }
+
+    .skv-reveal__content-toggle & {
+      text-align: center;
+      color: $color-purple-dark;
     }
 
     &-icon {
@@ -84,7 +90,8 @@ $reveal-transition-duration: 300ms;
       line-height: 1em;
       height: 1em;
 
-      [aria-expanded="true"] & {
+      [aria-expanded="true"] &,
+      .skv-reveal__content-toggle & {
         transform: rotate(180deg);
       }
     }
@@ -113,6 +120,15 @@ $reveal-transition-duration: 300ms;
 
     @include media-print {
       background-color: $color-white;
+    }
+
+    &-toggle {
+      position: relative;
+      height: 60px;
+
+      @include media-print {
+        display: none;
+      }
     }
 
     &-wrapper {

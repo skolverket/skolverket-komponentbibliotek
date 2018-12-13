@@ -1,11 +1,12 @@
-.reveal {
+.skv-reveal {
   &__header,
   &__header:hover {
     background-color: $color-purple-dark;
     color: $color-white;
   }
 
-  &__toggle {
+  &__toggle,
+  &__content-toggle {
     display: none;
   }
 
