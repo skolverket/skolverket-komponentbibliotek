@@ -37,6 +37,7 @@ module.exports = {
       {
         title: "Bakgrundsfärger",
         description: 'Bakgrundsfärgerna får även användas i 50% och 25% opacitet.',
+        previewProperty: 'backgroundColor',
         colors: [
           {
             name: "Bakgrundsfärg 1",
@@ -44,12 +45,11 @@ module.exports = {
             variants: [
               {
                 label: '50%',
-                hex: "#DCEAEA88",
+                hex: "#EDF4F4",
               },
               {
                 label: '25%',
-                hex: 'pink',
-                hex: "#DCEAEA44",
+                hex: "#F6FAFA",
               }
             ]
           },
@@ -59,11 +59,11 @@ module.exports = {
             variants: [
               {
                 label: '50%',
-            hex: "#FCDBCB88",
+                hex: "#FDEDE5",
               },
               {
                 label: '25%',
-            hex: "#FCDBCB44",
+                hex: "#FEF6F2",
               }
             ]
           },
@@ -73,11 +73,11 @@ module.exports = {
             variants: [
               {
                 label: '50%',
-                hex: '#ffe56f88',
+                hex: '#FFF2B7',
               },
               {
                 label: '25%',
-                hex: '#ffe56f44',
+                hex: '#FFF8DB',
               }
             ]
           }

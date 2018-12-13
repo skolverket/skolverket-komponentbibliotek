@@ -6,7 +6,7 @@ name: Färger
 
 <div class="colorgroups-container">
 	{{#each colorGroups}}
-		<div class="colorgroup">
+		<div class="colorgroup" {{#if previewProperty}}data-preview-property="{{previewProperty}}"{{/if}}>
 			<h2>{{title}}</h2>
       {{#if description}}
         <p class="colorgroup__description">{{description}}</p>
@@ -87,3 +87,24 @@ name: Färger
   max-width: 500px;
 }
 </style>
+
+
+<script>
+const previews = document.querySelectorAll('.colorgroup[data-preview-property] .colordot__preview, .colorgroup[data-preview-property] .colordot__preview--variant');
+
+previews.forEach(preview => {
+  const container = document.querySelector('.Document');
+  container.style.transition = 'background-color 500ms ease-in-out';
+
+  preview.addEventListener('mouseover', event => {
+    console.log(event.target);
+    const property = event.target.parentElement.parentElement.parentElement.parentElement.dataset.previewProperty;
+    const hoveredColor = event.target.style.backgroundColor;
+    container.style[property] = hoveredColor;
+  })
+  preview.addEventListener('mouseout', event => {
+    const property = event.target.parentElement.parentElement.parentElement.parentElement.dataset.previewProperty;
+    container.style[property] = null;
+  })
+})
+</script>
