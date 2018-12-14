@@ -7,7 +7,9 @@ module.exports = {
       shouldOverlap: true
     },
     reveal: {
-     title: 'Lorem ipsum dolor sit amet'
+     title: 'Lorem ipsum dolor sit amet',
+     body: 'table--minimal',
+     expanded: true
     }
 	}
 }

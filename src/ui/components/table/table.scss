@@ -1,7 +1,4 @@
-.editorial-table {
-
-  $color-green: #00424C;
-
+.skv-table {
   margin: 1em 0;
   border: 1px solid #AAA;
   border-radius: 4px;
@@ -10,7 +7,7 @@
   caption {
     caption-side: top;
     padding: 4px;
-    background: $color-green;
+    background: $color-turq;
     color: $color-white;
     font-size: 18px;
   }
@@ -20,12 +17,13 @@
   }
 
   thead {
-    border-bottom: 3px solid $color-green;
+    border-bottom: 3px solid $color-turq;
+    font-weight: bold;
   }
 
   tr {
     &:nth-child(even) {
-      background: $color-gray-light;
+      background: $color-blue-light;
     }
   }
 
@@ -33,4 +31,23 @@
     padding: 8px;
     border: 1px solid $color-gray-lighter;
   }
+
+  &--minimal {
+    background: $color-white;
+
+    caption {
+      caption-side: bottom;
+      background: none;
+      text-align: center;
+      font-size: 14px;
+      color: $color-gray-dark;
+    }
+
+    tr {
+      &:nth-child(even) {
+        background: $color-gray-light;
+      }
+    }
+  }
 }
+
