@@ -31,6 +31,7 @@
         display: inline;
         line-height: 1.9em;
         box-shadow: 0.3em 0 0 $color-purple-dark, -0.3em 0 0 $color-purple-dark;
+        box-decoration-break: clone;
         font-size: 22px;
         padding: .2em 0;
         left: .2em;
@@ -47,6 +48,10 @@
   &__content {
     color: $color-white;
     padding: 30px;
+
+    @include media-max('sm') {
+      padding: 20px;
+    }
 
     &--center {
       align-self: center;

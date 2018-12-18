@@ -9,6 +9,10 @@
     flex-direction: column;
   }
 
+  @include media-max('sm') {
+    margin: 10px -10px;
+  }
+
   &__item {
     padding: 10px;
     width: 50%;
