@@ -1,5 +1,5 @@
 # Boxlänk
-Denna komponent kan användas för att...
+Som redaktör på Skolverket kan du använda Boxlänken för kärninnehåll på skolverket.se:s olika startsidor.
 
 ## För redaktörer
 
