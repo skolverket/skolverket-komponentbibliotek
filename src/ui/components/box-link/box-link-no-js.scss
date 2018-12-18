@@ -1,0 +1,29 @@
+.skv-box-link {
+  cursor: default;
+
+  &:hover,
+  &--focused {
+    background-color: mediumpurple;
+  }
+
+  &__headline {
+
+    &-link {
+      outline: none;
+      color: $color-white;
+      font-size: 45px;
+      line-height: 1em;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline !important;
+        color: $color-white;
+      }
+
+      .skv-box-link:hover &,
+      .skv-box-link--focused & {
+        text-decoration: none;
+      }
+    }
+  }
+}

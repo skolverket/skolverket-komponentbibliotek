@@ -1,0 +1,98 @@
+.skv-box-link {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 350px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .4s ease;
+
+  &:hover,
+  &--focused {
+    transition-duration: .2s;
+  }
+
+  &--focused {
+    box-shadow: 0 0 0 3px $color-yellow;
+  }
+
+  &__headline {
+    margin: 0;
+
+    &-link {
+      outline: none;
+      color: $color-white;
+      font-size: 30px;
+      line-height: 1.2em;
+
+      &--boxed {
+        position: relative;
+        background-color: $color-purple-dark;
+        display: inline;
+        line-height: 1.9em;
+        box-shadow: 0.3em 0 0 $color-purple-dark, -0.3em 0 0 $color-purple-dark;
+        font-size: 22px;
+        padding: .2em 0;
+        left: .2em;
+      }
+
+      .skv-box-link:hover &,
+      .skv-box-link--focused & {
+        text-decoration: underline;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__content {
+    color: $color-white;
+    padding: 30px;
+
+    &--center {
+      align-self: center;
+    }
+  }
+
+  &__teaser {
+    margin: 15px 0 0 0;
+    font-size: 20px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+    &--pattern {
+      &-green-squares {
+        background-image: url('../assets/img/patterns/pattern-green-squares.png');
+      }
+
+      &-green-waves {
+        background-image: url('../assets/img/patterns/pattern-green-waves.png');
+      }
+
+      &-purple-squares {
+        background-image: url('../assets/img/patterns/pattern-purple-squares.png');
+      }
+
+      &-purple-waves {
+        background-image: url('../assets/img/patterns/pattern-purple-waves.png');
+      }
+    }
+
+    /*&--color {
+      &-blue {
+        background-color: $color-blue-dark;
+      }
+
+      &-purple {
+        background-color: $color-purple-dark;
+      }
+    }*/
+  }
+}

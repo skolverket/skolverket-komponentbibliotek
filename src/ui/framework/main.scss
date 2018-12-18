@@ -11,11 +11,15 @@
 "../components/section-navigation/section-navigation",
 "../components/accordion/accordion",
 "../components/box/box",
+"../components/box-link/box-link",
 "../components/btn/btn",
 "../components/feedback/feedback",
 "../components/toc/toc",
 "../components/hero/hero",
 "../components/icon/icon",
-"../components/reveal/reveal",
+"../components/reveal/reveal";
+
+@import
+"../containers/box-link-container/box-link-container",
 "../containers/content-navigation/content-navigation",
 "../containers/form/form";
