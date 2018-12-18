@@ -35,6 +35,7 @@ module.exports = {
     {
       name: 'external',
       context: {
+        url: 'http://google.se',
         linkType: linkTypes.external,
         layout: layouts.textLink,
         pattern: patterns.greenSquares,
