@@ -1,7 +1,7 @@
 const linkTypes = {
   internal: 'internal',
   external: 'external',
-  page: 'page'
+  anchor: 'anchor'
 }
 
 const layouts = {
@@ -21,7 +21,7 @@ module.exports = {
   handle: 'box-link',
   context: {
     url: '#',
-    linkType: linkTypes.page,
+    linkType: linkTypes.internal,
     layout: layouts.imageLink,
     pattern: null,
     image: {
@@ -33,12 +33,44 @@ module.exports = {
   },
   variants: [
     {
-      name: 'external',
+      name: 'external-link',
       context: {
         url: 'http://google.se',
-        linkType: linkTypes.external,
+        linkType: linkTypes.external
+      }
+    },
+    {
+      name: 'text-link-green-squares',
+      context: {
         layout: layouts.textLink,
         pattern: patterns.greenSquares,
+        image: null,
+        teaser: 'Vi arbetar för att digitalisera de nationella proven och möjliggöra extern bedömning. Redan från hösten 2018 ska skolorna använda <strong>digitala enheter</strong> vid vissa prov'
+      }
+    },
+    {
+      name: 'text-link-green-waves',
+      context: {
+        layout: layouts.textLink,
+        pattern: patterns.greenWaves,
+        image: null,
+        teaser: 'Vi arbetar för att digitalisera de nationella proven och möjliggöra extern bedömning. Redan från hösten 2018 ska skolorna använda <strong>digitala enheter</strong> vid vissa prov'
+      }
+    },
+    {
+      name: 'text-link-purple-squares',
+      context: {
+        layout: layouts.textLink,
+        pattern: patterns.purpleSquares,
+        image: null,
+        teaser: 'Vi arbetar för att digitalisera de nationella proven och möjliggöra extern bedömning. Redan från hösten 2018 ska skolorna använda <strong>digitala enheter</strong> vid vissa prov'
+      }
+    },
+    {
+      name: 'text-link-purple-waves',
+      context: {
+        layout: layouts.textLink,
+        pattern: patterns.purpleWaves,
         image: null,
         teaser: 'Vi arbetar för att digitalisera de nationella proven och möjliggöra extern bedömning. Redan från hösten 2018 ska skolorna använda <strong>digitala enheter</strong> vid vissa prov'
       }

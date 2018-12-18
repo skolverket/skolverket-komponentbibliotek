@@ -18,7 +18,9 @@
       </a>
     </h2>
     {{#if teaser}}
-      <p class="skv-box-link__teaser">{{{ teaser }}}</p>
+    {{#eq layout 'textLink' }}
+      <p class="skv-box-link__teaser">{{{ ../teaser }}}</p>
+    {{/eq}}
     {{/if}}
   </div>
 </div>
