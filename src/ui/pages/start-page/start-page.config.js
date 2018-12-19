@@ -3,6 +3,8 @@ module.exports = {
   handle: 'start-page',
   preview: '@layout--page',
   context: {
-    heroTitle: 'En lång rubrik som sträcker sig över flera rader'
+    heroModel: {
+      title: 'Gå webbkursen om fritidshemmets uppdrag'
+    }
   }
 }
