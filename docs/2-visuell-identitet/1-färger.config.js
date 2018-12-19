@@ -36,7 +36,7 @@ module.exports = {
       },
       {
         title: "Bakgrundsfärger",
-        description: 'Bakgrundsfärgerna får även användas i 50% och 25% opacitet.',
+        description: 'Bakgrundsfärgerna får även användas i 50% och 25% opacitet. Hovra färgrutorna för att se hur de fungerar på en större yta.',
         previewProperty: 'backgroundColor',
         colors: [
           {
@@ -69,7 +69,7 @@ module.exports = {
           },
           {
             name: 'Bakgrundsfärg 3',
-            hex: '#ffe56f',
+            hex: '#FFE56F',
             variants: [
               {
                 label: '50%',
@@ -103,7 +103,10 @@ module.exports = {
           {
             name: "Textfärg",
             hex: "#292929",
-            textColor: 'white',
+          },
+          {
+            name: 'Sekundär',
+            hex: '#666666'
           },
           {
             name: "Länkfärg",

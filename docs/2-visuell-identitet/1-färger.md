@@ -57,7 +57,7 @@ name: Färger
 	flex-flow: row wrap;
 }
 .colordot {
-  margin-right: 20px;
+  margin: 0 15px 15px 0;
 	color: black;
 	font-size: 16px;
 }
