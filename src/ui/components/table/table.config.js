@@ -1,4 +1,6 @@
 module.exports = {
+  name: 'Tabell',
+  handle: 'table',
   context: {
     title: 'Lorem ipsum dolor sit amet'
   },
