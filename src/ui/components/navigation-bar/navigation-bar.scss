@@ -1,0 +1,53 @@
+.navigation-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 8px 0;
+  background: $color-yellow;
+
+  @include media-min('lg') {
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  h3 {
+    margin: 0.5em 1em;
+    font-weight: normal;
+    color: $color-black;
+    font-size: 20px;
+  }
+
+  nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0.5em 1em;
+
+    @include media-min('sm') {
+      display: flex;
+      flex-flow: row wrap;
+
+      a {
+        flex: 0 0 calc(50% - 2em);
+      }
+    }
+    @include media-min('md') {
+      a {
+        flex: 1 1 auto;
+      }
+    }
+  }
+
+  a {
+    margin: 0.5em 1em;
+    color: $color-purple-dark;
+    font-weight: bold;
+    font-size: 18px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div class="navigation-bar">
+  {{#if title}}<h3>{{ title }}</h3>{{/if}}
+  <nav>
+    {{#each links}}
+    <a href="{{ url }}">
+        {{ label }}
+        {{> @icon name='chevron_right' }}
+    </a>
+    {{/each}}
+  </nav>
+</div>
