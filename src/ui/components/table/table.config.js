@@ -2,7 +2,8 @@ module.exports = {
   name: 'Tabell',
   handle: 'table',
   context: {
-    title: 'Lorem ipsum dolor sit amet'
+    title: 'Lorem ipsum dolor sit amet',
+    isMinimal: false
   },
   variants: [
     {
