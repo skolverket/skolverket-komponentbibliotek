@@ -1,25 +1,28 @@
+const status = require('../../../dev/fractal/fractal-component-status')
+
 module.exports = {
+  status: status.prototype,
   name: 'Många frågor om...',
   handle: 'navigation-bar',
   context: {
     title: 'Många frågar om...',
     links: [
       {
-        label: 'Sit Amet Ipsum',
+        label: 'Lärarlegitimation',
         url: '#'
       },
       {
-        label: 'Lorem Dolor Sit Amet Lorem Dolor Sit Amet Dolor',
+        label: 'Särskilt stöd',
         url: '#'
       },
       {
-        label: 'Lorem Dolor',
+        label: 'Trygghet i skolan',
         url: '#'
       },
       {
-        label: 'Lorem Dolor',
+        label: 'Nationella prov',
         url: '#'
-      },
+      }
     ]
   }
 }
