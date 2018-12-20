@@ -1,5 +1,5 @@
-<table class="skv-table">
-  <caption>{{ title }}</caption>
+<table class="skv-table{{#if isMinimal}} skv-table--minimal{{/if}}">
+  {{#if title}}<caption>{{ title }}</caption>{{/if}}
   <thead>
     <tr>
       <td scope="col">Lorem Ipsum</td>

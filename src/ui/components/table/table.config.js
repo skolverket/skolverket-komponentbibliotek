@@ -8,7 +8,8 @@ module.exports = {
     {
       name: 'minimal',
       context: {
-        title: null
+        title: null,
+        isMinimal: true
       }
     }
   ]
