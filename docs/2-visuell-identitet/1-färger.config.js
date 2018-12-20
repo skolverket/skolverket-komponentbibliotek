@@ -3,7 +3,7 @@ module.exports = {
     colorGroups: [
       {
         title: "Profilfärger",
-        description: 'Skolverkets primära färger är lile och mörkturkos. Dessa ska användas genomgående i all kommunikation.',
+        description: 'Skolverkets primära färger är lila och mörkturkos. Dessa ska användas genomgående i all kommunikation.',
         colors: [
           {
             name: "Profilfärg 1",
@@ -101,14 +101,6 @@ module.exports = {
         title: "Ramverk",
         colors: [
           {
-            name: "Textfärg",
-            hex: "#292929",
-          },
-          {
-            name: 'Sekundär',
-            hex: '#666666'
-          },
-          {
             name: "Länkfärg",
             hex: "#0079C2",
           },
@@ -116,6 +108,40 @@ module.exports = {
             name: 'Felmeddelande',
             hex: "#CD2126"
           }
+        ]
+      },
+      {
+        title: 'Gråskala',
+        colors: [
+          {
+            name: 'Bakgrund',
+            hex: '#F2F2F2'
+          },
+          {
+            name: 'Ram',
+            hex: '#D9D9D9'
+          },
+          {
+            name: 'Text',
+            hex: '#262626'
+          },
+          {
+            name: 'Inaktiv text',
+            hex: '#666666'
+          },
+        ]
+      },
+      {
+        title: 'Tabeller',
+        colors: [
+          {
+            name: 'Radbakgrund',
+            hex: '#F7F7F7'
+          },
+          {
+            name: 'Ram',
+            hex: '#E5E5E5'
+          },
         ]
       }
     ]
