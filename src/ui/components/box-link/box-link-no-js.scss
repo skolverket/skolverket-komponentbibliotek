@@ -1,0 +1,29 @@
+.skv-box-link {
+  cursor: default;
+
+  &__headline {
+
+    &-link {
+      outline: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline !important;
+        color: $color-white;
+        background-color: $color-yellow;
+      }
+
+      &--boxed {
+        &:hover,
+        &:focus {
+          box-shadow: 0.3em 0 0 $color-yellow, -0.3em 0 0 $color-yellow;
+        }
+      }
+
+      .skv-box-link:hover &,
+      .skv-box-link--focused & {
+        text-decoration: none;
+      }
+    }
+  }
+}

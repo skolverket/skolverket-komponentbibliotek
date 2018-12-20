@@ -9,6 +9,7 @@
 @import
 "../components/accordion/accordion",
 "../components/box/box",
+"../components/box-link/box-link",
 "../components/btn/btn",
 "../components/feedback/feedback",
 "../components/hero/hero",
@@ -17,6 +18,9 @@
 "../components/section-navigation/section-navigation",
 "../components/section/section",
 "../components/table/table",
-"../components/toc/toc",
+"../components/toc/toc";
+
+@import
+"../containers/box-link-container/box-link-container",
 "../containers/content-navigation/content-navigation",
 "../containers/form/form";
