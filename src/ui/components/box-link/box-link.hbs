@@ -1,0 +1,26 @@
+<div class="skv-box-link" data-js-box-link>
+  <figure class="skv-box-link__figure">
+    {{#eq layout 'imageLink' }}
+      <img class="skv-box-link__image" src="{{ ../image.src }}@1x.jpg" srcset="{{ ../image.src }}@1x.jpg 600w, {{ ../image.src }}@2x.jpg 1200w" sizes="auto" alt="{{ image.alt }}"/>
+    {{else}}
+      <div class="skv-box-link__image skv-box-link__image--pattern-{{ ../pattern }} skv-box-link__image--color-{{ ../color }}"></div>
+    {{/eq}}
+  </figure>
+  <div class="skv-box-link__content{{#eq layout 'textLink' }} skv-box-link__content--center{{/eq}}">
+    <h2 class="skv-box-link__headline">
+      <a class="skv-box-link__headline-link{{#eq layout 'imageLink' }} skv-box-link__headline-link--boxed{{/eq}}" href="{{ url }}" data-js-box-link-headline-link>
+        {{ headline }}
+        {{#eq linkType 'external' }}
+          {{> @icon name='external' inline=true }}
+        {{ else }}
+          {{> @icon name='chevron-right' middle=true }}
+        {{/eq}}
+      </a>
+    </h2>
+    {{#if teaser}}
+    {{#eq layout 'textLink' }}
+      <p class="skv-box-link__teaser">{{{ ../teaser }}}</p>
+    {{/eq}}
+    {{/if}}
+  </div>
+</div>

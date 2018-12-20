@@ -11,7 +11,8 @@
   </header>
   <div class="skv-reveal__content-wrapper{{#if expanded}} skv-reveal__content-wrapper--open{{/if}}" id="{{ id }}" tabindex="-1" data-js-reveal-container>
     <div class="skv-reveal__content">
-      {{{ body }}}
+      {{render (getView body) }}
+
       <div class="skv-reveal__content-toggle">
         <button class="skv-reveal__toggle" aria-label="{{ hideContentLabel }}" aria-controls="{{ id }}" aria-expanded="{{#if expanded}}true{{else}}false{{/if}}" data-js-reveal-trigger>
           <span class="skv-reveal__toggle-text">{{ toggleCloseText }}</span>

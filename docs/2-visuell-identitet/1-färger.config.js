@@ -3,7 +3,7 @@ module.exports = {
     colorGroups: [
       {
         title: "Profilfärger",
-        description: 'Skolverkets primära färger är lile och mörkturkos. Dessa ska användas genomgående i all kommunikation.',
+        description: 'Skolverkets primära färger är lila och mörkturkos. Dessa ska användas genomgående i all kommunikation.',
         colors: [
           {
             name: "Profilfärg 1",

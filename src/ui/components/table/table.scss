@@ -1,0 +1,52 @@
+.skv-table {
+
+  $border-color: #CCC;
+
+  width: 100%;
+  margin: 1em 0;
+  border-collapse: collapse;
+  line-height: 1.3;
+
+  caption {
+    caption-side: top;
+    text-align: left;
+    padding: 10px;
+    background: $color-turq;
+    color: $color-white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  thead, tbody {
+    font-size: 16px;
+  }
+
+  thead {
+    border-bottom: 3px solid $color-turq;
+    font-weight: bold;
+  }
+
+  tr {
+    &:nth-child(even) {
+      background: $color-gray-light;
+    }
+
+  }
+
+  td {
+    padding: 10px;
+    border: 1px solid $border-color;
+    vertical-align: top;
+  }
+
+  &--minimal {
+    background: $color-white;
+
+    caption {
+      padding: 10px 0;
+      background: none;
+      color: $color-gray-dark;
+    }
+  }
+}
+

@@ -5,6 +5,11 @@ module.exports = {
     heroTitle: null,
     sectionNavModel: {
       shouldOverlap: true
+    },
+    reveal: {
+     title: 'Lorem ipsum dolor sit amet',
+     body: 'table--minimal',
+     expanded: true
     }
 	}
 }
