@@ -1,0 +1,32 @@
+.skv-box-link-container {
+  list-style: none;
+  padding: 0;
+  margin: 20px -10px;
+  display: flex;
+  width: calc(100% + 20px);
+
+  @include media-max('md') {
+    flex-direction: column;
+  }
+
+  @include media-max('sm') {
+    margin: 10px -10px;
+  }
+
+  @include media-print {
+    flex-direction: row;
+  }
+
+  &__item {
+    padding: 10px;
+    width: 50%;
+
+    @include media-max('md') {
+      width: 100%;
+    }
+
+    @include media-print {
+      width: 50%;
+    }
+  }
+}
