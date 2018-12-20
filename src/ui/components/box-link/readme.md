@@ -1,5 +1,5 @@
 # Boxlänk
-Som redaktör på Skolverket kan du använda Boxlänken för kärninnehåll på skolverket.se:s olika startsidor.
+<p style="font-size: 20px">Som redaktör på Skolverket kan du använda Boxlänken för kärninnehåll på skolverket.se:s olika startsidor.</p>
 
 ## För redaktörer
 

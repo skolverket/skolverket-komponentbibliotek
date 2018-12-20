@@ -1,3 +1,5 @@
+const status = require('../../../dev/fractal/fractal-component-status')
+
 const linkTypes = {
   internal: 'internal',
   external: 'external',
@@ -17,6 +19,7 @@ const patterns = {
 }
 
 module.exports = {
+  status: status.prototype,
   name: 'Boxlänk',
   handle: 'box-link',
   context: {
