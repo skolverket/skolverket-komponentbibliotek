@@ -1,8 +1,6 @@
 .navigation-bar {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 8px 0;
   background: $color-yellow;
 
   @include media-min('lg') {
@@ -11,43 +9,49 @@
   }
 
   h3 {
-    margin: 0.5em 1em;
+    margin: 8px;
     font-weight: normal;
     color: $color-black;
     font-size: 20px;
+
+    @include media-min('lg') {
+      margin: 0 16px 0 32px;
+    }
   }
 
   nav {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: flex-start;
-    margin: 0.5em 1em;
 
     @include media-min('sm') {
       display: flex;
       flex-flow: row wrap;
-
-      a {
-        flex: 0 0 calc(50% - 2em);
-      }
+      justify-content: space-evenly;
     }
-    @include media-min('md') {
-      a {
-        flex: 1 1 auto;
-      }
+
+    @include media-min('lg') {
+      margin: 0 32px 0 16px;
     }
   }
 
-  a {
-    margin: 0.5em 1em;
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
     color: $color-purple-dark;
     font-weight: bold;
     font-size: 18px;
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &-label {
+      word-break: break-all;
     }
   }
 }

@@ -2,8 +2,8 @@
   {{#if title}}<h3>{{ title }}</h3>{{/if}}
   <nav>
     {{#each links}}
-    <a href="{{ url }}">
-        {{ label }}
+    <a href="{{ url }}" class="navigation-bar__link">
+        <span class="navigation-bar__link-label">{{ label }}</span>
         {{> @icon name='chevron-right' }}
     </a>
     {{/each}}
