@@ -28,7 +28,7 @@ module.exports = {
     layout: layouts.imageLink,
     pattern: null,
     image: {
-      src: '/styleguide/tmp/img/box-links/karlbergs_skola_fritidshem',
+      src: '/styleguide/tmp/img/box-links/karlbergs_skola_fritidshem.jpg',
       alt: 'Karlbergs skola fritidshem'
     },
     headline: 'Digitalisering av de nationella proven genom successivt införande',
