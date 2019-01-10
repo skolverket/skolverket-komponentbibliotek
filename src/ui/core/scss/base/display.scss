@@ -1,0 +1,17 @@
+// TODO: fix all variants
+.d-none {
+  display: none;
+}
+@include media-min('md') {
+  .d-md-none {
+    display: none;
+  }
+}
+.d-block {
+  display: block;
+}
+@include media-min('md') {
+  .d-md-block {
+    display: block;
+  }
+}

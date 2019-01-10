@@ -1,25 +1,22 @@
-@import
-"functions/units";
+@import 'functions/units';
 
-@import
-"variables/baseline",
-"variables/breakpoints",
-"variables/colors",
-"variables/font-sizes",
-"variables/font-wights",
-"variables/grid",
-"variables/line-heights",
-"variables/page";
+@import 'variables/baseline';
+@import 'variables/breakpoints';
+@import 'variables/colors';
+@import 'variables/font-sizes';
+@import 'variables/font-wights';
+@import 'variables/grid';
+@import 'variables/line-heights';
+@import 'variables/page';
 
-@import
-"mixins/box-mixins",
-"mixins/media-mixins",
-"mixins/on-event";
+@import 'mixins/box-mixins';
+@import 'mixins/media-mixins';
+@import 'mixins/on-event';
 
-@import
-"base/grid",
-"base/icons",
-"base/links",
-"base/scaffolding",
-"base/type",
-"base/well";
+@import 'base/grid';
+@import 'base/icons';
+@import 'base/links';
+@import 'base/scaffolding';
+@import 'base/type';
+@import 'base/well';
+@import 'base/display';
