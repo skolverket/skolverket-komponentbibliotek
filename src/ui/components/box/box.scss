@@ -23,4 +23,8 @@
   &--no-border {
     border: 0;
   }
+  &--sticky {
+    position: sticky;
+    top: $baseline;
+  }
 }
