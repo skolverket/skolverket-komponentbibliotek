@@ -65,12 +65,24 @@
 }
 
 .no-gutters > .col,
-.no-gutters > [class*="col-"] {
+.no-gutters > [class*='col-'] {
   padding-right: 0;
   padding-left: 0;
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col {
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -1040,6 +1052,7 @@
   .container {
     padding-left: $page-padding-medium;
     padding-right: $page-padding-medium;
+    overflow: hidden;
   }
 }
 
@@ -1052,7 +1065,19 @@
     margin-right: -$grid-gutter-small;
     margin-left: -$grid-gutter-small;
   }
-  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col {
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12,
+  .col {
     padding-right: $grid-gutter-small;
     padding-left: $grid-gutter-small;
   }
