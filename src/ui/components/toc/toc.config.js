@@ -5,28 +5,16 @@ module.exports = {
     title: 'Innehåll på denna sida',
     pages: [
       {
-        title: 'Behörighet och urval',
-        url: '#behorighet-och-urval'
+        title: '1 augusti 2018',
+        url: '#h-1augusti2018'
       },
       {
-        title: 'Introduktionsprogram',
-        url: '#introduktionsprogram'
+        title: '1 januari 2019',
+        url: '#h-1januari2019'
       },
       {
-        title: 'Urval',
-        url: '#urval'
-      },
-      {
-        title: 'Elever från utlandet',
-        url: '#elever-fran-utlandet'
-      },
-      {
-        title: 'Rätt att fullfölja utbildningen',
-        url: '#ratt-att-fullfolja-utbildningen'
-      },
-      {
-        title: 'Andra frågor om utbildningen',
-        url: '#andra-fragor-om-utbildningen'
+        title: '1 juli 2019',
+        url: '#h-1juli2019'
       }
     ]
   }

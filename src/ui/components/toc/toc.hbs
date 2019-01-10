@@ -1,16 +1,21 @@
 <div class="skv-toc">
-  {{#if title }}
-  <h3 class="skv-toc__title">{{ title }}</h3>
-  {{/if}}
-  <ul class="skv-toc__list">
-    {{#each pages}}
-    <li tabindex="1" class="skv-toc__list-item">
-      {{#if this.active}} {{ this.title }} {{else}}
-      <a class="skv-toc__list-item-link text-small" href="{{ this.url }}">{{
-        this.title
-      }}</a>
-      {{/if}}
-    </li>
-    {{/each}}
-  </ul>
+  <button class="skv-toc__toggle-button">
+    <span class="visually-hidden">Öppna innehålls förteckningen</span>
+  </button>
+  <div class="skv-toc__wrapper">
+    {{#if title }}
+    <h2 class="h4 skv-toc__title">{{ title }}</h2>
+    {{/if}}
+    <ul class="skv-toc__list">
+      {{#each pages}}
+      <li class="skv-toc__list-item">
+        {{#if this.active}} {{ this.title }} {{else}}
+        <a class="skv-toc__list-item-link text-small" href="{{ this.url }}">{{
+          this.title
+        }}</a>
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </div>
 </div>
