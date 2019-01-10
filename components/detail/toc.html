@@ -184,13 +184,63 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-a3c8452bb45d1088f44df28445c1eae3">toc.scss</option>
+                <option value="file-363c5bf1248a42993a4ade371ddcefcb">toc.js</option>
+                
+                <option value="file-1066e30fad07ff637b852a71e799bd1b">toc.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-a3c8452bb45d1088f44df28445c1eae3" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-363c5bf1248a42993a4ade371ddcefcb" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JavaScript FileBrowser-code">
+                                <pre><span class="hljs-keyword">const</span> button = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.skv-toc__toggle-button'</span>)[<span class="hljs-number">0</span>];
+<span class="hljs-keyword">if</span> (button) {
+  button.addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.closest(<span class="hljs-string">'.skv-toc'</span>).classList.toggle(<span class="hljs-string">'skv-toc--open'</span>);
+  });
+}
+
+<span class="hljs-keyword">const</span> links = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.skv-toc__list-item-link'</span>);
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; links.length; i++) {
+  links[i].addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> selected = <span class="hljs-built_in">document</span>.querySelectorAll(
+      <span class="hljs-string">'.skv-toc__list-item-link--selected'</span>
+    )[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">if</span> (selected) {
+      selected.classList.toggle(<span class="hljs-string">'skv-toc__list-item-link--selected'</span>);
+    }
+    <span class="hljs-keyword">this</span>.classList.toggle(<span class="hljs-string">'skv-toc__list-item-link--selected'</span>);
+  });
+}
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/toc/toc.js"><span>/components/raw/toc/toc.js</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/ui/components/toc/toc.js</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">636 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-1066e30fad07ff637b852a71e799bd1b" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -199,18 +249,68 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.skv-toc</span> {
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">1em</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">1em</span>;
-  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">3px</span> solid <span class="hljs-variable">$color-blue</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color-white</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">4px</span>;
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+
+  &amp;<span class="hljs-selector-class">.skv-toc--open</span> {
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  }
 
   @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
-    <span class="hljs-attribute">padding</span>: .<span class="hljs-number">375rem</span> <span class="hljs-number">1.5rem</span>;
+    <span class="hljs-attribute">position</span>: static;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.375rem</span> <span class="hljs-number">1.5rem</span> <span class="hljs-number">1.5rem</span>;
+  }
+
+  &amp;__wrapper {
+    <span class="hljs-attribute">display</span>: none;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">108</span>, <span class="hljs-number">39</span>, <span class="hljs-number">106</span>, <span class="hljs-number">0.4</span>);
+    <span class="hljs-selector-class">.skv-toc--open</span> &amp; {
+      <span class="hljs-attribute">display</span>: block;
+    }
+    @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">box-shadow</span>: none;
+      <span class="hljs-attribute">display</span>: block;
+    }
   }
 
   &amp;__title {
-    <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$font-weight-bold</span>;
-    <span class="hljs-attribute">margin-bottom</span>: .<span class="hljs-number">75rem</span>;
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.75rem</span>;
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
+  }
+
+  &amp;__toggle-<span class="hljs-selector-tag">button</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span> <span class="hljs-number">8px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$color-yellow</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color-white</span>;
+    <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">180deg</span>);
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">42px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>;
+    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">108</span>, <span class="hljs-number">39</span>, <span class="hljs-number">106</span>, <span class="hljs-number">0.4</span>);
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../assets/img/arrow-right.svg'</span>);
+    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">1.5rem</span>;
+    <span class="hljs-attribute">background-position</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">left</span>: -<span class="hljs-number">42px</span>;
+    <span class="hljs-attribute">cursor</span>: pointer;
+
+    <span class="hljs-selector-class">.skv-toc--open</span> &amp; {
+      <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">0deg</span>);
+      <span class="hljs-attribute">left</span>: auto;
+      <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">8px</span>;
+    }
+
+    @<span class="hljs-keyword">media</span> (min-width: 767.9999px) {
+      <span class="hljs-attribute">display</span>: none;
+    }
   }
 
   &amp;__list {
@@ -220,27 +320,35 @@
     <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
 
     &amp;-item {
-      <span class="hljs-attribute">padding</span>: .<span class="hljs-number">25rem</span> <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.25rem</span> <span class="hljs-number">0</span>;
 
       &amp;-<span class="hljs-selector-tag">link</span> {
-        <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$font-weight-bold</span>;
-      }
-    }
+        <span class="hljs-attribute">text-decoration</span>: underline;
+        <span class="hljs-attribute">position</span>: relative;
+        <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-purple-dark</span>;
 
-    <span class="hljs-comment">// Is sub list (nested)</span>
-    &amp;--<span class="hljs-selector-tag">sub</span> {
-      <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">1.875rem</span>;
-      <span class="hljs-selector-class">.skv-toc__list-item-link</span> {
-        <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">400</span>;
-      }
-    }
-  }
+        &amp;:active,
+        &amp;:focus,
+        &amp;<span class="hljs-selector-class">.skv-toc__list-item-link--selected</span> {
+          <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-black</span>;
+          <span class="hljs-attribute">text-decoration</span>: none;
 
-  @<span class="hljs-keyword">media</span> (max-width: 767.9999px) {
-    &amp; {
-      <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">1rem</span>;
-      <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1rem</span>;
-      <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
+          &amp;:before {
+            <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>;
+            <span class="hljs-attribute">position</span>: absolute;
+            <span class="hljs-attribute">left</span>: -<span class="hljs-number">1rem</span>;
+            <span class="hljs-attribute">top</span>: -<span class="hljs-number">3px</span>;
+            <span class="hljs-attribute">height</span>: calc(<span class="hljs-number">100%</span> + <span class="hljs-number">6px</span>);
+            <span class="hljs-attribute">display</span>: block;
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">8px</span>;
+            <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-yellow</span>;
+
+            @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
+              <span class="hljs-attribute">left</span>: -<span class="hljs-number">1.5rem</span>;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -260,7 +368,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">717 Bytes</span>
+                    <span class="Meta-value">2 KB</span>
                 </li>
             </ul>
         </div>
@@ -276,31 +384,19 @@
         
             
             <pre>{
-  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Rubrik"</span>,
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Innehåll på denna sida"</span>,
   <span class="hljs-attr">"pages"</span>: [
     {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Innehållsrubrik nivå 1"</span>,
-      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
-      <span class="hljs-attr">"pages"</span>: [
-        {
-          <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Innehållsrubrik nivå 2"</span>,
-          <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>
-        },
-        {
-          <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Innehållsrubrik nivå 2"</span>,
-          <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>
-        }
-      ]
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"1 augusti 2018"</span>,
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-1augusti2018"</span>
     },
     {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Innehållsrubrik nivå 1"</span>,
-      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
-      <span class="hljs-attr">"pages"</span>: <span class="hljs-literal">null</span>
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"1 januari 2019"</span>,
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-1januari2019"</span>
     },
     {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Innehållsrubrik nivå 1"</span>,
-      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
-      <span class="hljs-attr">"pages"</span>: <span class="hljs-literal">null</span>
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"1 juli 2019"</span>,
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-1juli2019"</span>
     }
   ]
 }</pre>
@@ -313,29 +409,25 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-2ada2e48290bad9bb4e8e9d49d64fd29-panel-view">
     <code class="Code Code--lang-handlebars">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc"</span>&gt;</span>
-	</span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> title }}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__title"</span>&gt;</span></span><span class="hljs-template-variable">{{ title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
-	<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list"</span>&gt;</span>
-		</span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> pages}}</span><span class="xml">
-		<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
-			</span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> this.active}}</span><span class="xml">
-			</span><span class="hljs-template-variable">{{this.title}}</span><span class="xml">
-			</span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml">
-			<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ this.url }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ this.title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-			</span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
-		<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-		</span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> this.pages }}</span><span class="xml">
-		<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-			<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list skv-toc__list--sub"</span>&gt;</span>
-				</span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> this.pages }}</span><span class="xml">
-				<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
-					<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ this.url }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ this.title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-				<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-				</span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
-			<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-		<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-		</span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
-		</span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
-	<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__toggle-button"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Öppna innehålls förteckningen<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__wrapper"</span>&gt;</span>
+    </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> title }}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4 skv-toc__title"</span>&gt;</span></span><span class="hljs-template-variable">{{ title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list"</span>&gt;</span>
+      </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> pages}}</span><span class="xml">
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+        </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> this.active}}</span><span class="xml"> </span><span class="hljs-template-variable">{{ this.title }}</span><span class="xml"> </span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ this.url }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{
+          this.title
+        }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -346,28 +438,26 @@
     <code class="Code Code--lang-html">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__title"</span>&gt;</span>Rubrik<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Innehållsrubrik nivå 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list skv-toc__list--sub"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Innehållsrubrik nivå 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Innehållsrubrik nivå 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Innehållsrubrik nivå 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Innehållsrubrik nivå 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__toggle-button"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Öppna innehålls förteckningen<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__wrapper"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4 skv-toc__title"</span>&gt;</span>Innehåll på denna sida<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-1augusti2018"</span>&gt;</span>1 augusti 2018<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-1januari2019"</span>&gt;</span>1 januari 2019<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-1juli2019"</span>&gt;</span>1 juli 2019<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -407,6 +497,15 @@
             <span class="Meta-value">src/ui/components/toc/toc.hbs</span>
         </li>
         
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(1)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="innehallssida.html">@<span>innehallssida</span></a>
+            
+            </span>
+        </li>
         
     </ul>
 </div>
@@ -2037,6 +2136,30 @@
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="innehallssida.html" data-pjax>
+                <span>Innehållssida</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         
