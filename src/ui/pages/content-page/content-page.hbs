@@ -1,7 +1,14 @@
-<div class="container container--margins">
+<div class="container container--margins container--no-padding">
   <div class="row">
-    <div class="col-12 col-md-8">
-      <div class="skv-box">
+    <div class="d-md-none col-12 col-md-4">
+      <div
+        class="skv-box skv-box--compact skv-box--no-padding skv-box--no-border skv-box--relative"
+      >
+        {{render '@toc'}}
+      </div>
+    </div>
+    <main class="col-12 col-md-8">
+      <div class="skv-box skv-box--mb-large">
         <h1 class="h1 margin-tp-reset">Aktuella regeländringar</h1>
         <p class="text-large">
           Här hittar du information om de flesta aktuella ändringarna av lagar
@@ -9,9 +16,7 @@
           läroplaner här. Datumen gäller den tidpunkt då en ändring ska börja
           tillämpas.
         </p>
-        <h2 class="h2 toc-link" id="h-1augusti2018">
-          1 augusti 2018 <a href="#h-1augusti2018" aria-hidden="true">#</a>
-        </h2>
+        <h2 class="h2" id="h-1augusti2018">1 augusti 2018</h2>
         <h3 class="h3">Allmänt</h3>
         <h4 class="h4">Behandling av personuppgifter på utbildningsområdet</h4>
         <p class="text-standard">
@@ -35,9 +40,7 @@
           Det skedde fler regeländringar på skolområdet under sommaren 2018. Dem
           har Skolverket skrivit om tidigare.
         </p>
-        <h2 class="h2 toc-link" id="h-1januari2019">
-          1 januari 2019 <a href="#h-1januari2019" aria-hidden="true">#</a>
-        </h2>
+        <h2 class="h2" id="h-1januari2019">1 januari 2019</h2>
         <h3 class="h3">Förskola</h3>
         <h4 class="h4">Förskola på nationella minoritetsspråk</h4>
         <p class="text-standard">
@@ -111,9 +114,7 @@
             skolor</a
           >
         </p>
-        <h2 class="h2 toc-link" id="h-1juli2019">
-          1 juli 2019 <a href="#h-1juli2019" aria-hidden="true">#</a>
-        </h2>
+        <h2 class="h2" id="h-1juli2019">1 juli 2019</h2>
         <h3 class="h3">Förskola</h3>
         <h4 class="h4">Reviderad&nbsp;läroplan för förskolan</h4>
         <p class="text-standard">
@@ -275,9 +276,9 @@
           skollagen 15 kap §19a.
         </p>
       </div>
-    </div>
-    <div class="col-12 col-md-4">
-      <div class="skv-box skv-box--compact skv-box--sticky">
+    </main>
+    <div class="d-none d-md-block col-12 col-md-4">
+      <div class="skv-box skv-box--compact skv-box--no-padding skv-box--sticky">
         {{render '@toc'}}
       </div>
     </div>
