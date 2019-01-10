@@ -1,32 +1,32 @@
 module.exports = {
-  name: "Innehållsförteckning",
+  name: 'Innehållsförteckning',
   handle: 'toc',
   context: {
-    title: "Rubrik",
+    title: 'Innehåll på denna sida',
     pages: [
       {
-        title: "Innehållsrubrik nivå 1",
-        url: "#",
-        pages: [
-          {
-            title: "Innehållsrubrik nivå 2",
-            url: "#"
-          },
-          {
-            title: "Innehållsrubrik nivå 2",
-            url: "#"
-          }
-        ]
+        title: 'Behörighet och urval',
+        url: '#behorighet-och-urval'
       },
       {
-        title: "Innehållsrubrik nivå 1",
-        url: "#",
-        pages: null
+        title: 'Introduktionsprogram',
+        url: '#introduktionsprogram'
       },
       {
-        title: "Innehållsrubrik nivå 1",
-        url: "#",
-        pages: null
+        title: 'Urval',
+        url: '#urval'
+      },
+      {
+        title: 'Elever från utlandet',
+        url: '#elever-fran-utlandet'
+      },
+      {
+        title: 'Rätt att fullfölja utbildningen',
+        url: '#ratt-att-fullfolja-utbildningen'
+      },
+      {
+        title: 'Andra frågor om utbildningen',
+        url: '#andra-fragor-om-utbildningen'
       }
     ]
   }
