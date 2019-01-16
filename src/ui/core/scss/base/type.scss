@@ -107,7 +107,7 @@
   color: $color-error;
 }
 .text-secondary {
-  color: $color-gray;
+  color: $color-gray-text;
 }
 .margin-tp-reset {
   margin-top: 0;
@@ -130,17 +130,17 @@
   display: block;
   width: 100%;
   text-decoration: none;
-  color: $color-purple-dark;
+  color: $color-primary-purple;
   font-weight: $font-weight-bold;
 
   &:hover {
-    color: $color-purple-dark;
+    color: $color-primary-purple;
   }
 
   &:focus,
   &:active,
   &:active:focus {
-    color: $color-purple-dark;
+    color: $color-primary-purple;
   }
 }
 
@@ -149,6 +149,6 @@
 hr {
   margin: $baseline 0;
   height: 1px;
-  background: $color-purple;
+  background: $color-complement-purple-light;
   border: 0;
 }

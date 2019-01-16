@@ -10,7 +10,7 @@
   font-size: $font-size-std;
   line-height: $line-height-std;
   border-radius: 0.1875rem;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   background-color: $color-white;
 
   &:hover {
@@ -20,8 +20,8 @@
   &:focus,
   &.focus {
     outline: 0;
-    box-shadow: inset 0 0 0 1px $color-yellow;
-    border: 1px solid $color-yellow;
+    box-shadow: inset 0 0 0 1px $color-accent-orange;
+    border: 1px solid $color-accent-orange;
 
     &:hover {
       box-shadow: none;
@@ -31,8 +31,8 @@
   // Disabled comes first so active can properly restyle
   &--disabled,
   &:disabled {
-    background-color: $color-gray-light;
-    color: $color-gray;
+    background-color: $color-gray-background;
+    color: $color-gray-inactive;
     cursor: not-allowed;
     border: 1px solid transparent;
 
@@ -40,13 +40,13 @@
     &:focus {
       box-shadow: none;
       border: 1px solid transparent;
-      background-color: $color-gray-light;
+      background-color: $color-gray-background;
     }
   }
 
   &:active,
   &.active {
-    box-shadow: 0 0 1px $color-yellow;
+    box-shadow: 0 0 1px $color-accent-orange;
   }
 
   // Opinionated: add "hand" cursor to non-disabled .btn elements
@@ -56,14 +56,14 @@
 
   &--primary {
     color: $color-white;
-    background-color: $color-purple-dark;
-    border-color: $color-purple-dark;
+    background-color: $color-primary-purple;
+    border-color: $color-primary-purple;
   }
 
   &--secondary {
-    color: $color-purple-dark;
+    color: $color-primary-purple;
     background-color: $color-white;
-    border-color: $color-purple;
+    border-color: $color-complement-purple-light;
   }
 
   &--small {
@@ -78,12 +78,11 @@
 
     &:focus,
     &.focus {
-
     }
 
     // Vertically space out multiple block buttons
     + .skv-btn--block {
-      margin-top: .5rem;
+      margin-top: 0.5rem;
     }
   }
 
@@ -99,14 +98,14 @@
 
     &:hover {
       box-shadow: none;
-      background-color: $color-purple-light;
+      background-color: $color-complement-purple-light;
     }
 
     &:focus,
     &.focus {
-      background-color: $color-purple-light;
+      background-color: $color-complement-purple-light;
       box-shadow: none;
-      border: 2px solid $color-yellow;
+      border: 2px solid $color-accent-orange;
     }
 
     &--right {

@@ -4,6 +4,8 @@ name: Färger
 
 # Färger
 
+För muspekaren över färgen för att få förslag på variabelnamn.
+
 <div class="colorgroups-container">
 	{{#each colorGroups}}
 		<div class="colorgroup" {{#if previewProperty}}data-preview-property="{{previewProperty}}"{{/if}}>
@@ -13,12 +15,12 @@ name: Färger
       {{/if}}
     		<div class="colorgroup__list">
     			{{#each colors}}
-    			<div class="colordot">
+    			<div class="colordot" title="{{variable}}">
           <div class="colordot__previews">
             <div class="colordot__preview" style="background-color: {{hex}};"></div>
             {{#if variants}}
               {{#each variants}}
-                <div class="colordot__preview--variant" style="background-color: {{hex}};"></div>
+                <div class="colordot__preview--variant" title="{{variable}}" style="background-color: {{hex}};"></div>
               {{/each}}
             {{/if}}
             </div>
@@ -87,7 +89,6 @@ name: Färger
   max-width: 500px;
 }
 </style>
-
 
 <script>
 const previews = document.querySelectorAll('.colorgroup[data-preview-property] .colordot__preview, .colorgroup[data-preview-property] .colordot__preview--variant');

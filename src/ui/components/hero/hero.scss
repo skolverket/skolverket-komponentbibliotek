@@ -33,13 +33,13 @@
         font-size: 1.25rem;
         line-height: 2.1;
         font-weight: $font-weight-bold;
-        margin-left: .5rem;
+        margin-left: 0.5rem;
         color: $color-white;
 
         @include media-min('md') {
           font-size: $font-size-h1;
           line-height: 1.7;
-          margin-left: .875rem;
+          margin-left: 0.875rem;
         }
 
         &:hover {
@@ -52,19 +52,20 @@
         }
 
         &-stripe {
-          background-color: $color-turq;
-          padding: .375rem 0;
+          background-color: $color-primary-green;
+          padding: 0.375rem 0;
           box-decoration-break: clone; // Firefox fix ???
-          box-shadow: 8px 0 0 $color-turq, -8px 0 0 $color-turq;
+          box-shadow: 8px 0 0 $color-primary-green,
+            -8px 0 0 $color-primary-green;
 
           @include media-min('md') {
-            box-shadow: 14px 0 0 $color-turq, -14px 0 0 $color-turq;
+            box-shadow: 14px 0 0 $color-primary-green,
+              -14px 0 0 $color-primary-green;
           }
         }
       }
     }
   }
-
 
   &--overlap {
     @include media-min('lg') {

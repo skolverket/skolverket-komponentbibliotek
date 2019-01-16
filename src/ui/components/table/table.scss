@@ -1,6 +1,5 @@
 .skv-table {
-
-  $border-color: #CCC;
+  $border-color: #ccc;
 
   width: 100%;
   margin: 1em 0;
@@ -11,26 +10,26 @@
     caption-side: top;
     text-align: left;
     padding: 10px;
-    background: $color-turq;
+    background: $color-primary-green;
     color: $color-white;
     font-size: 18px;
     font-weight: bold;
   }
 
-  thead, tbody {
+  thead,
+  tbody {
     font-size: 16px;
   }
 
   thead {
-    border-bottom: 3px solid $color-turq;
+    border-bottom: 3px solid $color-primary-green;
     font-weight: bold;
   }
 
   tr {
     &:nth-child(even) {
-      background: $color-gray-light;
+      background: $color-table-background;
     }
-
   }
 
   td {
@@ -45,8 +44,7 @@
     caption {
       padding: 10px 0;
       background: none;
-      color: $color-gray-dark;
+      color: $color-gray-text;
     }
   }
 }
-

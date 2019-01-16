@@ -15,19 +15,19 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: .3125rem 0 .3125rem .875rem;
+      padding: 0.3125rem 0 0.3125rem 0.875rem;
       border: 1px solid transparent;
-      border-top: 1px solid $color-purple;
-      color: $color-purple-dark;
+      border-top: 1px solid $color-complement-purple-light;
+      color: $color-primary-purple;
       font-weight: $font-weight-bold;
 
       @include media-min('md') {
-        padding: 1rem .25rem 1rem .875rem;
+        padding: 1rem 0.25rem 1rem 0.875rem;
       }
 
       &:focus {
         outline: 0;
-        border: 2px solid $color-yellow;
+        border: 2px solid $color-accent-orange;
         margin: -1px;
       }
 
@@ -35,7 +35,7 @@
       &:focus,
       &:active,
       &:active:focus {
-        color: $color-purple-dark;
+        color: $color-primary-purple;
       }
 
       &:active {
