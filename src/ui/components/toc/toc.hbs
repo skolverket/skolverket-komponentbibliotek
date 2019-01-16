@@ -1,13 +1,13 @@
-<div class="skv-toc">
+<div class="skv-toc" data-js-toc>
   <button class="skv-toc__toggle-button">
     <span class="visually-hidden">Öppna innehålls förteckningen</span>
   </button>
-  <div class="skv-toc__wrapper">
+  <div class="skv-toc__inner">
     {{#if title }}
     <h2 class="h4 skv-toc__title">{{ title }}</h2>
     {{/if}}
     <ul class="skv-toc__list">
-      {{#each pages}}
+      {{#each headings}}
       <li class="skv-toc__list-item">
         {{#if this.active}} {{ this.title }} {{else}}
         <a class="skv-toc__list-item-link text-small" href="{{ this.url }}">{{
@@ -17,5 +17,8 @@
       </li>
       {{/each}}
     </ul>
+    <button class="skv-toc__close-button">
+      <span class="visually-hidden">Stäng innehålls förteckningen</span>
+    </button>
   </div>
 </div>

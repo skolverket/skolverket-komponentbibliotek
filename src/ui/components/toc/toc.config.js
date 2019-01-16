@@ -3,7 +3,7 @@ module.exports = {
   handle: 'toc',
   context: {
     title: 'Innehåll på denna sida',
-    pages: [
+    headings: [
       {
         title: '1 augusti 2018',
         url: '#h-1augusti2018'

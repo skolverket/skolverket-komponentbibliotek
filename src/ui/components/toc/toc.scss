@@ -1,31 +1,79 @@
 .skv-toc {
-  background: $color-white;
   position: absolute;
   right: 0;
-  top: 4px;
   z-index: 1;
-
-  &.skv-toc--open {
-    left: 0;
-  }
 
   @include media-min('md') {
     position: static;
-    padding: 0.375rem 1.5rem 1.5rem;
   }
 
-  &__wrapper {
-    display: none;
-    margin: 0;
-    padding: 1em;
-    box-shadow: 0 0 14px 0 rgba(108, 39, 106, 0.4);
-    .skv-toc--open & {
-      display: block;
+  &__inner {
+    z-index: 2;
+    height: 100vh;
+
+    background-color: $color-white;
+    transform: translate(100%, 4px);
+
+    transition-delay: 100ms;
+    transition: transform $reveal-transition-duration;
+    transition-timing-function: ease-in;
+
+    * {
+      display: none;
+
+      .skv-toc--open &,
+      .skv-toc--animate-out & {
+        display: block;
+      }
     }
+
+    .fixed & {
+      position: fixed;
+      top: -4px;
+      right: 0;
+    }
+
+    .skv-toc--animate-in & {
+      padding: 1em;
+      width: 300px;
+      box-shadow: 0 0 14px 0 rgba(108, 39, 106, 0.4);
+      transform: translate(0, 4px);
+    }
+
+    .skv-toc--animate-in.fixed & {
+      transform: translate(0, 0);
+    }
+
+    .skv-toc--animate-out & {
+      padding: 1em;
+      width: 300px;
+      box-shadow: 0 0 14px 0 rgba(108, 39, 106, 0.4);
+      transform: translate(100%, 4px);
+    }
+
+    .skv-toc--open & {
+      padding: 1em;
+      width: 300px;
+      box-shadow: 0 0 14px 0 rgba(108, 39, 106, 0.4);
+      transform: translate(0, 4px);
+    }
+
+    .skv-toc--open.fixed & {
+      transform: translate(0, 0);
+    }
+
     @include media-min('md') {
-      padding: 1em 0 0;
+      position: static;
+      height: auto;
+      transform: none;
+      width: auto;
+      padding: 1em 1.5rem 1.5rem;
       box-shadow: none;
       display: block;
+
+      * {
+        display: block;
+      }
     }
   }
 
@@ -35,30 +83,71 @@
   }
 
   &__toggle-button {
+    opacity: 1;
     padding: 0;
     border-width: 0 8px 0 0;
     border-color: $color-yellow;
     background: $color-white;
-    transform: rotate(180deg);
-    width: 42px;
+    transform: rotate(180deg) translateY(-4px);
+    width: 50px;
     height: 50px;
     box-shadow: 0 0 14px 0 rgba(108, 39, 106, 0.4);
     background-image: url('../assets/img/arrow-right.svg');
-    background-size: 1.5rem;
+    background-size: 2rem;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    z-index: 4;
     position: absolute;
-    left: -42px;
+    right: 0;
     cursor: pointer;
+    transition: transform $reveal-transition-duration,
+      opacity $reveal-transition-duration;
+    transition-timing-function: ease-in;
 
+    .skv-toc--animate-in &,
     .skv-toc--open & {
-      transform: rotate(0deg);
-      left: auto;
-      right: 0;
-      border-width: 0 0 0 8px;
+      opacity: 0;
+      transform: rotate(180deg) translateX(-100%) translateY(-4px);
+    }
+
+    .skv-toc--open &,
+    .skv-toc--animate-out & {
+      display: none;
+    }
+
+    .fixed & {
+      transform: rotate(180deg) translateY(0);
+      top: 0;
+      position: fixed;
+    }
+    .skv-toc--animate-in.fixed &,
+    .skv-toc--open.fixed & {
+      opacity: 0;
+      transform: rotate(180deg) translateX(-100%) translateY(0);
+    }
+
+    &.skv-toc__toggle-button--animate-bump {
+      animation: bump 1000ms;
     }
 
     @media (min-width: 767.9999px) {
+      display: none;
+    }
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background-color: transparent;
+    background-image: url('../assets/img/arrow-right.svg');
+    background-size: 2rem;
+    background-position: 50% 50%;
+
+    @include media-min('md') {
       display: none;
     }
   }
@@ -77,8 +166,6 @@
         position: relative;
         color: $color-purple-dark;
 
-        &:active,
-        &:focus,
         &.skv-toc__list-item-link--selected {
           color: $color-black;
           text-decoration: none;
@@ -100,5 +187,23 @@
         }
       }
     }
+  }
+}
+
+@keyframes bump {
+  0% {
+    width: 50px;
+  }
+  25% {
+    width: 57px;
+  }
+  50% {
+    width: 50px;
+  }
+  75% {
+    width: 57px;
+  }
+  100% {
+    width: 50px;
   }
 }
