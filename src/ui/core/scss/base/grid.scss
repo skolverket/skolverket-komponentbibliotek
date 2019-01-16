@@ -70,6 +70,29 @@
   padding-left: 0;
 }
 
+@media (max-width: 767px) {
+  .container--no-padding .row {
+    margin-left: 0;
+    margin-right: 0;
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
 .col-1,
 .col-2,
 .col-3,
@@ -1048,7 +1071,7 @@
   }
 }
 
-@media (max-width: 768.9999px) {
+@media (max-width: 767px) {
   .container {
     padding-left: $page-padding-medium;
     padding-right: $page-padding-medium;
