@@ -184,6 +184,8 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
+                <option value="file-4261e858f03bf1bd95562f9cff314fe3">toc-no-js.scss</option>
+                
                 <option value="file-363c5bf1248a42993a4ade371ddcefcb">toc.js</option>
                 
                 <option value="file-1066e30fad07ff637b852a71e799bd1b">toc.scss</option>
@@ -192,7 +194,62 @@
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-363c5bf1248a42993a4ade371ddcefcb" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-4261e858f03bf1bd95562f9cff314fe3" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre><span class="hljs-selector-class">.skv-toc</span> {
+  <span class="hljs-attribute">position</span>: static;
+  <span class="hljs-attribute">right</span>: auto;
+  <span class="hljs-attribute">top</span>: auto;
+  <span class="hljs-attribute">z-index</span>: auto;
+
+  &amp;__toggle-<span class="hljs-selector-tag">button</span>,
+  &amp;__close-<span class="hljs-selector-tag">button</span> {
+    <span class="hljs-attribute">display</span>: none;
+  }
+
+  &amp;__inner {
+    <span class="hljs-attribute">height</span>: auto;
+    <span class="hljs-attribute">transform</span>: none;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+
+    * {
+      <span class="hljs-attribute">display</span>: block;
+    }
+  }
+  &amp;__toggle-<span class="hljs-selector-tag">button</span>,
+  &amp;__close-<span class="hljs-selector-tag">button</span> {
+    <span class="hljs-attribute">display</span>: none;
+  }
+}
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/toc/toc-no-js.scss"><span>/components/raw/toc/toc-no-js.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/ui/components/toc/toc-no-js.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">337 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-363c5bf1248a42993a4ade371ddcefcb" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -200,25 +257,157 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
-                                <pre><span class="hljs-keyword">const</span> button = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.skv-toc__toggle-button'</span>)[<span class="hljs-number">0</span>];
-<span class="hljs-keyword">if</span> (button) {
-  button.addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">this</span>.closest(<span class="hljs-string">'.skv-toc'</span>).classList.toggle(<span class="hljs-string">'skv-toc--open'</span>);
-  });
-}
-
-<span class="hljs-keyword">const</span> links = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.skv-toc__list-item-link'</span>);
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; links.length; i++) {
-  links[i].addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">const</span> selected = <span class="hljs-built_in">document</span>.querySelectorAll(
-      <span class="hljs-string">'.skv-toc__list-item-link--selected'</span>
+                                <pre>(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">const</span> TOC = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el</span>) </span>{
+    <span class="hljs-keyword">this</span>.root = el;
+    <span class="hljs-keyword">this</span>.headings = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.toc-heading'</span>);
+    <span class="hljs-keyword">this</span>.inner = <span class="hljs-keyword">this</span>.root.querySelectorAll(<span class="hljs-string">'.skv-toc__inner'</span>)[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">this</span>.tocLinks = <span class="hljs-keyword">this</span>.root.querySelectorAll(<span class="hljs-string">'.skv-toc__list-item-link'</span>);
+    <span class="hljs-keyword">this</span>.toggleButton = <span class="hljs-keyword">this</span>.root.querySelectorAll(
+      <span class="hljs-string">'.skv-toc__toggle-button'</span>
     )[<span class="hljs-number">0</span>];
-    <span class="hljs-keyword">if</span> (selected) {
-      selected.classList.toggle(<span class="hljs-string">'skv-toc__list-item-link--selected'</span>);
+    <span class="hljs-keyword">this</span>.closeButton = <span class="hljs-keyword">this</span>.root.querySelectorAll(<span class="hljs-string">'.skv-toc__close-button'</span>)[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">this</span>.isExpanded = <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">this</span>.hasNotified = <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">this</span>.fixButton();
+
+    <span class="hljs-keyword">this</span>.setupUI();
+    <span class="hljs-keyword">this</span>.registerEvents();
+  };
+
+  TOC.prototype = {
+    <span class="hljs-attr">classList</span>: {
+      <span class="hljs-attr">tocOpen</span>: <span class="hljs-string">'skv-toc--open'</span>,
+      <span class="hljs-attr">tocAnimateIn</span>: <span class="hljs-string">'skv-toc--animate-in'</span>,
+      <span class="hljs-attr">tocAnimateOut</span>: <span class="hljs-string">'skv-toc--animate-out'</span>,
+      <span class="hljs-attr">tocAnimateBump</span>: <span class="hljs-string">'skv-toc__toggle-button--animate-bump'</span>
+    },
+
+    setupUI() {
+      <span class="hljs-keyword">this</span>.toggleButton.setAttribute(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-keyword">this</span>.isExpanded);
+      <span class="hljs-keyword">this</span>.toggleButton.classList.add(<span class="hljs-keyword">this</span>.classList.tocAnimateBump);
+    },
+
+    registerEvents() {
+      <span class="hljs-keyword">this</span>.root.addEventListener(<span class="hljs-string">'keydown'</span>, <span class="hljs-keyword">this</span>.onKeyDown.bind(<span class="hljs-keyword">this</span>));
+      <span class="hljs-keyword">this</span>.toggleButton.addEventListener(
+        <span class="hljs-string">'click'</span>,
+        <span class="hljs-keyword">this</span>.onToggleButtonClick.bind(<span class="hljs-keyword">this</span>)
+      );
+      <span class="hljs-keyword">this</span>.closeButton.addEventListener(
+        <span class="hljs-string">'click'</span>,
+        <span class="hljs-keyword">this</span>.onToggleButtonClick.bind(<span class="hljs-keyword">this</span>)
+      );
+
+      <span class="hljs-keyword">this</span>.inner.addEventListener(
+        <span class="hljs-string">'transitionend'</span>,
+        <span class="hljs-keyword">this</span>.onTransitionEnd.bind(<span class="hljs-keyword">this</span>)
+      );
+
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.tocLinks.length; i++) {
+        <span class="hljs-keyword">this</span>.tocLinks[i].addEventListener(
+          <span class="hljs-string">'click'</span>,
+          <span class="hljs-keyword">this</span>.onLinksClick.bind(<span class="hljs-keyword">this</span>)
+        );
+      }
+
+      <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'scroll'</span>, <span class="hljs-keyword">this</span>.onScroll.bind(<span class="hljs-keyword">this</span>));
+    },
+
+    onScroll() {
+      <span class="hljs-keyword">this</span>.updateToc();
+      <span class="hljs-keyword">this</span>.fixButton();
+    },
+
+    onKeyDown(e) {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isExpanded &amp;&amp; e.keyCode === <span class="hljs-number">27</span>) {
+        <span class="hljs-keyword">this</span>.toggleButton.click();
+      }
+    },
+
+    onToggleButtonClick() {
+      <span class="hljs-keyword">this</span>.toggleButton.setAttribute(<span class="hljs-string">'aria-expanded'</span>, !<span class="hljs-keyword">this</span>.isExpanded);
+
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isExpanded) {
+        <span class="hljs-keyword">this</span>.root.classList.remove(<span class="hljs-keyword">this</span>.classList.tocOpen);
+        <span class="hljs-keyword">this</span>.root.classList.add(<span class="hljs-keyword">this</span>.classList.tocAnimateOut);
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>.root.classList.add(<span class="hljs-keyword">this</span>.classList.tocAnimateIn);
+      }
+      <span class="hljs-keyword">this</span>.isExpanded = !<span class="hljs-keyword">this</span>.isExpanded;
+    },
+
+    onTransitionEnd() {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.toggleButton.classList.contains(<span class="hljs-keyword">this</span>.classList.tocAnimateBump)) {
+        <span class="hljs-keyword">this</span>.toggleButton.classList.remove(<span class="hljs-keyword">this</span>.classList.tocAnimateBump);
+      }
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.root.classList.contains(<span class="hljs-keyword">this</span>.classList.tocAnimateOut)) {
+        <span class="hljs-keyword">this</span>.root.classList.remove(<span class="hljs-keyword">this</span>.classList.tocAnimateOut);
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>.root.classList.add(<span class="hljs-keyword">this</span>.classList.tocOpen);
+        <span class="hljs-keyword">this</span>.root.classList.remove(<span class="hljs-keyword">this</span>.classList.tocAnimateIn);
+      }
+    },
+
+    onCloseButtonClick() {
+      <span class="hljs-keyword">this</span>.toggleButton.click();
+    },
+
+    fixButton() {
+      <span class="hljs-keyword">const</span> offset = <span class="hljs-keyword">this</span>.root.getBoundingClientRect();
+      <span class="hljs-keyword">if</span> (offset.top &lt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">this</span>.root.classList.add(<span class="hljs-string">'fixed'</span>);
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>.root.classList.remove(<span class="hljs-string">'fixed'</span>);
+      }
+    },
+
+    findTopHeading() {
+      <span class="hljs-keyword">let</span> topHeading;
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.headings.length; i++) {
+        <span class="hljs-keyword">const</span> offset = <span class="hljs-keyword">this</span>.headings[i].getBoundingClientRect();
+        <span class="hljs-keyword">if</span> (offset.top &lt; <span class="hljs-number">20</span>) {
+          topHeading = i;
+        }
+      }
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.headings[topHeading];
+    },
+
+    findLinksInToc(target) {
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'a[href$="#'</span> + target + <span class="hljs-string">'"]'</span>);
+    },
+
+    updateToc() {
+      <span class="hljs-keyword">const</span> topHeading = <span class="hljs-keyword">this</span>.findTopHeading();
+      <span class="hljs-keyword">const</span> selected = <span class="hljs-keyword">this</span>.root.querySelectorAll(
+        <span class="hljs-string">'.skv-toc__list-item-link--selected'</span>
+      );
+      <span class="hljs-keyword">if</span> (selected) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; selected.length; i++) {
+          selected[i].classList.remove(<span class="hljs-string">'skv-toc__list-item-link--selected'</span>);
+        }
+      }
+      <span class="hljs-keyword">if</span> (topHeading) {
+        <span class="hljs-keyword">const</span> links = <span class="hljs-keyword">this</span>.findLinksInToc(topHeading.id);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; links.length; i++) {
+          links[i].classList.add(<span class="hljs-string">'skv-toc__list-item-link--selected'</span>);
+        }
+      }
+    },
+
+    onLinksClick() {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isExpanded) {
+        <span class="hljs-keyword">this</span>.toggleButton.click();
+      }
     }
-    <span class="hljs-keyword">this</span>.classList.toggle(<span class="hljs-string">'skv-toc__list-item-link--selected'</span>);
-  });
-}
+  };
+
+  <span class="hljs-keyword">const</span> components = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'[data-js-toc]'</span>);
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; components.length; i++) {
+    <span class="hljs-keyword">new</span> TOC(components[i]);
+  }
+})();
 </pre>
                             </code>
                             
@@ -235,7 +424,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">636 Bytes</span>
+                    <span class="Meta-value">4.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -249,33 +438,81 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.skv-toc</span> {
-  <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color-white</span>;
   <span class="hljs-attribute">position</span>: absolute;
   <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">top</span>: <span class="hljs-number">4px</span>;
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
-
-  &amp;<span class="hljs-selector-class">.skv-toc--open</span> {
-    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
-  }
 
   @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
     <span class="hljs-attribute">position</span>: static;
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.375rem</span> <span class="hljs-number">1.5rem</span> <span class="hljs-number">1.5rem</span>;
   }
 
-  &amp;__wrapper {
-    <span class="hljs-attribute">display</span>: none;
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
-    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">108</span>, <span class="hljs-number">39</span>, <span class="hljs-number">106</span>, <span class="hljs-number">0.4</span>);
-    <span class="hljs-selector-class">.skv-toc--open</span> &amp; {
-      <span class="hljs-attribute">display</span>: block;
+  &amp;__inner {
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-white</span>;
+    <span class="hljs-attribute">transform</span>: translate(<span class="hljs-number">100%</span>, <span class="hljs-number">4px</span>);
+
+    <span class="hljs-attribute">transition-delay</span>: <span class="hljs-number">100ms</span>;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-variable">$reveal-transition-duration</span>;
+    <span class="hljs-attribute">transition-timing-function</span>: ease-in;
+
+    * {
+      <span class="hljs-attribute">display</span>: none;
+
+      <span class="hljs-selector-class">.skv-toc--open</span> &amp;,
+      <span class="hljs-selector-class">.skv-toc--animate-out</span> &amp; {
+        <span class="hljs-attribute">display</span>: block;
+      }
     }
+
+    <span class="hljs-selector-class">.fixed</span> &amp; {
+      <span class="hljs-attribute">position</span>: fixed;
+      <span class="hljs-attribute">top</span>: -<span class="hljs-number">4px</span>;
+      <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-selector-class">.skv-toc--animate-in</span> &amp; {
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+      <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">108</span>, <span class="hljs-number">39</span>, <span class="hljs-number">106</span>, <span class="hljs-number">0.4</span>);
+      <span class="hljs-attribute">transform</span>: translate(<span class="hljs-number">0</span>, <span class="hljs-number">4px</span>);
+    }
+
+    <span class="hljs-selector-class">.skv-toc--animate-in</span><span class="hljs-selector-class">.fixed</span> &amp; {
+      <span class="hljs-attribute">transform</span>: translate(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    }
+
+    <span class="hljs-selector-class">.skv-toc--animate-out</span> &amp; {
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+      <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">108</span>, <span class="hljs-number">39</span>, <span class="hljs-number">106</span>, <span class="hljs-number">0.4</span>);
+      <span class="hljs-attribute">transform</span>: translate(<span class="hljs-number">100%</span>, <span class="hljs-number">4px</span>);
+    }
+
+    <span class="hljs-selector-class">.skv-toc--open</span> &amp; {
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+      <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">108</span>, <span class="hljs-number">39</span>, <span class="hljs-number">106</span>, <span class="hljs-number">0.4</span>);
+      <span class="hljs-attribute">transform</span>: translate(<span class="hljs-number">0</span>, <span class="hljs-number">4px</span>);
+    }
+
+    <span class="hljs-selector-class">.skv-toc--open</span><span class="hljs-selector-class">.fixed</span> &amp; {
+      <span class="hljs-attribute">transform</span>: translate(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    }
+
     @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
-      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">position</span>: static;
+      <span class="hljs-attribute">height</span>: auto;
+      <span class="hljs-attribute">transform</span>: none;
+      <span class="hljs-attribute">width</span>: auto;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span> <span class="hljs-number">1.5rem</span> <span class="hljs-number">1.5rem</span>;
       <span class="hljs-attribute">box-shadow</span>: none;
       <span class="hljs-attribute">display</span>: block;
+
+      * {
+        <span class="hljs-attribute">display</span>: block;
+      }
     }
   }
 
@@ -285,30 +522,71 @@
   }
 
   &amp;__toggle-<span class="hljs-selector-tag">button</span> {
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span> <span class="hljs-number">8px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
     <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$color-yellow</span>;
     <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color-white</span>;
-    <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">180deg</span>);
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">42px</span>;
+    <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">180deg</span>) translateY(-<span class="hljs-number">4px</span>);
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">50px</span>;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>;
     <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">108</span>, <span class="hljs-number">39</span>, <span class="hljs-number">106</span>, <span class="hljs-number">0.4</span>);
     <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../assets/img/arrow-right.svg'</span>);
-    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">1.5rem</span>;
+    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">2rem</span>;
     <span class="hljs-attribute">background-position</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span>;
     <span class="hljs-attribute">background-repeat</span>: no-repeat;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">4</span>;
     <span class="hljs-attribute">position</span>: absolute;
-    <span class="hljs-attribute">left</span>: -<span class="hljs-number">42px</span>;
+    <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">cursor</span>: pointer;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-variable">$reveal-transition-duration</span>,
+      opacity <span class="hljs-variable">$reveal-transition-duration</span>;
+    <span class="hljs-attribute">transition-timing-function</span>: ease-in;
 
+    <span class="hljs-selector-class">.skv-toc--animate-in</span> &amp;,
     <span class="hljs-selector-class">.skv-toc--open</span> &amp; {
-      <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">0deg</span>);
-      <span class="hljs-attribute">left</span>: auto;
-      <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
-      <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">8px</span>;
+      <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">180deg</span>) translateX(-<span class="hljs-number">100%</span>) translateY(-<span class="hljs-number">4px</span>);
+    }
+
+    <span class="hljs-selector-class">.skv-toc--open</span> &amp;,
+    <span class="hljs-selector-class">.skv-toc--animate-out</span> &amp; {
+      <span class="hljs-attribute">display</span>: none;
+    }
+
+    <span class="hljs-selector-class">.fixed</span> &amp; {
+      <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">180deg</span>) translateY(<span class="hljs-number">0</span>);
+      <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">position</span>: fixed;
+    }
+    <span class="hljs-selector-class">.skv-toc--animate-in</span><span class="hljs-selector-class">.fixed</span> &amp;,
+    <span class="hljs-selector-class">.skv-toc--open</span><span class="hljs-selector-class">.fixed</span> &amp; {
+      <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">180deg</span>) translateX(-<span class="hljs-number">100%</span>) translateY(<span class="hljs-number">0</span>);
+    }
+
+    &amp;<span class="hljs-selector-class">.skv-toc__toggle-button--animate-bump</span> {
+      <span class="hljs-attribute">animation</span>: bump <span class="hljs-number">1000ms</span>;
     }
 
     @<span class="hljs-keyword">media</span> (min-width: 767.9999px) {
+      <span class="hljs-attribute">display</span>: none;
+    }
+  }
+
+  &amp;__close-<span class="hljs-selector-tag">button</span> {
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">5px</span>;
+    <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">50px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">background-color</span>: transparent;
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../assets/img/arrow-right.svg'</span>);
+    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">2rem</span>;
+    <span class="hljs-attribute">background-position</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span>;
+
+    @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
       <span class="hljs-attribute">display</span>: none;
     }
   }
@@ -327,8 +605,6 @@
         <span class="hljs-attribute">position</span>: relative;
         <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-purple-dark</span>;
 
-        &amp;:active,
-        &amp;:focus,
         &amp;<span class="hljs-selector-class">.skv-toc__list-item-link--selected</span> {
           <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-black</span>;
           <span class="hljs-attribute">text-decoration</span>: none;
@@ -352,6 +628,24 @@
     }
   }
 }
+
+@keyframes bump {
+  0% {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">50px</span>;
+  }
+  25% {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">57px</span>;
+  }
+  50% {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">50px</span>;
+  }
+  75% {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">57px</span>;
+  }
+  100% {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">50px</span>;
+  }
+}
 </pre>
                             </code>
                             
@@ -368,7 +662,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2 KB</span>
+                    <span class="Meta-value">4.1 KB</span>
                 </li>
             </ul>
         </div>
@@ -385,7 +679,7 @@
             
             <pre>{
   <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Innehåll på denna sida"</span>,
-  <span class="hljs-attr">"pages"</span>: [
+  <span class="hljs-attr">"headings"</span>: [
     {
       <span class="hljs-attr">"title"</span>: <span class="hljs-string">"1 augusti 2018"</span>,
       <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-1augusti2018"</span>
@@ -408,16 +702,16 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-2ada2e48290bad9bb4e8e9d49d64fd29-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc"</span> <span class="hljs-attr">data-js-toc</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__toggle-button"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Öppna innehålls förteckningen<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__wrapper"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__inner"</span>&gt;</span>
     </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> title }}</span><span class="xml">
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4 skv-toc__title"</span>&gt;</span></span><span class="hljs-template-variable">{{ title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
     </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list"</span>&gt;</span>
-      </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> pages}}</span><span class="xml">
+      </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> headings}}</span><span class="xml">
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
         </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> this.active}}</span><span class="xml"> </span><span class="hljs-template-variable">{{ this.title }}</span><span class="xml"> </span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml">
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ this.url }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{
@@ -427,6 +721,9 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
       </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__close-button"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Stäng innehålls förteckningen<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
@@ -437,11 +734,11 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-2ada2e48290bad9bb4e8e9d49d64fd29-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc"</span> <span class="hljs-attr">data-js-toc</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__toggle-button"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Öppna innehålls förteckningen<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__wrapper"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__inner"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4 skv-toc__title"</span>&gt;</span>Innehåll på denna sida<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
@@ -457,6 +754,9 @@
                 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-1juli2019"</span>&gt;</span>1 juli 2019<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__close-button"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Stäng innehålls förteckningen<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         

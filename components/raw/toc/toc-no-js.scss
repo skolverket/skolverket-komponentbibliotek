@@ -1,0 +1,26 @@
+.skv-toc {
+  position: static;
+  right: auto;
+  top: auto;
+  z-index: auto;
+
+  &__toggle-button,
+  &__close-button {
+    display: none;
+  }
+
+  &__inner {
+    height: auto;
+    transform: none;
+    display: block;
+    padding: 1em;
+
+    * {
+      display: block;
+    }
+  }
+  &__toggle-button,
+  &__close-button {
+    display: none;
+  }
+}
