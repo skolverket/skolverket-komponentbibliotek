@@ -11,6 +11,7 @@
     this.isExpanded = false;
     this.hasNotified = false;
     this.fixButton();
+    this.updateToc();
 
     this.setupUI();
     this.registerEvents();
@@ -53,6 +54,7 @@
       }
 
       window.addEventListener('scroll', this.onScroll.bind(this));
+      window.addEventListener('resize', this.fixButton.bind(this));
     },
 
     onScroll() {
