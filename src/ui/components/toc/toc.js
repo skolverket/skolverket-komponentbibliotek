@@ -3,6 +3,7 @@
     this.root = el;
     this.headings = document.querySelectorAll('.toc-heading');
     this.inner = this.root.querySelectorAll('.skv-toc__inner')[0];
+    this.innerHeader = this.inner.querySelectorAll('h2')[0];
     this.tocLinks = this.root.querySelectorAll('.skv-toc__list-item-link');
     this.toggleButton = this.root.querySelectorAll(
       '.skv-toc__toggle-button'
@@ -28,6 +29,7 @@
     setupUI() {
       this.toggleButton.setAttribute('aria-expanded', this.isExpanded);
       this.toggleButton.classList.add(this.classList.tocAnimateBump);
+      this.innerHeader.setAttribute('tabIndex', 0);
     },
 
     registerEvents() {
@@ -86,9 +88,15 @@
       }
       if (this.root.classList.contains(this.classList.tocAnimateOut)) {
         this.root.classList.remove(this.classList.tocAnimateOut);
+        this.toggleButton.focus({
+          preventScroll: true
+        });
       } else {
         this.root.classList.add(this.classList.tocOpen);
         this.root.classList.remove(this.classList.tocAnimateIn);
+        this.innerHeader.focus({
+          preventScroll: true
+        });
       }
     },
 

@@ -80,6 +80,10 @@
   &__title {
     margin-bottom: 0.75rem;
     margin-top: 0;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &__toggle-button {
