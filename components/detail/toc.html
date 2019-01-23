@@ -167,7 +167,55 @@
     <div class="Prose Prose--condensed">
         
         <h1 id="inneh-llsf-rteckning">Innehållsförteckning</h1>
-<p>Ger användaren överblick och möjlighet att hoppa direkt till innehåll på en sida</p>
+<p style="font-size: 20px;">Ger användaren överblick och möjlighet att hoppa direkt till innehåll på en sida</p>
+
+<h2 id="tillg-nglighet-mindre-sk-rm-">Tillgänglighet (Mindre skärm)</h2>
+<p>Följande interaktionsprinciper förväntas av den här komponenten:</p>
+<h3 id="knapptryck-eller-fokus-p-knapp-enter-mellanslag-n-r-inneh-llsf-rteckningen-r-st-ngd">Knapptryck eller fokus på knapp + enter/mellanslag när innehållsförteckningen är stängd</h3>
+<p>Ska fälla ut innehållsförteckningen och fokus sätts på innehållsförteckningen.</p>
+<h3 id="knapptryck-eller-fokus-p-knapp-enter-mellanslag-n-r-inneh-llsf-rteckningen-r-ppen">Knapptryck eller fokus på knapp + enter/mellanslag när innehållsförteckningen är öppen</h3>
+<p>Ska fälla in innehållsförteckningen och fokus sätts på knappen som öppnar innehållsförteckningen.</p>
+<h3 id="klick-p-l-nk">Klick på länk</h3>
+<p>Ska fälla ihop innehållsförteckningen och fokus sätts på rubriken som länken refererar till. Värdet i adressfältet har också uppdaterats med korrekt ankarlänk.</p>
+<h3 id="fokus-p-inneh-ll-escape">Fokus på innehåll + Escape</h3>
+<p>Ska fälla ihop innehållet och sätta fokus på knappen</p>
+<h3 id="fokus-utanf-r-inneh-ll">Fokus utanför innehåll</h3>
+<p>Innehållet lyssnar inte längre på knapptryck</p>
+<h2 id="tillg-nglighet-st-rre-sk-rm-">Tillgänglighet (Större skärm)</h2>
+<h3 id="klick-p-l-nk">Klick på länk</h3>
+<p>Ska sätta fokus på rubriken som länken refererar till. Värdet i adressfältet har också uppdaterats med korrekt ankarlänk.</p>
+<h2 id="f-r-utvecklare">För utvecklare</h2>
+<h3 id="kontext">Kontext</h3>
+<table>
+<thead>
+<tr>
+<th>Egenskap</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>title</strong></td>
+<td>Rubriken för innehållsförteckningen</td>
+</tr>
+<tr>
+<td><strong>headings</strong></td>
+<td>En array med länkobjekt</td>
+</tr>
+<tr>
+<td><strong>– title</strong></td>
+<td>Denna text visas inom länken</td>
+</tr>
+<tr>
+<td><strong>– url</strong></td>
+<td>En ankarlänk som tar användaren till rätt sektion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="no-js">No-js</h3>
+<p>Om man har stängt av javascript så skall man fortfarande kunna ta till sig innehållet. Detta görs genom att inkludera <code>/css/no-js.min.css</code> i <a href="/styleguide/components/detail/head">headern</a> i en noscript-tag.</p>
+<h3 id="print">Print</h3>
+<p>När man skriver ut sidan så visar vi innehållsförteckningen ovanför innehållet. Vi tar även bort knappen.</p>
 
         
     </div>
@@ -456,6 +504,10 @@
     <span class="hljs-attribute">position</span>: static;
   }
 
+  @<span class="hljs-keyword">include</span> media-print {
+    <span class="hljs-attribute">position</span>: static;
+  }
+
   &amp;__inner {
     <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
@@ -524,6 +576,16 @@
         <span class="hljs-attribute">display</span>: block;
       }
     }
+    @<span class="hljs-keyword">include</span> media-print {
+      <span class="hljs-attribute">position</span>: static;
+      <span class="hljs-attribute">transform</span>: none;
+      <span class="hljs-attribute">height</span>: auto;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span> <span class="hljs-number">1.75rem</span>;
+
+      * {
+        <span class="hljs-attribute">display</span>: block;
+      }
+    }
   }
 
   &amp;__title {
@@ -585,6 +647,9 @@
     }
 
     @<span class="hljs-keyword">media</span> (min-width: 767.9999px) {
+      <span class="hljs-attribute">display</span>: none;
+    }
+    @<span class="hljs-keyword">include</span> media-print {
       <span class="hljs-attribute">display</span>: none;
     }
   }
@@ -677,7 +742,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">4.1 KB</span>
+                    <span class="Meta-value">4.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -696,16 +761,60 @@
   <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Innehåll på denna sida"</span>,
   <span class="hljs-attr">"headings"</span>: [
     {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"1 augusti 2018"</span>,
-      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-1augusti2018"</span>
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Darforskaskolorochforskolorarbetamedsakerhetochkrisberedskap"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Därför ska skolor och förskolor arbeta med säkerhet och krisberedskap"</span>
     },
     {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"1 januari 2019"</span>,
-      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-1januari2019"</span>
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Arbetasystematisktmedsakerheten"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Arbeta systematiskt med säkerheten"</span>
     },
     {
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"1 juli 2019"</span>,
-      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-1juli2019"</span>
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Forebyggaincidentersomkanledatillkriser"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Förebygga incidenter som kan leda till kriser"</span>
+    },
+    {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Okakrisberedskapen"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Öka krisberedskapen"</span>
+    },
+    {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Utbildningarochmaterial"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Utbildningar och material"</span>
+    },
+    {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Statsbidragforsakerhetshojandeatgarder2018"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Statsbidrag för säkerhetshöjande åtgärder 2018"</span>
+    },
+    {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Setillattallaharkannedomomlokalerna"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Se till att alla har kännedom om lokalerna"</span>
+    },
+    {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Allpersonalskavetahurlarmetfungerar"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"All personal ska veta hur larmet fungerar"</span>
+    },
+    {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Utarbetarutinerforkommunikation"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Utarbeta rutiner för kommunikation"</span>
+    },
+    {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Ovakrisplanenmedpersonalen"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Öva krisplanen med personalen"</span>
+    },
+    {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Olikahandlingsalternativvidvapnatvald"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Olika handlingsalternativ vid väpnat våld"</span>
+    },
+    {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Videnakutsituation"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Vid en akut situation"</span>
+    },
+    {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Ansvarochbefogenheteriskolforfattningarna"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Ansvar och befogenheter i skolförfattningarna"</span>
+    },
+    {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#h-Diskussionsfragor"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Diskussionsfrågor"</span>
     }
   ]
 }</pre>
@@ -758,15 +867,59 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-1augusti2018"</span>&gt;</span>1 augusti 2018<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Darforskaskolorochforskolorarbetamedsakerhetochkrisberedskap"</span>&gt;</span>Därför ska skolor och förskolor arbeta med säkerhet och krisberedskap<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-1januari2019"</span>&gt;</span>1 januari 2019<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Arbetasystematisktmedsakerheten"</span>&gt;</span>Arbeta systematiskt med säkerheten<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-1juli2019"</span>&gt;</span>1 juli 2019<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Forebyggaincidentersomkanledatillkriser"</span>&gt;</span>Förebygga incidenter som kan leda till kriser<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Okakrisberedskapen"</span>&gt;</span>Öka krisberedskapen<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Utbildningarochmaterial"</span>&gt;</span>Utbildningar och material<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Statsbidragforsakerhetshojandeatgarder2018"</span>&gt;</span>Statsbidrag för säkerhetshöjande åtgärder 2018<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Setillattallaharkannedomomlokalerna"</span>&gt;</span>Se till att alla har kännedom om lokalerna<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Allpersonalskavetahurlarmetfungerar"</span>&gt;</span>All personal ska veta hur larmet fungerar<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Utarbetarutinerforkommunikation"</span>&gt;</span>Utarbeta rutiner för kommunikation<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Ovakrisplanenmedpersonalen"</span>&gt;</span>Öva krisplanen med personalen<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Olikahandlingsalternativvidvapnatvald"</span>&gt;</span>Olika handlingsalternativ vid väpnat våld<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Videnakutsituation"</span>&gt;</span>Vid en akut situation<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Ansvarochbefogenheteriskolforfattningarna"</span>&gt;</span>Ansvar och befogenheter i skolförfattningarna<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__list-item-link text-small"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#h-Diskussionsfragor"</span>&gt;</span>Diskussionsfrågor<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-toc__close-button"</span>&gt;</span>
