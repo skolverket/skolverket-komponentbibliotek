@@ -15,3 +15,12 @@
     display: block;
   }
 }
+
+@include media-print {
+  .d-print-block {
+    display: block;
+  }
+  .d-print-none {
+    display: none;
+  }
+}

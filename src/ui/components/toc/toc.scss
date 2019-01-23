@@ -7,6 +7,10 @@
     position: static;
   }
 
+  @include media-print {
+    position: static;
+  }
+
   &__inner {
     z-index: 2;
     height: 100vh;
@@ -75,6 +79,16 @@
         display: block;
       }
     }
+    @include media-print {
+      position: static;
+      transform: none;
+      height: auto;
+      padding: 1rem 1.75rem;
+
+      * {
+        display: block;
+      }
+    }
   }
 
   &__title {
@@ -136,6 +150,9 @@
     }
 
     @media (min-width: 767.9999px) {
+      display: none;
+    }
+    @include media-print {
       display: none;
     }
   }
