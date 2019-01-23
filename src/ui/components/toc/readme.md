@@ -1,6 +1,10 @@
 # Innehållsförteckning
 
-<p style="font-size: 20px;">Ger användaren överblick och möjlighet att hoppa direkt till innehåll på en sida</p>
+<p style="font-size: 20px;">Ger användaren överblick och möjlighet att hoppa direkt till innehållet.</p>
+
+## Användning
+
+Innehållsförteckning är endast tänkt att användas på en innehållssida/artikelsida
 
 ## Tillgänglighet (Mindre skärm)
 
