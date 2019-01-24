@@ -2,8 +2,8 @@
 // Textual form controls
 //
 
-$color-input: $color-gray !default;
-$color-input-bg: $color-purple-light !default;
+$color-input: $color-gray-text !default;
+$color-input-bg: $color-complement-purple-light !default;
 
 .skv-form-control {
   display: block;
@@ -17,7 +17,7 @@ $color-input-bg: $color-purple-light !default;
   background-clip: padding-box;
   border: 0;
 
-  @include media-min("md") {
+  @include media-min('md') {
     font-size: $font-size-sm;
     line-height: $line-height-sm;
   }
@@ -29,8 +29,8 @@ $color-input-bg: $color-purple-light !default;
   }
 
   &:focus {
-    outline: 2px solid $color-yellow;
-    color: $color-black;
+    outline: 2px solid $color-accent-orange;
+    color: $color-gray-text;
   }
 
   // Placeholder
@@ -47,7 +47,7 @@ $color-input-bg: $color-purple-light !default;
   // don't honor that edge case; we style them as disabled anyway.
   &:disabled,
   &[readonly] {
-    background-color: $color-gray-light;
+    background-color: $color-gray-background;
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 1;
   }
@@ -70,7 +70,7 @@ $color-input-bg: $color-purple-light !default;
     }
 
     &:focus {
-      outline: 2px solid $color-yellow;
+      outline: 2px solid $color-accent-orange;
       border-color: transparent;
     }
   }
@@ -110,7 +110,7 @@ select.skv-form-control {
   }
 
   &[disabled] {
-    background-color: $color-gray-light;
+    background-color: $color-gray-background;
     opacity: 0.6;
   }
 }
@@ -140,7 +140,7 @@ select.skv-form-control {
   font-size: rem(18px);
   line-height: rem(24px);
 
-  @include media-min("md") {
+  @include media-min('md') {
     font-size: $font-size-h4;
     line-height: $line-height-h4;
   }
@@ -152,13 +152,13 @@ select.skv-form-control {
 
 .skv-form-text {
   display: block;
-  color: $color-gray;
+  color: $color-gray-inactive;
   font-style: italic;
   margin-bottom: 0.5rem;
   font-size: rem(16px);
   line-height: rem(24px);
 
-  @include media-min("md") {
+  @include media-min('md') {
     font-size: $font-size-sm;
     line-height: $line-height-sm;
   }
@@ -182,11 +182,11 @@ select.skv-form-control {
   opacity: 0;
 
   &:checked ~ .skv-custom-control__label::before {
-    background-color: $color-purple-dark;
+    background-color: $color-primary-purple;
   }
 
   &:active ~ .skv-custom-control__label::before {
-    background-color: $color-purple;
+    background-color: $color-complement-purple-light;
   }
 
   &:focus ~ .skv-custom-control__label::before {
@@ -195,11 +195,11 @@ select.skv-form-control {
 
   &:disabled {
     ~ .skv-custom-control__label {
-      color: $color-gray;
+      color: $color-gray-inactive;
       cursor: not-allowed;
 
       &::before {
-        background-color: $color-gray-light;
+        background-color: $color-gray-background;
         border: solid 2px rgba(153, 153, 153, 0.4);
       }
     }
@@ -213,7 +213,7 @@ select.skv-form-control {
   font-size: rem(18px);
   line-height: rem(24px);
 
-  @include media-min("md") {
+  @include media-min('md') {
     font-size: $font-size-std;
     line-height: $line-height-std;
   }
@@ -229,8 +229,8 @@ select.skv-form-control {
     width: 1.125rem;
     height: 1.125rem;
     background-color: $color-white;
-    border: 2px solid $color-purple-dark;
-    content: "";
+    border: 2px solid $color-primary-purple;
+    content: '';
   }
 
   // Foreground (icon)
@@ -246,7 +246,7 @@ select.skv-form-control {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 0.875rem;
-    content: "";
+    content: '';
   }
 }
 
@@ -258,7 +258,7 @@ select.skv-form-control {
 
   .skv-custom-control__input:checked ~ .skv-custom-control__label {
     &::after {
-      background-image: url("../assets/img/tick-white.svg");
+      background-image: url('../assets/img/tick-white.svg');
     }
   }
 }
@@ -274,7 +274,7 @@ select.skv-form-control {
       background-color: $color-white;
     }
     &::after {
-      background-image: url("../assets/img/radio-checked.svg");
+      background-image: url('../assets/img/radio-checked.svg');
       background-size: 0.75rem;
     }
   }

@@ -1,19 +1,55 @@
-$color-blue-light: #EFF4F4;
-$color-blue-lighter: #DCEAEA;
-$color-blue: #0079C2;
+$color-primary-purple: #692859;
+$color-primary-green: #00424c;
+
+$color-accent-blue: #99ced4;
+$color-accent-red: #ef7748;
+$color-accent-orange: #f59c00;
+
+$color-background-blue: #dceaea;
+$color-background-blue-lighter: #edf4f4;
+$color-background-blue-light: #f6fafa;
+
+$color-background-red: #fcdbcb;
+$color-background-red-lighter: #fdede5;
+$color-background-red-light: #fef6f2;
+
+$color-background-yellow: #ffe56f;
+$color-background-yellow-lighter: #fff2b7;
+$color-background-yellow-light: #fff8db;
+
+$color-complement-green: #497e89;
+$color-complement-brown: #b1451c;
+$color-complement-purple: #5a235a;
+$color-complement-purple-light: #f8f4f8;
+
+$color-framework-blue: #0079c2;
+$color-framework-red: #cd2126;
+
+$color-gray-background: #f2f2f2;
+$color-gray-border: #d9d9d9;
+$color-gray-text: #262626;
+$color-gray-inactive: #666666;
+
+$color-table-background: #f7f7f7;
+$color-table-border: #e5e5e5;
+
+$color-white: #ffffff;
+
+$color-error: $color-framework-red;
+$color-link: $color-framework-blue;
+
+/* 
+frågetecken 
+reveal.scss:13
+hoverfärg på $color-primary-purple https://skolverket.github.io/styleguide/components/preview/reveal--default.html
+*/
+
+/*
+    länk
+    länk:hover
+    länk:visited
+*/
+
 $color-blue-dark: #005182;
-$color-grass: #386406;
-$color-purple-dark: #692969;
-$color-purple-light: #F8F4F8;
-$color-purple: #E1D4E1;
-$color-black: #000000;
-$color-white: #FFFFFF;
-$color-gray: #666666;
-$color-gray-lighter: #CFCFCF;
-$color-gray-light: #F7F7F7;
-$color-gray-dark: #292929;
-$color-error: #CD2126;
-$color-yellow: #FCB933;
-$color-turq: #178079;
-$color-link: $color-blue;
 $color-link-hover: $color-blue-dark;
+$color-grass: #386406;

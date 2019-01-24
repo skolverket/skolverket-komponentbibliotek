@@ -2,7 +2,6 @@
   cursor: default;
 
   &__headline {
-
     &-link {
       outline: none;
 
@@ -10,13 +9,14 @@
       &:focus {
         text-decoration: underline !important;
         color: $color-white;
-        background-color: $color-yellow;
+        background-color: $color-accent-orange;
       }
 
       &--boxed {
         &:hover,
         &:focus {
-          box-shadow: 0.3em 0 0 $color-yellow, -0.3em 0 0 $color-yellow;
+          box-shadow: 0.3em 0 0 $color-accent-orange,
+            -0.3em 0 0 $color-accent-orange;
         }
       }
 
