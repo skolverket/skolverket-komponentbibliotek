@@ -2,15 +2,15 @@ $reveal-border-radius: 4px;
 $reveal-transition-duration: 300ms;
 
 @mixin reveal-header-active {
-  background: $color-purple-dark;
+  background: $color-primary-purple;
   color: $color-white;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  border: 1px solid $color-purple-dark;
+  border: 1px solid $color-primary-purple;
   transition: background-color 0s;
 
   &:hover {
-    background: darken($color-purple-dark, 4);
+    background: $color-complement-purple;
   }
 }
 
@@ -22,16 +22,16 @@ $reveal-transition-duration: 300ms;
     justify-content: space-between;
     align-items: center;
     padding: 8px 90px 8px 16px;
-    background: $color-blue-light;
-    color: $color-purple-dark;
-    border: 1px solid $color-gray-lighter;
+    background-color: $color-background-blue-lighter;
+    color: $color-primary-purple;
+    border: 1px solid $color-gray-border;
     border-radius: $reveal-border-radius;
     transition-duration: $reveal-transition-duration;
     font-weight: $font-weight-bold;
     position: relative;
 
     &:hover {
-      background: darken($color-blue-light, 4);
+      background-color: $color-background-blue;
     }
 
     &--open {
@@ -40,8 +40,8 @@ $reveal-transition-duration: 300ms;
 
     @include media-print {
       background: $color-white;
-      color: $color-purple-dark;
-      border: 1px solid $color-gray-lighter;
+      color: $color-primary-purple;
+      border: 1px solid $color-gray-border;
     }
   }
 
@@ -70,7 +70,7 @@ $reveal-transition-duration: 300ms;
 
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 3px $color-yellow;
+      box-shadow: 0 0 0 3px $color-accent-orange;
     }
 
     @include media-print {
@@ -79,7 +79,7 @@ $reveal-transition-duration: 300ms;
 
     .skv-reveal__content-toggle & {
       text-align: center;
-      color: $color-purple-dark;
+      color: $color-primary-purple;
     }
 
     &-icon {
@@ -90,7 +90,7 @@ $reveal-transition-duration: 300ms;
       line-height: 1em;
       height: 1em;
 
-      [aria-expanded="true"] &,
+      [aria-expanded='true'] &,
       .skv-reveal__content-toggle & {
         transform: rotate(180deg);
       }
@@ -98,13 +98,13 @@ $reveal-transition-duration: 300ms;
 
     &-text {
       &--open {
-        [aria-expanded="true"] & {
+        [aria-expanded='true'] & {
           display: none;
         }
       }
 
       &--close {
-        [aria-expanded="false"] & {
+        [aria-expanded='false'] & {
           display: none;
         }
       }
@@ -113,8 +113,8 @@ $reveal-transition-duration: 300ms;
 
   &__content {
     padding: 16px;
-    background-color: $color-blue-light;
-    border: 1px solid $color-blue-lighter;
+    background-color: $color-background-blue-lighter;
+    border: 1px solid $color-background-blue-light;
     border-top: none;
     border-radius: 0 0 $reveal-border-radius $reveal-border-radius;
 
@@ -144,7 +144,7 @@ $reveal-transition-duration: 300ms;
       }
 
       .skv-reveal--open & {
-        transition-delay: .1s;
+        transition-delay: 0.1s;
       }
 
       &--open {

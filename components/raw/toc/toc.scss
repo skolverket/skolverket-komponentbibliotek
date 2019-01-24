@@ -104,7 +104,7 @@
     opacity: 1;
     padding: 0;
     border-width: 0 8px 0 0;
-    border-color: $color-yellow;
+    border-color: $color-accent-orange;
     border-style: solid;
     background: $color-white;
     transform: rotate(180deg) translateY(-4px);
@@ -186,10 +186,10 @@
       &-link {
         text-decoration: underline;
         position: relative;
-        color: $color-purple-dark;
+        color: $color-primary-purple;
 
         &.skv-toc__list-item-link--selected {
-          color: $color-black;
+          color: $color-gray-text;
           text-decoration: none;
 
           &:before {
@@ -200,7 +200,7 @@
             height: calc(100% + 6px);
             display: block;
             width: 8px;
-            background-color: $color-yellow;
+            background-color: $color-accent-orange;
 
             @include media-min('md') {
               left: -1.5rem;

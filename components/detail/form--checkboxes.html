@@ -9,14 +9,14 @@
     };
     </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
-    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+    <link rel="shortcut icon" href="../../theme/favicon.ico" type="image/ico">
 
 <link rel="stylesheet" href="../../themes/mandelbrot/css/black.css?cachebust=1.2.0" type="text/css">
 
 <link rel="stylesheet" href="../../theme/main.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Formular: Checkboxes | Skolverkets Komponentbilbiotek v1.1.0</title>
+<title>Formular: Checkboxes | Skolverkets Komponentbilbiotek v1.2.0</title>
 
 </head>
 <body>
@@ -40,7 +40,7 @@
 </svg>
 
     </button>
-    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.1.0</a>
+    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.2.0</a>
   </div>
 
   <div class="Header__links">
@@ -217,8 +217,8 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
 <span class="hljs-comment">// Textual form controls</span>
 <span class="hljs-comment">//</span>
 
-<span class="hljs-variable">$color-input</span>: <span class="hljs-variable">$color-gray</span> !default;
-<span class="hljs-variable">$color-input-bg</span>: <span class="hljs-variable">$color-purple-light</span> !default;
+<span class="hljs-variable">$color-input</span>: <span class="hljs-variable">$color-gray-text</span> !default;
+<span class="hljs-variable">$color-input-bg</span>: <span class="hljs-variable">$color-complement-purple-light</span> !default;
 
 <span class="hljs-selector-class">.skv-form-control</span> {
   <span class="hljs-attribute">display</span>: block;
@@ -232,7 +232,7 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
   <span class="hljs-attribute">background-clip</span>: padding-box;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
 
-  @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">"md"</span>) {
+  @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
     <span class="hljs-attribute">font-size</span>: <span class="hljs-variable">$font-size-sm</span>;
     <span class="hljs-attribute">line-height</span>: <span class="hljs-variable">$line-height-sm</span>;
   }
@@ -244,8 +244,8 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
   }
 
   &amp;:focus {
-    <span class="hljs-attribute">outline</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$color-yellow</span>;
-    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-black</span>;
+    <span class="hljs-attribute">outline</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$color-accent-orange</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-gray-text</span>;
   }
 
   <span class="hljs-comment">// Placeholder</span>
@@ -262,7 +262,7 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
   <span class="hljs-comment">// don't honor that edge case; we style them as disabled anyway.</span>
   &amp;:disabled,
   &amp;<span class="hljs-selector-attr">[readonly]</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-gray-light</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-gray-background</span>;
     <span class="hljs-comment">// iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.</span>
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
   }
@@ -285,7 +285,7 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
     }
 
     &amp;:focus {
-      <span class="hljs-attribute">outline</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$color-yellow</span>;
+      <span class="hljs-attribute">outline</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$color-accent-orange</span>;
       <span class="hljs-attribute">border-color</span>: transparent;
     }
   }
@@ -325,7 +325,7 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
   }
 
   &amp;<span class="hljs-selector-attr">[disabled]</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-gray-light</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-gray-background</span>;
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.6</span>;
   }
 }
@@ -355,7 +355,7 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
   <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">18px</span>);
   <span class="hljs-attribute">line-height</span>: rem(<span class="hljs-number">24px</span>);
 
-  @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">"md"</span>) {
+  @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
     <span class="hljs-attribute">font-size</span>: <span class="hljs-variable">$font-size-h4</span>;
     <span class="hljs-attribute">line-height</span>: <span class="hljs-variable">$line-height-h4</span>;
   }
@@ -367,13 +367,13 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
 
 <span class="hljs-selector-class">.skv-form-text</span> {
   <span class="hljs-attribute">display</span>: block;
-  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-gray</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-gray-inactive</span>;
   <span class="hljs-attribute">font-style</span>: italic;
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.5rem</span>;
   <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">16px</span>);
   <span class="hljs-attribute">line-height</span>: rem(<span class="hljs-number">24px</span>);
 
-  @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">"md"</span>) {
+  @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
     <span class="hljs-attribute">font-size</span>: <span class="hljs-variable">$font-size-sm</span>;
     <span class="hljs-attribute">line-height</span>: <span class="hljs-variable">$line-height-sm</span>;
   }
@@ -397,11 +397,11 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
 
   &amp;:checked ~ <span class="hljs-selector-class">.skv-custom-control__label</span>::before {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-purple-dark</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-primary-purple</span>;
   }
 
   &amp;:active ~ <span class="hljs-selector-class">.skv-custom-control__label</span>::before {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-purple</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-complement-purple-light</span>;
   }
 
   &amp;:focus ~ <span class="hljs-selector-class">.skv-custom-control__label</span>::before {
@@ -410,11 +410,11 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
 
   &amp;:disabled {
     ~ <span class="hljs-selector-class">.skv-custom-control__label</span> {
-      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-gray</span>;
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-gray-inactive</span>;
       <span class="hljs-attribute">cursor</span>: not-allowed;
 
       &amp;::before {
-        <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-gray-light</span>;
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-gray-background</span>;
         <span class="hljs-attribute">border</span>: solid <span class="hljs-number">2px</span> rgba(<span class="hljs-number">153</span>, <span class="hljs-number">153</span>, <span class="hljs-number">153</span>, <span class="hljs-number">0.4</span>);
       }
     }
@@ -428,7 +428,7 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
   <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">18px</span>);
   <span class="hljs-attribute">line-height</span>: rem(<span class="hljs-number">24px</span>);
 
-  @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">"md"</span>) {
+  @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
     <span class="hljs-attribute">font-size</span>: <span class="hljs-variable">$font-size-std</span>;
     <span class="hljs-attribute">line-height</span>: <span class="hljs-variable">$line-height-std</span>;
   }
@@ -444,8 +444,8 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
     <span class="hljs-attribute">width</span>: <span class="hljs-number">1.125rem</span>;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">1.125rem</span>;
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-white</span>;
-    <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$color-purple-dark</span>;
-    <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$color-primary-purple</span>;
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>;
   }
 
   <span class="hljs-comment">// Foreground (icon)</span>
@@ -461,7 +461,7 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
     <span class="hljs-attribute">background-repeat</span>: no-repeat;
     <span class="hljs-attribute">background-position</span>: center center;
     <span class="hljs-attribute">background-size</span>: <span class="hljs-number">0.875rem</span>;
-    <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>;
   }
 }
 
@@ -473,7 +473,7 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
 
   <span class="hljs-selector-class">.skv-custom-control__input</span>:checked ~ <span class="hljs-selector-class">.skv-custom-control__label</span> {
     &amp;::after {
-      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../assets/img/tick-white.svg"</span>);
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../assets/img/tick-white.svg'</span>);
     }
   }
 }
@@ -489,7 +489,7 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
       <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-white</span>;
     }
     &amp;::after {
-      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../assets/img/radio-checked.svg"</span>);
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../assets/img/radio-checked.svg'</span>);
       <span class="hljs-attribute">background-size</span>: <span class="hljs-number">0.75rem</span>;
     }
   }
@@ -735,6 +735,16 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/visuell-identitet/farger.html" data-pjax>
                 <span>Färger</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/visuell-identitet/favicon.html" data-pjax>
+                <span>Favicon</span>
                 
             </a>
         </li>
@@ -2085,6 +2095,30 @@ Komponenten använder webbläsarens <code>&lt;select&gt;</code>-element i bakgru
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="favicon.html" data-pjax>
+                <span>Favicon</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         

@@ -9,14 +9,14 @@
     };
     </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
-    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+    <link rel="shortcut icon" href="../../theme/favicon.ico" type="image/ico">
 
 <link rel="stylesheet" href="../../themes/mandelbrot/css/black.css?cachebust=1.2.0" type="text/css">
 
 <link rel="stylesheet" href="../../theme/main.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Knappar: Theme Secondary | Skolverkets Komponentbilbiotek v1.1.0</title>
+<title>Knappar: Theme Secondary | Skolverkets Komponentbilbiotek v1.2.0</title>
 
 </head>
 <body>
@@ -40,7 +40,7 @@
 </svg>
 
     </button>
-    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.1.0</a>
+    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.2.0</a>
   </div>
 
   <div class="Header__links">
@@ -224,7 +224,7 @@
   <span class="hljs-attribute">font-size</span>: <span class="hljs-variable">$font-size-std</span>;
   <span class="hljs-attribute">line-height</span>: <span class="hljs-variable">$line-height-std</span>;
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0.1875rem</span>;
-  <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">2s</span> ease-in-out;
+  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.2s</span> ease-in-out;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-white</span>;
 
   &amp;:hover {
@@ -234,8 +234,8 @@
   &amp;:focus,
   &amp;<span class="hljs-selector-class">.focus</span> {
     <span class="hljs-attribute">outline</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-variable">$color-yellow</span>;
-    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$color-yellow</span>;
+    <span class="hljs-attribute">box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-variable">$color-accent-orange</span>;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$color-accent-orange</span>;
 
     &amp;:hover {
       <span class="hljs-attribute">box-shadow</span>: none;
@@ -245,8 +245,8 @@
   <span class="hljs-comment">// Disabled comes first so active can properly restyle</span>
   &amp;--disabled,
   &amp;:disabled {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-gray-light</span>;
-    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-gray</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-gray-background</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-gray-inactive</span>;
     <span class="hljs-attribute">cursor</span>: not-allowed;
     <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid transparent;
 
@@ -254,13 +254,13 @@
     &amp;:focus {
       <span class="hljs-attribute">box-shadow</span>: none;
       <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid transparent;
-      <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-gray-light</span>;
+      <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-gray-background</span>;
     }
   }
 
   &amp;:active,
   &amp;<span class="hljs-selector-class">.active</span> {
-    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-variable">$color-yellow</span>;
+    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-variable">$color-accent-orange</span>;
   }
 
   <span class="hljs-comment">// Opinionated: add "hand" cursor to non-disabled .btn elements</span>
@@ -270,14 +270,14 @@
 
   &amp;--primary {
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-white</span>;
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-purple-dark</span>;
-    <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$color-purple-dark</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-primary-purple</span>;
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$color-primary-purple</span>;
   }
 
   &amp;--secondary {
-    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-purple-dark</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-primary-purple</span>;
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-white</span>;
-    <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$color-purple</span>;
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$color-complement-purple-light</span>;
   }
 
   &amp;--<span class="hljs-selector-tag">small</span> {
@@ -292,12 +292,11 @@
 
     &amp;:focus,
     &amp;<span class="hljs-selector-class">.focus</span> {
-
     }
 
     <span class="hljs-comment">// Vertically space out multiple block buttons</span>
     + <span class="hljs-selector-class">.skv-btn--block</span> {
-      <span class="hljs-attribute">margin-top</span>: .<span class="hljs-number">5rem</span>;
+      <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0.5rem</span>;
     }
   }
 
@@ -313,14 +312,14 @@
 
     &amp;:hover {
       <span class="hljs-attribute">box-shadow</span>: none;
-      <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-purple-light</span>;
+      <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-complement-purple-light</span>;
     }
 
     &amp;:focus,
     &amp;<span class="hljs-selector-class">.focus</span> {
-      <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-purple-light</span>;
+      <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-complement-purple-light</span>;
       <span class="hljs-attribute">box-shadow</span>: none;
-      <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$color-yellow</span>;
+      <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$color-accent-orange</span>;
     }
 
     &amp;--<span class="hljs-attribute">right</span> {
@@ -346,7 +345,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.4 KB</span>
+                    <span class="Meta-value">2.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -559,6 +558,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/visuell-identitet/farger.html" data-pjax>
                 <span>Färger</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/visuell-identitet/favicon.html" data-pjax>
+                <span>Favicon</span>
                 
             </a>
         </li>
@@ -1909,6 +1918,30 @@
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="favicon.html" data-pjax>
+                <span>Favicon</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         

@@ -9,14 +9,14 @@
     };
     </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
-    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+    <link rel="shortcut icon" href="../../theme/favicon.ico" type="image/ico">
 
 <link rel="stylesheet" href="../../themes/mandelbrot/css/black.css?cachebust=1.2.0" type="text/css">
 
 <link rel="stylesheet" href="../../theme/main.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Sektionsnavigering | Skolverkets Komponentbilbiotek v1.1.0</title>
+<title>Sektionsnavigering | Skolverkets Komponentbilbiotek v1.2.0</title>
 
 </head>
 <body>
@@ -40,7 +40,7 @@
 </svg>
 
     </button>
-    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.1.0</a>
+    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.2.0</a>
   </div>
 
   <div class="Header__links">
@@ -199,75 +199,71 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
-                                <pre><span class="hljs-variable">$label-padding-tb</span>: .<span class="hljs-number">375rem</span>;
-<span class="hljs-variable">$label-padding-tb-md</span>: .<span class="hljs-number">75rem</span>;
+                                <pre><span class="hljs-variable">$label-padding-tb</span>: <span class="hljs-number">0.375rem</span>;
+<span class="hljs-variable">$label-padding-tb-md</span>: <span class="hljs-number">0.75rem</span>;
 
 <span class="hljs-selector-class">.skv-section-navigation</span> {
   <span class="hljs-attribute">position</span>: relative;
-  <span class="hljs-attribute">padding-top</span>: .<span class="hljs-number">875rem</span>;
-  <span class="hljs-attribute">padding-bottom</span>: .<span class="hljs-number">875rem</span>;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0.875rem</span>;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">0.875rem</span>;
 
   &amp;__label {
     <span class="hljs-attribute">display</span>: inline-block;
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">margin-bottom</span>: #{<span class="hljs-number">2</span>*<span class="hljs-variable">$label-padding-tb</span>};
-    <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$label-padding-tb</span> <span class="hljs-number">1.125rem</span> <span class="hljs-variable">$label-padding-tb</span> .<span class="hljs-number">75rem</span>;
+    <span class="hljs-attribute">margin-bottom</span>: #{<span class="hljs-number">2</span> * <span class="hljs-variable">$label-padding-tb</span>};
+    <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$label-padding-tb</span> <span class="hljs-number">1.125rem</span> <span class="hljs-variable">$label-padding-tb</span> <span class="hljs-number">0.75rem</span>;
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-white</span>;
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-purple-dark</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-primary-purple</span>;
     <span class="hljs-attribute">border-top-right-radius</span>: <span class="hljs-number">1.125rem</span>;
 
     @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
-      <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$label-padding-tb-md</span> <span class="hljs-number">1.25rem</span> <span class="hljs-variable">$label-padding-tb-md</span> .<span class="hljs-number">875rem</span>;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$label-padding-tb-md</span> <span class="hljs-number">1.25rem</span> <span class="hljs-variable">$label-padding-tb-md</span> <span class="hljs-number">0.875rem</span>;
     }
 
     &amp;--overlap {
       <span class="hljs-attribute">position</span>: absolute;
-      <span class="hljs-attribute">top</span>: calc(-.<span class="hljs-number">875rem</span> - <span class="hljs-number">1.625rem</span> - #{<span class="hljs-number">2</span>*<span class="hljs-variable">$label-padding-tb</span>}); <span class="hljs-comment">// 1.625rem is line height</span>
+      <span class="hljs-attribute">top</span>: calc(
+        -<span class="hljs-number">0.875rem</span> - <span class="hljs-number">1.625rem</span> - #{<span class="hljs-number">2</span> * <span class="hljs-variable">$label-padding-tb</span>}
+      ); <span class="hljs-comment">// 1.625rem is line height</span>
       <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
-
       @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
-        <span class="hljs-attribute">top</span>: calc(-.<span class="hljs-number">875rem</span> - <span class="hljs-number">2rem</span> - #{<span class="hljs-number">2</span>*<span class="hljs-variable">$label-padding-tb-md</span>}); <span class="hljs-comment">// 2rem is line height</span>
+        <span class="hljs-attribute">top</span>: calc(-<span class="hljs-number">0.875rem</span> - <span class="hljs-number">2rem</span> - #{<span class="hljs-number">2</span> * <span class="hljs-variable">$label-padding-tb-md</span>});
+        <span class="hljs-comment">// 2rem is line height</span>
       }
     }
   }
-
   &amp;__box {
     <span class="hljs-attribute">display</span>: flex;
-
     &amp;-item {
       <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-      <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-purple-light</span>;
-      <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$color-purple</span>;
-
+      <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-complement-purple-light</span>;
+      <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$color-complement-purple-light</span>;
       @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
         <span class="hljs-attribute">min-height</span>: <span class="hljs-number">7rem</span>;
-        <span class="hljs-attribute">margin</span>: .<span class="hljs-number">875rem</span> <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0.875rem</span> <span class="hljs-number">0</span>;
         <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">0</span>;
         <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-white</span>;
-
-        &amp;:hover, &amp;:focus {
-          <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$color-purple</span>;
+        &amp;:hover,
+        &amp;:focus {
+          <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$color-complement-purple-light</span>;
         }
       }
-
-
       @<span class="hljs-keyword">include</span> media-max(<span class="hljs-string">'md'</span>) {
         &amp;--no-<span class="hljs-attribute">border</span> {
           <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">0</span>;
-          &amp;:hover, &amp;:focus {
+          &amp;:hover,
+          &amp;:focus {
             <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">0</span>;
           }
         }
       }
-
       &amp;-<span class="hljs-selector-tag">link</span> {
         <span class="hljs-attribute">display</span>: block;
-        <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-purple-dark</span>;
+        <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-primary-purple</span>;
         <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">20px</span>);
         <span class="hljs-attribute">line-height</span>: rem(<span class="hljs-number">26px</span>);
         <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$font-weight-bold</span>;
         <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.6875rem</span> <span class="hljs-number">0</span>;
-
         @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
           <span class="hljs-attribute">display</span>: flex;
           <span class="hljs-attribute">align-items</span>: center;
@@ -277,25 +273,22 @@
           <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
           <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid transparent;
           <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-number">14px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">108</span>, <span class="hljs-number">39</span>, <span class="hljs-number">106</span>, <span class="hljs-number">0.25</span>);
-          <span class="hljs-attribute">transition</span>: box-shadow .<span class="hljs-number">15s</span> ease-in-out;
-
+          <span class="hljs-attribute">transition</span>: box-shadow <span class="hljs-number">0.15s</span> ease-in-out;
           &amp;:hover,
           &amp;:focus {
-            <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$color-purple-dark</span>;
+            <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$color-primary-purple</span>;
             <span class="hljs-attribute">outline</span>: none;
             <span class="hljs-attribute">box-shadow</span>: none;
           }
-
           &amp; &gt; <span class="hljs-selector-class">.icon-arrow</span> {
             <span class="hljs-attribute">display</span>: none;
           }
         }
-
         &amp;:hover,
         &amp;:focus,
         &amp;:active,
         &amp;:active:focus {
-          <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-purple-dark</span>;
+          <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-primary-purple</span>;
         }
       }
     }
@@ -317,7 +310,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.5 KB</span>
+                    <span class="Meta-value">2.6 KB</span>
                 </li>
             </ul>
         </div>
@@ -618,6 +611,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/visuell-identitet/farger.html" data-pjax>
                 <span>Färger</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/visuell-identitet/favicon.html" data-pjax>
+                <span>Favicon</span>
                 
             </a>
         </li>
@@ -1968,6 +1971,30 @@
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="favicon.html" data-pjax>
+                <span>Favicon</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         

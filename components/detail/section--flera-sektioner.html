@@ -9,14 +9,14 @@
     };
     </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
-    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+    <link rel="shortcut icon" href="../../theme/favicon.ico" type="image/ico">
 
 <link rel="stylesheet" href="../../themes/mandelbrot/css/black.css?cachebust=1.2.0" type="text/css">
 
 <link rel="stylesheet" href="../../theme/main.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Sektion: Flera Sektioner | Skolverkets Komponentbilbiotek v1.1.0</title>
+<title>Sektion: Flera Sektioner | Skolverkets Komponentbilbiotek v1.2.0</title>
 
 </head>
 <body>
@@ -40,7 +40,7 @@
 </svg>
 
     </button>
-    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.1.0</a>
+    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.2.0</a>
   </div>
 
   <div class="Header__links">
@@ -211,7 +211,7 @@
   }
 
   + <span class="hljs-selector-class">.skv-section</span> {
-    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$color-purple</span>;
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$color-complement-purple-light</span>;
   }
 
   &amp;__header {
@@ -240,7 +240,7 @@
         <span class="hljs-attribute">z-index</span>: <span class="hljs-number">0</span>;
         <span class="hljs-attribute">height</span>: <span class="hljs-number">3px</span>;
         <span class="hljs-attribute">transform</span>: translateY(-<span class="hljs-number">50%</span>);
-        <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-purple</span>;
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-complement-purple-light</span>;
 
         @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'lg'</span>) {
           <span class="hljs-attribute">position</span>: static;
@@ -276,12 +276,12 @@
     @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'lg'</span>) {
       <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0%</span>;
       <span class="hljs-attribute">flex-basis</span>: <span class="hljs-number">0%</span>;
-      <span class="hljs-attribute">margin-left</span>: <span class="hljs-variable">$grid-gutter</span> * <span class="hljs-number">2</span>
+      <span class="hljs-attribute">margin-left</span>: <span class="hljs-variable">$grid-gutter</span> * <span class="hljs-number">2</span>;
     }
   }
 
   &amp;--boxed {
-    @include box-padding;
+    @<span class="hljs-keyword">include</span> box-padding;
   }
 
   &amp;--compact-<span class="hljs-attribute">padding</span> {
@@ -547,6 +547,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/visuell-identitet/farger.html" data-pjax>
                 <span>Färger</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/visuell-identitet/favicon.html" data-pjax>
+                <span>Favicon</span>
                 
             </a>
         </li>
@@ -1897,6 +1907,30 @@
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="favicon.html" data-pjax>
+                <span>Favicon</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         

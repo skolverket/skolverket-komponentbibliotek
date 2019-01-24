@@ -9,14 +9,14 @@
     };
     </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
-    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+    <link rel="shortcut icon" href="../../theme/favicon.ico" type="image/ico">
 
 <link rel="stylesheet" href="../../themes/mandelbrot/css/black.css?cachebust=1.2.0" type="text/css">
 
 <link rel="stylesheet" href="../../theme/main.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Hero: Default | Skolverkets Komponentbilbiotek v1.1.0</title>
+<title>Hero: Default | Skolverkets Komponentbilbiotek v1.2.0</title>
 
 </head>
 <body>
@@ -40,7 +40,7 @@
 </svg>
 
     </button>
-    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.1.0</a>
+    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.2.0</a>
   </div>
 
   <div class="Header__links">
@@ -232,13 +232,13 @@
         <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.25rem</span>;
         <span class="hljs-attribute">line-height</span>: <span class="hljs-number">2.1</span>;
         <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$font-weight-bold</span>;
-        <span class="hljs-attribute">margin-left</span>: .<span class="hljs-number">5rem</span>;
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0.5rem</span>;
         <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-white</span>;
 
         @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
           <span class="hljs-attribute">font-size</span>: <span class="hljs-variable">$font-size-h1</span>;
           <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.7</span>;
-          <span class="hljs-attribute">margin-left</span>: .<span class="hljs-number">875rem</span>;
+          <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0.875rem</span>;
         }
 
         &amp;:hover {
@@ -251,19 +251,20 @@
         }
 
         &amp;-stripe {
-          <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-turq</span>;
-          <span class="hljs-attribute">padding</span>: .<span class="hljs-number">375rem</span> <span class="hljs-number">0</span>;
+          <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-primary-green</span>;
+          <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.375rem</span> <span class="hljs-number">0</span>;
           <span class="hljs-attribute">box-decoration-break</span>: clone; <span class="hljs-comment">// Firefox fix ???</span>
-          <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">8px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$color-turq</span>, -<span class="hljs-number">8px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$color-turq</span>;
+          <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">8px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$color-primary-green</span>,
+            -<span class="hljs-number">8px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$color-primary-green</span>;
 
           @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
-            <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">14px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$color-turq</span>, -<span class="hljs-number">14px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$color-turq</span>;
+            <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">14px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$color-primary-green</span>,
+              -<span class="hljs-number">14px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-variable">$color-primary-green</span>;
           }
         }
       }
     }
   }
-
 
   &amp;--overlap {
     @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'lg'</span>) {
@@ -530,6 +531,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/visuell-identitet/farger.html" data-pjax>
                 <span>Färger</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/visuell-identitet/favicon.html" data-pjax>
+                <span>Favicon</span>
                 
             </a>
         </li>
@@ -1880,6 +1891,30 @@
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="favicon.html" data-pjax>
+                <span>Favicon</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         

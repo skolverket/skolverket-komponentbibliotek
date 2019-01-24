@@ -4,7 +4,7 @@
   }
 
   + .skv-section {
-    border-top: 1px solid $color-purple;
+    border-top: 1px solid $color-complement-purple-light;
   }
 
   &__header {
@@ -33,7 +33,7 @@
         z-index: 0;
         height: 3px;
         transform: translateY(-50%);
-        background-color: $color-purple;
+        background-color: $color-complement-purple-light;
 
         @include media-min('lg') {
           position: static;
@@ -69,7 +69,7 @@
     @include media-min('lg') {
       flex: 1 1 0%;
       flex-basis: 0%;
-      margin-left: $grid-gutter * 2
+      margin-left: $grid-gutter * 2;
     }
   }
 
