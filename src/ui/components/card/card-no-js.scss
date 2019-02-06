@@ -13,10 +13,19 @@
       line-height: 1.2em;
 
       &:focus {
+        color: $color-gray-text;
         text-decoration: underline;
-        color: $color-white;
         box-shadow: 0 0 0 3px $color-accent-orange;
         background: $color-accent-orange;
+      }
+
+      .skv-card:hover &,
+      .skv-card--focused & {
+        text-decoration: none;
+      }
+
+      &:hover {
+        text-decoration: underline !important;
       }
     }
   }

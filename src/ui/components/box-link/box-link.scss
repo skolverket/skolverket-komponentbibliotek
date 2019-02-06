@@ -50,6 +50,7 @@
   &__content {
     color: $color-white;
     padding: 30px;
+    z-index: 1;
 
     @include media-max('sm') {
       padding: 20px;
@@ -72,7 +73,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
 
     &--pattern {
       &-green-squares {

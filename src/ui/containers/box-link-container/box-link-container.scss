@@ -1,16 +1,16 @@
 .skv-box-link-container {
   list-style: none;
   padding: 0;
-  margin: 20px -10px;
+  margin: -15px;
   display: flex;
-  width: calc(100% + 20px);
+  width: calc(100% + 30px);
 
   @include media-max('md') {
     flex-direction: column;
   }
 
   @include media-max('sm') {
-    margin: 10px -10px;
+    margin: 15px -15px;
   }
 
   @include media-print {
@@ -18,7 +18,7 @@
   }
 
   &__item {
-    padding: 10px;
+    padding: 15px;
     width: 50%;
 
     @include media-max('md') {

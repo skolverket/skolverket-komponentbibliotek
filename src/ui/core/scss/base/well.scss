@@ -4,6 +4,9 @@
 .Body--purple {
   background: #F8F4F8;
 }
+.Body--blue {
+  background: $color-background-blue-light;
+}
 .Body--purple.Body--padded {
   padding: 40px;
 }
