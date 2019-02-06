@@ -1,0 +1,38 @@
+.skv-card-container {
+  list-style: none;
+  padding: 60px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: $color-background-blue-light;
+
+  @include media-max('lg') {
+    padding: 30px;
+  }
+
+  @include media-max('md') {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  @include media-print {
+    flex-direction: row;
+  }
+
+  &__item {
+    padding: 10px;
+    width: 33.33%;
+
+    @include media-max('lg') {
+      width: 50%;
+    }
+
+    @include media-max('md') {
+      width: 100%;
+    }
+
+    @include media-print {
+      width: 50%;
+    }
+  }
+}

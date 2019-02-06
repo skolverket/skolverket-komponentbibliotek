@@ -1,0 +1,38 @@
+.skv-card {
+  background-color: $color-white;
+  height: 100%;
+  min-height: 300px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--focused {
+    box-shadow: 0 0 0 3px $color-accent-orange;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__headline {
+    margin: 0;
+
+    &-link {
+      outline: none;
+      color: $color-primary-purple;
+      font-size: 20px;
+      line-height: 1.2em;
+
+      .skv-card:hover &,
+      .skv-card--focused & {
+        text-decoration: underline;
+        color: $color-primary-purple;
+      }
+    }
+  }
+}

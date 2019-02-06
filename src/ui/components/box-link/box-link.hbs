@@ -1,4 +1,4 @@
-<div class="skv-box-link" data-js-box-link>
+<div class="skv-box-link" data-js-accessible-link data-js-accessible-link-focus-class="skv-box-link--focused">
   <figure class="skv-box-link__figure">
     {{#eq layout 'imageLink' }}
       <img class="skv-box-link__image" src="{{ ../image.src }}@1x.jpg" srcset="{{ ../image.src }}@1x.jpg 600w, {{ ../image.src }}@2x.jpg 1200w" sizes="auto" alt="{{ image.alt }}"/>
@@ -8,7 +8,7 @@
   </figure>
   <div class="skv-box-link__content{{#eq layout 'textLink' }} skv-box-link__content--center{{/eq}}">
     <h2 class="skv-box-link__headline">
-      <a class="skv-box-link__headline-link{{#eq layout 'imageLink' }} skv-box-link__headline-link--boxed{{/eq}}" href="{{ url }}" data-js-box-link-headline-link>
+      <a class="skv-box-link__headline-link{{#eq layout 'imageLink' }} skv-box-link__headline-link--boxed{{/eq}}" href="{{ url }}" data-js-accessible-link-url>
         {{ headline }}
         {{#eq linkType 'external' }}
           {{> @icon name='external' inline=true }}

@@ -1,0 +1,70 @@
+const status = require('../../../dev/fractal/fractal-component-status')
+
+const linkTypes = {
+  internal: 'internal',
+  external: 'external',
+  anchor: 'anchor'
+}
+
+module.exports = {
+  status: status.prototype,
+  name: 'kort',
+  handle: 'card',
+  context: {
+    url: '#',
+    image: null,
+    linkType:linkTypes.internal,
+    headline: 'Så förbättrade Dalhemsskolan elevernas resultat',
+    teaser: 'Mellan 2016 och 2018 deltog Dalhemsskolan i Skolverkets satsning Samverkan för bästa skola. Tio medarbetare berättar hur de utvecklat verksamheten för att bättre kunna möta elevernas behov.'
+  },
+  variants: [
+    {
+      name: 'image',
+      context: {
+        image: {
+          src: '/styleguide/tmp/img/graphics/student.jpg',
+          alt: 'Tabeller'
+        },
+        linkType:linkTypes.external,
+        headline: 'Skillnader mellan provresultat och betyg i gymnasieskolan',
+        teaser: null
+      }
+    },
+    {
+      name: 'with-graphics-charts',
+      context: {
+        image: {
+          src: '/styleguide/tmp/img/graphics/graphics-charts.png',
+          alt: 'Tabeller'
+        },
+        linkType:linkTypes.internal,
+        headline: 'Statistik över betyg inom gymnasieskolan 2018',
+        teaser: null
+      }
+    },
+    {
+      name: 'with-graphics-computer',
+      context: {
+        image: {
+          src: '/styleguide/tmp/img/graphics/graphics-computer.png',
+          alt: 'Tabeller'
+        },
+        linkType:linkTypes.internal,
+        headline: 'Identitet, jämställdhet och digitalisering i förskolan',
+        teaser: null
+      }
+    },
+    {
+      name: 'with-graphics-calendar',
+      context: {
+        image: {
+          src: '/styleguide/tmp/img/graphics/graphics-calendar.png',
+          alt: 'Tabeller'
+        },
+        linkType:linkTypes.internal,
+        headline: 'Webbinarium om Specialpedagogik för lärande',
+        teaser: null
+      }
+    }
+  ]
+}
