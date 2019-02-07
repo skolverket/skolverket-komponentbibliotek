@@ -3,6 +3,7 @@
     <img class="skv-card__image" src="{{ image.src }}" alt="{{ image.alt }}"/>
   {{/if}}
   <div class="skv-card__content{{#eq layout 'textLink' }} skv-card__content--center{{/eq}}">
+    {{#if preHeadline }}<span class="skv-card__pre-headline">{{ preHeadline }}</span>{{/if}}
     <h2 class="skv-card__headline">
       <a class="skv-card__headline-link{{#eq layout 'imageLink' }} skv-card__headline-link--boxed{{/eq}}" href="{{ url }}" data-js-accessible-link-url>
         {{ headline }}

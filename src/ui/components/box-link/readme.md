@@ -32,9 +32,7 @@ På grund av hur boxen behöver skala om sig i olika format så behöver bilden 
 | <strong>teaser</strong>    | En html-sträng som kan innehålla lätt formaterad text (bold, italic etc) men inte länkar. |
 
 ### Tillgänglighet
-För att kunna göra det möjligt att göra hela ytan klickbar, samt att den skall vara tillgänglig så måste vi ta ta till några specialknep!
-
-Komponenten lyssnar på att länken (som ligger i rubriken) får fokus. Då kommer skärmläsaren läsa upp det innehållet. Då sätter vi även en `active` style på boxen så det ser ut som vi har fokus på hela boxen. Vi lägger också till ett klick event på boxen som tittar på länkens url och lägger till det värdet på `window.location.href`. 
+Se [Tillgänglighetsanpassade länkar](/styleguide/docs/kod/core/tillganglighetsanpassade-lankar)
 
 ### No-js
 I och med att det krävs javascript för att göra hela boxen klick- och fokusbar (och tillgänglig) så går detta betéendet inte att återskapa om javascript är inaktiverad. Vi ger den därför en annan css så att det inte skall se ut som hela boxen är klickbar när den inte är det.

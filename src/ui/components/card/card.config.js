@@ -14,6 +14,7 @@ module.exports = {
     url: '#',
     image: null,
     linkType:linkTypes.internal,
+    preHeadline: null,
     headline: 'Så förbättrade Dalhemsskolan elevernas resultat',
     teaser: 'Mellan 2016 och 2018 deltog Dalhemsskolan i Skolverkets satsning Samverkan för bästa skola. Tio medarbetare berättar hur de utvecklat verksamheten för att bättre kunna möta elevernas behov.'
   },
@@ -50,6 +51,7 @@ module.exports = {
           alt: 'Tabeller'
         },
         linkType:linkTypes.internal,
+        preHeadline: 'Webbkurs',
         headline: 'Identitet, jämställdhet och digitalisering i förskolan',
         teaser: null
       }
@@ -62,6 +64,7 @@ module.exports = {
           alt: 'Tabeller'
         },
         linkType:linkTypes.internal,
+        preHeadline: '15 januari 2019',
         headline: 'Webbinarium om Specialpedagogik för lärande',
         teaser: null
       }

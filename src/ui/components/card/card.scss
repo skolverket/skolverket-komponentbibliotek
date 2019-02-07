@@ -3,6 +3,11 @@
   height: 100%;
   box-shadow: 0 1px 5px rgba(0,0,0,0.07);
 
+  @include media-print {
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,0.07);
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -17,6 +22,13 @@
 
   &__content {
     padding: 20px;
+  }
+
+  &__pre-headline {
+    line-height: 1em;
+    display: block;
+    font-size: 16px;
+    margin-bottom: .4em;
   }
 
   &__headline {
