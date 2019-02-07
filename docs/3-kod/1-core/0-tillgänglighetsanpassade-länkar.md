@@ -1,15 +1,15 @@
-# Accessible links
-<p style="font-size:20px;">Denna funktion använder vi när vi skapar länkar som innehåller mer än text.</p>
+# Tillgänglighetsanpassade länkar
+<p style="font-size:20px;">(AccessibleLink) Detta javaskriptobjektet använder vi när vi skapar länkar som innehåller mer än text.</p>
 
 ## Problem
-När man skapar länkar som tex innehåller bilder eller annat innehåll som inte är text, så uppstår några problem. Dels blir det svårt för skärmläsare att förmedla sammanhanget för innehållet, men länkarna blir också dåligt indexerade för SEO.
+När man skapar länkar som innehåller tex bilder eller annat innehåll som inte är text, så uppstår några problem. Dels blir det svårt för skärmläsare att förmedla innehållets sammanhang, men länkarna blir också dåligt indexerade för SEO.
 
 ## Lösning
 För att komma runt det här så skapar vi en länk som bara innehåller text, och med hjälp av javascript och css så ökar vi klickytan.
 
 ## Vad behöver jag göra?
 1. Lägg till attributet `[data-js-accessible-link]` på rotelementet som skall se ut som en länk.
-2. Lägg till attributet `[data-js-accessible-link-focus-class]` på rotelementet. Detta är klassen som kommer att sättar på rotelemenetet när man fokuserar på länken.
+2. Lägg till attributet `[data-js-accessible-link-focus-class]` på rotelementet. Detta är klassen som kommer att sättas på rotelemenetet när man fokuserar på länken.
 3. Styla rotelementet med en relevant hovereffekt.
 4. Lägg till attributet `[data-js-accessible-link-url]` på länken inne i rotelementet.
 
