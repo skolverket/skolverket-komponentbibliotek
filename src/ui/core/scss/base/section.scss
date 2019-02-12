@@ -1,0 +1,19 @@
+.skv-section {
+  margin: 60px 0;
+
+  &--small {
+    margin: 30px 0;
+
+    @include media-max('md') {
+      margin: 15px 0;
+    }
+  }
+
+  &--first {
+    margin-top: 0;
+  }
+
+  &--last {
+    margin-bottom: 0;
+  }
+}
