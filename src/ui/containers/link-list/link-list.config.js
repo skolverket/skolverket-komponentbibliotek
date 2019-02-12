@@ -5,12 +5,12 @@ module.exports = {
   name: 'Länklista',
   handle: 'link-list',
   context: {
-    outlined: false,
     title: 'Många frågar om...',
+    isOutlined: false,
     links: [
       {
         url: '#',
-        text: 'Bedömningsportalen'
+        text: 'Bedömningsportalen med längre text'
       },
       {
         url: '#',
@@ -31,7 +31,7 @@ module.exports = {
       name: 'outlined',
       context: {
         title: 'Ta mig till...',
-        outlined: true,
+        isOutlined: true,
         links: [
           {
             url: '#',

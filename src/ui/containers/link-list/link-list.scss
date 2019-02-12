@@ -20,6 +20,10 @@
     max-width: 25%;
     font-size: 20px;
 
+    @include media-max('lg') {
+      padding-right: 20px;
+    }
+
     @include media-max('md') {
       max-width: none;
       margin-bottom: 20px;
@@ -33,14 +37,23 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+
+    @include media-max('md') {
+      margin: -10px;
+    }
   }
 
   &__item {
-    flex-shrink: 0;
     margin: 10px 30px;
+    max-width: 23%;
+
+    @include media-max('lg') {
+      margin: 10px;
+      max-width: 50%;
+    }
 
     @include media-max('md') {
-      margin: 10px 0;
+      max-width: none;
     }
   }
 
