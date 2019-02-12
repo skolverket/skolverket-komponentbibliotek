@@ -12,7 +12,7 @@ Visuellt finns det två utseenden att välja mellan för denna.
 ### Kontext
 | Egenskap                    | Beskrivning |
 |-----------------------------|-------------|
-| <strong>title</strong>      | En rubrik som skrivs ut bredvid navigationen. |
+| <strong>title</strong>      | En rubrik som skrivs ut bredvid navigationen. Denna rubrik är obligatorisk. |
 | <strong>isOutlined</strong> | Ett true/false värde som sätter en linje runt boxen om den är true. Boxed blir fylld om detta värdet är false. |
 | <strong>links</strong>      | En array med länkar. |
 | <strong>links.url</strong>  | Url som en länk går till (enbart interna länkar). |
