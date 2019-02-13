@@ -24,7 +24,7 @@ module.exports = {
       context: {
         image: {
           src: '/styleguide/tmp/img/graphics/student.jpg',
-          alt: 'Tabeller'
+          alt: 'Ung flicka som studerar'
         },
         linkType:linkTypes.external,
         headline: 'Skillnader mellan provresultat och betyg i gymnasieskolan',
@@ -36,7 +36,7 @@ module.exports = {
       context: {
         image: {
           src: '/styleguide/tmp/img/graphics/graphics-charts.png',
-          alt: 'Tabeller'
+          alt: 'Abstrakt grafik på ett diagram'
         },
         linkType:linkTypes.internal,
         headline: 'Statistik över betyg inom gymnasieskolan 2018',
@@ -48,7 +48,7 @@ module.exports = {
       context: {
         image: {
           src: '/styleguide/tmp/img/graphics/graphics-computer.png',
-          alt: 'Tabeller'
+          alt: 'Abstrakt grafik på en dator'
         },
         linkType:linkTypes.internal,
         preHeadline: 'Webbkurs',
@@ -61,7 +61,7 @@ module.exports = {
       context: {
         image: {
           src: '/styleguide/tmp/img/graphics/graphics-calendar.png',
-          alt: 'Tabeller'
+          alt: 'Abstrakt grafik på en kalender'
         },
         linkType:linkTypes.internal,
         preHeadline: '15 januari 2019',
