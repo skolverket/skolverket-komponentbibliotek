@@ -1,0 +1,58 @@
+<nav class="skv-navigation" id="main-navigation">
+  <ul class="skv-navigation__list skv-navigation__list--level-1">
+    {{# each links }}
+    <li
+      class="skv-navigation__list-item {{#if links }} skv-navigation__list-item--has-child-links{{/if}} {{#if isPath }} skv-navigation__list-item--path{{/if}}"
+    >
+      <span
+        class="skv-navigation__list-item-text{{#if isActive }} skv-navigation__list-item-text--active{{/if}} "
+      >
+        {{ text }}
+      </span>
+      {{#if links }} {{> @icon name='expand-more' middle=true }}
+      <ul class="skv-navigation__list skv-navigation__list--level-2">
+        {{# each links }}
+        <li
+          class="skv-navigation__list-item {{#if links }} skv-navigation__list-item--has-child-links{{/if}} {{#if isPath }} skv-navigation__list-item--path{{/if}}"
+        >
+          <a
+            href="{{ url }}"
+            class="skv-navigation__list-item-link{{#if isActive }} skv-navigation__list-item-link--active{{/if}}"
+          >
+            <span>{{ text }}</span>
+          </a>
+          {{#if links }} {{> @icon name='expand-more' middle=true }}
+          <ul
+            class="skv-navigation__list skv-navigation__list--level-3 {{#if isPath }} skv-navigation__list-item--open{{/if}}"
+          >
+            {{# each links }}
+            <li
+              class="skv-navigation__list-item {{#if links }} skv-navigation__list-item--has-child-links{{/if}}"
+            >
+              <a
+                href="{{ url }}"
+                class="skv-navigation__list-item-link{{#if isActive }} skv-navigation__list-item-link--active{{/if}}"
+              >
+                <span>{{ text }}</span>
+              </a>
+            </li>
+            {{/each}}
+          </ul>
+          {{/if}}
+        </li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </li>
+    {{/each}}
+  </ul>
+  <ul class="skv-navigation__utility-list">
+    {{#each utilities }}
+    <li class="skv-navigation__utility-list-item">
+      <a href="{{ uel }}" class="skv-navigation__utility-list-item-{{ type }}">
+        {{ text }}
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+</nav>

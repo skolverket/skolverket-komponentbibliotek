@@ -1,6 +1,4 @@
-$block: 'skv-mobile-menu';
-
-.#{$block} {
+.skv-mobile-menu {
   display: none;
 
   &--open {

@@ -22,34 +22,7 @@ module.exports = {
         text: 'Sök',
         url: '#',
         type: 'search'
-      },
-      {
-        text: 'Meny',
-        url: '#',
-        type: 'mobilemenu'
-      }
-    ],
-    links: [
-      {
-        text: 'Undervisning',
-        url: '#',
-        isActive: true
-      },
-      {
-        text: 'Skolutveckling',
-        url: '#',
-        isActive: false
-      },
-      {
-        text: 'Lagar och regler',
-        url: '#',
-        isActive: false
-      },
-      {
-        text: 'Innehåll A-Ö',
-        url: '#',
-        isActive: false
       }
     ]
   }
-}
+};
