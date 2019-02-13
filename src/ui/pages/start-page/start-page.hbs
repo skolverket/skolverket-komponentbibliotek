@@ -1,9 +1,11 @@
-{{ render '@hero' heroModel merge=true }}
-<div class="container">
-  {{ render '@box-link-container' }}
+<div class="container--header">
+  <div class="container">
+    {{ render '@box-link-container' }}
+  </div>
 </div>
-<div class="container">
+<div class="container container--no-padding">
   <div class="skv-box skv-box--no-padding">
+    {{ render '@card-container' }}
     <div class="skv-section skv-section--boxed">
       <header class="skv-section__header">
         <h2 class="h3 skv-section__header-title"><span class="skv-section__header-title-text">Sektionstitel<span></h2>
@@ -12,7 +14,7 @@
         </div>
       </header>
       <div class="skv-section__body">
-        <img src="http://placehold.it/800x250/ffffff/E8D3E0?text=(Sektionens innehåll)" style="max-width: 100%" />
+        <img src="http://placehold.it/800x250/ffffff/E8D3E0?text=(Sektionens innehåll)" alt="Exempelbild" style="max-width: 100%" />
       </div>
     </div>
   </div>

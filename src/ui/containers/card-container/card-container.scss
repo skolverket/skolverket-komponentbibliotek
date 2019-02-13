@@ -1,16 +1,18 @@
-.skv-box-link-container {
+.skv-card-container {
   list-style: none;
-  padding: 0;
-  margin: -15px;
+  padding: 45px;
   display: flex;
-  width: calc(100% + 30px);
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: $color-background-blue-light;
+
+  @include media-max('lg') {
+    padding: 15px;
+  }
 
   @include media-max('md') {
     flex-direction: column;
-  }
-
-  @include media-max('sm') {
-    margin: 15px -15px;
+    padding: 10px;
   }
 
   @include media-print {
@@ -19,7 +21,11 @@
 
   &__item {
     padding: 15px;
-    width: 50%;
+    width: 33.33%;
+
+    @include media-max('lg') {
+      width: 50%;
+    }
 
     @include media-max('md') {
       width: 100%;

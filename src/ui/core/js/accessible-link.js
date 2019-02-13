@@ -1,17 +1,16 @@
+// For documentation - see /styleguide/docs/kod/core/accessible-links
+
 (() => {
-  const BoxLink = function(el) {
+  const AccessibleLink = function(el) {
     this.root = el
-    this.link = this.root.querySelector('[data-js-box-link-headline-link]')
+    this.link = this.root.querySelector('[data-js-accessible-link-url]')
     this.url = this.link.getAttribute('href')
+    this.rootFocusClass = this.root.getAttribute('data-js-accessible-link-focus-class')
 
     this.registerEvents()
   }
 
-  BoxLink.prototype = {
-
-    classNames: {
-      rootFocus: 'skv-box-link--focused'
-    },
+  AccessibleLink.prototype = {
 
     registerEvents() {
       this.onRootClick = this.onRootClick.bind(this)
@@ -28,19 +27,19 @@
     },
 
     onLinkFocus() {
-      this.root.classList.add(this.classNames.rootFocus)
+      this.root.classList.add(this.rootFocusClass)
     },
 
     onLinkBlur() {
-      this.root.classList.remove(this.classNames.rootFocus)
+      this.root.classList.remove(this.rootFocusClass)
     }
 
   }
 
-  const components = document.querySelectorAll('[data-js-box-link]')
+  const components = document.querySelectorAll('[data-js-accessible-link]')
 
   for(let i=0; i < components.length; i++) {
-    new BoxLink(components[i])
+    new AccessibleLink(components[i])
   }
 
 })()

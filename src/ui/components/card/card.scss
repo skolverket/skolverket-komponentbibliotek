@@ -1,0 +1,54 @@
+.skv-card {
+  background-color: $color-white;
+  height: 100%;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+
+  @include media-print {
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,0.07);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--focused {
+    box-shadow: 0 0 0 3px $color-accent-orange;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__pre-headline {
+    line-height: 1em;
+    display: block;
+    font-size: 16px;
+    margin-bottom: .4em;
+  }
+
+  &__headline {
+    margin: 0;
+
+    &-link {
+      outline: none;
+      color: $color-primary-purple;
+      font-size: 20px;
+      line-height: 1.2em;
+
+      .skv-card:hover &,
+      .skv-card--focused & {
+        text-decoration: underline;
+        color: $color-primary-purple;
+      }
+    }
+  }
+
+  &__teaser {
+    margin: 0;
+  }
+}
