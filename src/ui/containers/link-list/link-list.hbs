@@ -1,0 +1,12 @@
+<div class="link-list{{#if isOutlined }} link-list--outlined{{/if}}">
+  <h3 class="link-list__title">{{ title }}</h3>
+  <ul class="link-list__items">
+  {{#each links }}
+    <li class="link-list__item">
+      <a class="link-list__link" href="{{ url }}">
+        {{ text }} {{> '@icon' name='chevron-right' middle=true }}
+      </a>
+    </li>
+  {{/each}}
+  </ul>
+</div>
