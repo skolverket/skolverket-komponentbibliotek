@@ -534,10 +534,14 @@
       <span class="hljs-attribute">position</span>: fixed;
       <span class="hljs-attribute">top</span>: -<span class="hljs-number">4px</span>;
       <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+
+      @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
+        <span class="hljs-attribute">position</span>: static;
+      }
     }
 
     <span class="hljs-selector-class">.skv-toc--animate-in</span> &amp; {
-      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span> <span class="hljs-number">0</span>;
       <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
       <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">108</span>, <span class="hljs-number">39</span>, <span class="hljs-number">106</span>, <span class="hljs-number">0.4</span>);
       <span class="hljs-attribute">transform</span>: translate(<span class="hljs-number">0</span>, <span class="hljs-number">4px</span>);
@@ -548,14 +552,14 @@
     }
 
     <span class="hljs-selector-class">.skv-toc--animate-out</span> &amp; {
-      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span> <span class="hljs-number">0</span>;
       <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
       <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">108</span>, <span class="hljs-number">39</span>, <span class="hljs-number">106</span>, <span class="hljs-number">0.4</span>);
       <span class="hljs-attribute">transform</span>: translate(<span class="hljs-number">100%</span>, <span class="hljs-number">4px</span>);
     }
 
     <span class="hljs-selector-class">.skv-toc--open</span> &amp; {
-      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span> <span class="hljs-number">0</span>;
       <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
       <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">108</span>, <span class="hljs-number">39</span>, <span class="hljs-number">106</span>, <span class="hljs-number">0.4</span>);
       <span class="hljs-attribute">transform</span>: translate(<span class="hljs-number">0</span>, <span class="hljs-number">4px</span>);
@@ -570,7 +574,7 @@
       <span class="hljs-attribute">height</span>: auto;
       <span class="hljs-attribute">transform</span>: none;
       <span class="hljs-attribute">width</span>: auto;
-      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span> <span class="hljs-number">1.5rem</span> <span class="hljs-number">1.5rem</span>;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span> <span class="hljs-number">0</span> <span class="hljs-number">1.5rem</span>;
       <span class="hljs-attribute">box-shadow</span>: none;
       <span class="hljs-attribute">display</span>: block;
 
@@ -591,8 +595,7 @@
   }
 
   &amp;__title {
-    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.75rem</span>;
-    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">1.33em</span> <span class="hljs-number">0.75em</span>;
 
     &amp;:focus {
       <span class="hljs-attribute">outline</span>: none;
@@ -678,9 +681,21 @@
     <span class="hljs-attribute">list-style</span>: none;
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">overflow-y</span>: auto;
+    <span class="hljs-attribute">height</span>: calc(<span class="hljs-number">100%</span> - <span class="hljs-number">130px</span>);
+    overscroll-behavior: contain;
+
+    <span class="hljs-selector-class">.fixed</span> &amp; {
+      <span class="hljs-attribute">height</span>: calc(<span class="hljs-number">100%</span> - <span class="hljs-number">24px</span>);
+    }
+
+    @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
+      <span class="hljs-attribute">height</span>: calc(<span class="hljs-number">100vh</span> - <span class="hljs-number">100px</span>);
+    }
 
     &amp;-item {
       <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.25rem</span> <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">1.5em</span> <span class="hljs-number">0.5em</span>;
 
       &amp;-<span class="hljs-selector-tag">link</span> {
         <span class="hljs-attribute">text-decoration</span>: underline;
@@ -694,7 +709,7 @@
           &amp;:before {
             <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>;
             <span class="hljs-attribute">position</span>: absolute;
-            <span class="hljs-attribute">left</span>: -<span class="hljs-number">1rem</span>;
+            <span class="hljs-attribute">left</span>: -<span class="hljs-number">1.5rem</span>;
             <span class="hljs-attribute">top</span>: -<span class="hljs-number">3px</span>;
             <span class="hljs-attribute">height</span>: calc(<span class="hljs-number">100%</span> + <span class="hljs-number">6px</span>);
             <span class="hljs-attribute">display</span>: block;
@@ -744,7 +759,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">4.4 KB</span>
+                    <span class="Meta-value">4.7 KB</span>
                 </li>
             </ul>
         </div>
