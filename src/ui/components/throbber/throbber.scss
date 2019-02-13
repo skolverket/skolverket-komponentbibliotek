@@ -1,12 +1,11 @@
 .skv-throbber {
-  width: 600px;
-  height: 30px;
+  width: 300px;
+  height: 15px;
 }
 
 .skv-throbber #throbber__frame {
   fill: none;
 	stroke: #333;
-	stroke-width: 2;
 }
 .skv-throbber #throbber__progress {
 	fill: #99CED4;
