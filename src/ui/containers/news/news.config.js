@@ -5,6 +5,13 @@ module.exports = {
     title: 'Nyhetslista',
     items: [
       {
+        date: '14 april',
+        link: {
+          label: 'Glad påsk!',
+          url: 'glad-pask'
+        }
+      },
+      {
         date: '29 maj 2018',
         link: {
           label: 'Lorem ipsum dolor sit amet',
@@ -16,6 +23,13 @@ module.exports = {
         link: {
           label: 'Amet sit dolor ipsum lorem',
           url: 'amet-sit-dolor-ipsum-lorem'
+        }
+      },
+      {
+        date: '31 december 2018',
+        link: {
+          label: 'Gott nytt år!',
+          url: 'gott-nytt-ar'
         }
       }
     ]
