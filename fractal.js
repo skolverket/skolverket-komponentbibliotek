@@ -12,6 +12,17 @@ fractal.set('project.title', `Skolverkets Komponentbilbiotek v${ pkg.version }${
 fractal.components.engine(hbs)
 fractal.components.set('path', path.join(__dirname, 'src/ui'))
 fractal.components.set('default.preview', '@layout')
+fractal.components.set('statuses', {
+  wip: {
+    label: 'Under Utveckling',
+    color: '#e90303'
+  },
+  done: {
+    label: 'Godkänd',
+    color: '#01A501'
+  }
+})
+fractal.components.set('default.status', null)
 fractal.docs.set('path', path.join(__dirname, 'docs'))
 fractal.web.theme(theme);
 fractal.web.set('static.path', path.join(__dirname, 'dist'))

@@ -1,4 +1,5 @@
 module.exports = {
   name: 'Nyhetslista',
-  handle: 'news-list'
+  handle: 'news-list',
+  status: 'wip'
 }
