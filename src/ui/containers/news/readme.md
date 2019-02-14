@@ -1,3 +1,3 @@
 # Nyhetslista
 
-Presenterar navigationsvägar med ett publiceringsdatum.
+En komponent som listar ett gäng nyheter i kronologisk ordning med en titel och en datumsträng.

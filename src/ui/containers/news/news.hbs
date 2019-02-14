@@ -5,7 +5,7 @@
     {{#each items}}
       <li class="skv-news__list-item">
         <time class="skv-news__list-item-date">{{ date }}</time>
-        {{ render '@nav-link' . merge=true }}
+        {{ render '@nav-link' link merge=true }}
       </li>
     {{/each}}
   </ul>

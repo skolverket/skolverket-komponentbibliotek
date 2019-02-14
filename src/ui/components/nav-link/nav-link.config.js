@@ -2,7 +2,7 @@ module.exports = {
   name: 'Länk',
   handle: 'nav-link',
   context: {
-    href: '#',
+    url: '#',
     label: 'Lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
     icon: 'chevron-right'
   },
