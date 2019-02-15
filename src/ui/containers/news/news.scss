@@ -1,5 +1,5 @@
 .skv-news {
-  padding: 1em;
+  flex: 1;
 
   &__title {
     position: relative;
@@ -25,6 +25,10 @@
   &__list-item {
     padding: .5em 0;
     border-bottom: 1px solid $color-gray-border;
+
+    &:last-child {
+      border-bottom: none;
+    }
 
     &-date {
       display: block;
