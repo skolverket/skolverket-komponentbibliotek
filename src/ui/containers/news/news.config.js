@@ -1,6 +1,7 @@
 module.exports = {
   name: 'Nyhetslista',
   handle: 'news-list',
+  status: 'wip',
   context: {
     title: 'Nyhetslista',
     items: [
