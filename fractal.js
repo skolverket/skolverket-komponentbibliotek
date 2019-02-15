@@ -14,7 +14,7 @@ fractal.components.set('path', path.join(__dirname, 'src/ui'))
 fractal.components.set('default.preview', '@layout')
 fractal.components.set('statuses', {
   wip: {
-    label: 'Under Utveckling',
+    label: 'Testas',
     color: '#e90303'
   },
   done: {
