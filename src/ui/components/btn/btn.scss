@@ -10,7 +10,7 @@
   padding: 0.3725rem 1.3125rem;
   font-size: $font-size-std;
   line-height: $line-height-std;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   background-color: $color-white;
 
   &.focus {
