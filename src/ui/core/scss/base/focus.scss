@@ -1,0 +1,7 @@
+body.show-focus-outlines *:focus {
+  outline: 2px solid $color-accent-orange;
+}
+
+body:not(.show-focus-outlines) *:focus {
+  outline: unset;
+}

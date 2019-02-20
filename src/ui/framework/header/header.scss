@@ -34,6 +34,7 @@
 
       &:focus {
         background: $color-accent-orange;
+        outline: none;
       }
 
       @include media-min('md') {
@@ -179,7 +180,7 @@
         &:focus {
           background: $color-white;
           color: $color-primary-purple;
-          outline: none;
+          outline: none !important;
           text-decoration: none;
 
           &:hover {
