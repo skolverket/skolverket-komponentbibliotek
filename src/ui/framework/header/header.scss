@@ -32,6 +32,10 @@
       width: 134px;
       height: 36px;
 
+      &:focus {
+        background: $color-accent-orange;
+      }
+
       @include media-min('md') {
         width: 160px;
       }
@@ -66,17 +70,28 @@
     padding: 0;
     margin: 0;
 
-    @include media-min('md') {
-      height: 100%;
-    }
-
-    &--absolute {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-    }
-
     &-item {
+      display: flex;
+      align-items: center;
+      margin: 0 1rem;
+      padding: .5em 0;
+      position: relative;
+
+      &--active {
+        color: $color-white;
+        text-decoration: none;
+
+        &::before {
+          border-bottom: 8px solid $color-accent-orange;
+          position: absolute;
+          left: 0;
+          bottom: -4px;
+          height: 8px;
+          width: 100%;
+          content: '';
+        }
+      }
+
       &-listen,
       &-translate,
       &-search,
@@ -96,6 +111,10 @@
         &:active,
         &:active:focus {
           color: $color-primary-purple;
+        }
+
+        &:focus {
+          background-color: $color-accent-orange;
         }
       }
 
@@ -143,36 +162,28 @@
       }
 
       &-link {
-        position: relative;
         display: flex;
-        height: 100%;
-        align-items: center; // center text
-        margin-right: 1.75rem;
+        align-items: center;
+        padding: .5em;
         text-decoration: none;
         color: $color-white;
         font-weight: $font-weight-bold;
         font-size: $font-size-h4;
         line-height: $line-height-h4;
+        border-radius: 3px;
 
         &:hover {
           color: $color-white;
         }
 
-        &--active,
-        &:focus,
-        &:active,
-        &:active:focus {
-          color: $color-white;
+        &:focus {
+          background: $color-white;
+          color: $color-primary-purple;
+          outline: none;
           text-decoration: none;
 
-          &::before {
-            border-bottom: 8px solid $color-accent-orange;
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            height: 8px;
-            width: 100%;
-            content: '';
+          &:hover {
+            text-decoration: underline;
           }
         }
       }

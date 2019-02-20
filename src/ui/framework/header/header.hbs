@@ -54,8 +54,8 @@
       <div class="row">
         <div class="col">
           <div class="skv-header__top-container">
-            <a href="{{ rootUrl }}">
-              <img src="{{ logo.src }}" alt="{{ logo.alt }}" class="skv-header__top-logo" />
+            <a href="{{ rootUrl }}" class="skv-header__top-logo">
+              <img src="{{ logo.src }}" alt="{{ logo.alt }}" />
             </a>
             <ul class="skv-header__list">
               {{#each utilities }}
@@ -76,10 +76,10 @@
       <div class="row">
         <div class="col">
           <div class="skv-header__links-container">
-            <ul class="skv-header__list skv-header__list--absolute">
+            <ul class="skv-header__list">
               {{# each links }}
-              <li class="skv-header__list-item">
-                <a href="{{ url }}" class="skv-header__list-item-link{{#if isActive }} skv-header__list-item-link--active{{/if}}">
+              <li class="skv-header__list-item{{#if isActive }} skv-header__list-item--active{{/if}}">
+                <a href="{{ url }}" class="skv-header__list-item-link">
                   {{ text }}
                 </a>
               </li>
