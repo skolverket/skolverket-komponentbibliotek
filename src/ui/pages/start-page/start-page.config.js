@@ -7,7 +7,7 @@ module.exports = {
       title: 'Gå webbkursen om fritidshemmets uppdrag'
     },
     news: {
-      title: null,
+      title: 'Antons nyheter',
       items: [
         {
           date: '1 april 2019',
