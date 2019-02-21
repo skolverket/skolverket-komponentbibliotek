@@ -13,6 +13,13 @@ module.exports = {
         label: 'Navigera till extern sida',
         icon: 'external'
       }
+    },
+    {
+      label: 'Ljus',
+      name: 'light',
+      context: {
+        theme: 'light'
+      }
     }
   ]
 }

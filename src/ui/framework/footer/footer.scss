@@ -21,10 +21,6 @@
     }
   }
 
-  &__logo {
-    display: block;
-  }
-
   &__description {
     margin-top: 1rem;
     color: $color-complement-purple-light;
@@ -54,15 +50,21 @@
     width: 100%;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 1em 0;
 
     @include media-min('md') {
       flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
       width: auto;
     }
 
+    @include media-min('lg') {
+      justify-content: flex-end;
+    }
+
     &-item {
-      padding: 0.625rem 0.625rem 0.625rem 0;
+      padding: 0.3em;
       border-bottom: 1px solid rgba($color-complement-purple-light, 0.25);
 
       &:last-child {
@@ -80,9 +82,11 @@
 
       &-link {
         width: 100%;
+        padding: .2em;
         text-decoration: none;
         color: $color-white;
         font-weight: $font-weight-bold;
+        font-size: 0.9em;
 
         &:hover {
           color: $color-white;
@@ -91,7 +95,7 @@
 
         &:focus,
         &:active {
-          color: $color-white;
+          color: $color-primary-purple;
         }
 
         &:focus {
@@ -100,21 +104,6 @@
           color: $color-primary-purple;
           background: $color-white;
           fill: $color-primary-purple;
-        }
-
-        &--purple {
-          color: $color-complement-purple-light;
-          font-weight: 400;
-
-          &:hover {
-            color: $color-complement-purple-light;
-          }
-
-          &:focus,
-          &:active,
-          &:active:focus {
-            color: $color-complement-purple-light;
-          }
         }
       }
     }

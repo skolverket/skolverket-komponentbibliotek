@@ -8,7 +8,13 @@ module.exports = {
 			{ label: 'Kontakt', url: '#1' },
 			{ label: 'Om Skolverket', url: '#2' },
 			{ label: 'Våra webbplatser', url: '#3' },
-			{ label: 'Press', url: '#4' }
+			{ label: 'Press', url: '#4' },
+                        { label: 'Lorem', url: '#lorem' },
+                        { label: 'Lorem', url: '#lorem' },
+                        { label: 'Lorem', url: '#lorem' },
+                        { label: 'Lorem', url: '#lorem' },
+                        { label: 'Lorem', url: '#lorem' },
+                        { label: 'Lorem', url: '#lorem' },
 		],
 		links: [
 			{ label: 'Om webbplatsen', url: '#5' },
