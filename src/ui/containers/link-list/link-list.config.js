@@ -1,9 +1,7 @@
-const status = require('../../../dev/fractal/fractal-component-status')
-
 module.exports = {
-  status: status.prototype,
   name: 'Länklista',
   handle: 'link-list',
+  status: 'wip',
   context: {
     title: 'Många frågar om...',
     isOutlined: false,

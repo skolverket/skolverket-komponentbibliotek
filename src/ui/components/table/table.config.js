@@ -1,9 +1,7 @@
-const status = require('../../../dev/fractal/fractal-component-status')
-
 module.exports = {
-  status: status.prototype,
   name: 'Tabell',
   handle: 'table',
+  status: 'done',
   context: {
     title: 'Lorem ipsum dolor sit amet',
     isMinimal: false

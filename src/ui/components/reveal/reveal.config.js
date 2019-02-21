@@ -1,6 +1,7 @@
 module.exports = {
   name: 'Visa/Dölj',
   handle: 'reveal',
+  status: 'done',
   context: {
     id: 1321,
     title: 'Lorem ipsum dolor sit amet',
