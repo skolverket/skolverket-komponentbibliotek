@@ -1,5 +1,7 @@
 <div class="skv-news">
-  {{> @section-heading label=title }}
+  {{#if title}}
+    {{> @section-heading label=title }}
+  {{/if}}
   <ul class="skv-news__list">
     {{#each items}}
       <li class="skv-news__list-item">

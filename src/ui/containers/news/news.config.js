@@ -34,5 +34,14 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  variants: [
+    {
+      name: "Utan titel",
+      handle: "without-title",
+      context: {
+        title: null
+      }
+    }
+  ] 
 }
