@@ -1,6 +1,7 @@
 module.exports = {
   name: 'Innehållsförteckning',
   handle: 'toc',
+  status: 'done',
   context: {
     title: 'Innehåll på denna sida',
     headings: [

@@ -1,4 +1,5 @@
 module.exports = {
+  status: 'done',
   context: {
     background: '/styleguide/tmp/img/bildstartsida.png',
     title: 'En lång rubrik som sträcker sig över flera rader',

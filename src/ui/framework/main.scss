@@ -15,10 +15,14 @@
 "../components/feedback/feedback",
 "../components/hero/hero",
 "../components/icon/icon",
+"../components/nav-link/nav-link",
 "../components/reveal/reveal",
 "../components/section-navigation/section-navigation",
 "../components/section/section",
+"../components/loading-indicator/spinner",
+"../components/loading-indicator/throbber",
 "../components/table/table",
+"../components/section-heading/section-heading",
 "../components/toc/toc";
 
 @import
@@ -26,4 +30,5 @@
 "../containers/card-container/card-container",
 "../containers/content-navigation/content-navigation",
 "../containers/form/form",
-"../containers/link-list/link-list";
+"../containers/link-list/link-list",
+"../containers/news/news";

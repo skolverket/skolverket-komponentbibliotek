@@ -1,5 +1,3 @@
-const status = require('../../../dev/fractal/fractal-component-status')
-
 const linkTypes = {
   internal: 'internal',
   external: 'external',
@@ -7,9 +5,9 @@ const linkTypes = {
 }
 
 module.exports = {
-  status: status.prototype,
   name: 'kort',
   handle: 'card',
+  status: 'wip',
   context: {
     url: '#',
     image: null,
