@@ -1,0 +1,15 @@
+.skv-nav-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: $color-primary-purple;
+  transition: color 250ms;
+
+  &:hover, &:active, &:focus {
+    color: lighten($color-primary-purple, 10%);
+  }
+
+  .skv-icon {
+    vertical-align: middle;
+  }
+}
