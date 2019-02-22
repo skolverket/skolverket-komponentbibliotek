@@ -40,6 +40,10 @@
       font-size: 20px;
       line-height: 1.2em;
 
+      &:focus {
+        outline: none !important;
+      }
+
       .skv-card:hover &,
       .skv-card--focused & {
         text-decoration: underline;
