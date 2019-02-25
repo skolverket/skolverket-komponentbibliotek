@@ -215,19 +215,6 @@
     }
   }
 
-  &amp;__logo {
-    <span class="hljs-attribute">display</span>: block;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">160px</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">36px</span>;
-    <span class="hljs-attribute">font</span>: <span class="hljs-number">0</span>/<span class="hljs-number">0</span> a; <span class="hljs-comment">// zeros out the font size and line-height</span>
-    <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'/styleguide/assets/img/skolverket-logotype-white.svg'</span>);
-    <span class="hljs-attribute">background-repeat</span>: no-repeat;
-    <span class="hljs-attribute">color</span>: transparent;
-    <span class="hljs-attribute">background-color</span>: transparent;
-    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">100%</span>;
-  }
-
   &amp;__description {
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">1rem</span>;
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-complement-purple-light</span>;
@@ -257,15 +244,21 @@
     <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
     <span class="hljs-attribute">list-style</span>: none;
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">1em</span> <span class="hljs-number">0</span>;
 
     @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
       <span class="hljs-attribute">flex-direction</span>: row;
+      <span class="hljs-attribute">flex-wrap</span>: wrap;
+      <span class="hljs-attribute">justify-content</span>: center;
       <span class="hljs-attribute">width</span>: auto;
     }
 
+    @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'lg'</span>) {
+      <span class="hljs-attribute">justify-content</span>: flex-end;
+    }
+
     &amp;-item {
-      <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.625rem</span> <span class="hljs-number">0.625rem</span> <span class="hljs-number">0.625rem</span> <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.3em</span>;
       <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-complement-purple-light</span>, <span class="hljs-number">0.25</span>);
 
       &amp;:last-child {
@@ -283,9 +276,11 @@
 
       &amp;-<span class="hljs-selector-tag">link</span> {
         <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+        <span class="hljs-attribute">padding</span>: .<span class="hljs-number">2em</span>;
         <span class="hljs-attribute">text-decoration</span>: none;
         <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-white</span>;
         <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$font-weight-bold</span>;
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.9em</span>;
 
         &amp;:hover {
           <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-white</span>;
@@ -293,24 +288,16 @@
         }
 
         &amp;:focus,
-        &amp;:active,
-        &amp;:active:focus {
-          <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-white</span>;
+        &amp;:active {
+          <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-primary-purple</span>;
         }
 
-        &amp;--purple {
-          <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-complement-purple-light</span>;
-          <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">400</span>;
-
-          &amp;:hover {
-            <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-complement-purple-light</span>;
-          }
-
-          &amp;:focus,
-          &amp;:active,
-          &amp;:active:focus {
-            <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-complement-purple-light</span>;
-          }
+        &amp;:focus {
+          <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">3px</span>;
+          <span class="hljs-attribute">outline</span>: none <span class="hljs-meta">!important</span>;
+          <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-primary-purple</span>;
+          <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color-white</span>;
+          fill: <span class="hljs-variable">$color-primary-purple</span>;
         }
       }
     }
@@ -332,7 +319,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.5 KB</span>
+                    <span class="Meta-value">2.1 KB</span>
                 </li>
             </ul>
         </div>
@@ -392,7 +379,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-12 col-lg-5"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__header-container"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__logo"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span></span><span class="hljs-template-variable">{{ logoAlt }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__logo"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/styleguide/assets/img/skolverket-logotype-white.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ logoAlt }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> /&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__description text-standard"</span>&gt;</span></span><span class="hljs-template-variable">{{description}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -401,17 +388,14 @@
           <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation"</span>&gt;</span>
             </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> navigation}}</span><span class="xml">
             <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{url}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item-link text-standard"</span>&gt;</span>
-                </span><span class="hljs-template-variable">{{label}}</span><span class="xml">
-                <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-arrow icon-arrow--white"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
-              <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+              </span><span class="hljs-template-variable">{{ render '<a href="nav-link--light.html">@nav-link--light</a>' this merge=true }}</span><span class="xml">
             <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
             </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
           <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation"</span>&gt;</span>
             </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> links}}</span><span class="xml">
             <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item skv-footer__navigation-item--no-border-bottom"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item-link skv-footer__navigation-item-link--purple text-small"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item-link text-small"</span>&gt;</span>
                 </span><span class="hljs-template-variable">{{label}}</span><span class="xml">
               <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -430,60 +414,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-9ca6e37e1e4f7b551b740717ab97509a-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-12 col-lg-5"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__header-container"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__logo"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Skolverket<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__description text-standard"</span>&gt;</span>Skolverket arbetar för att alla barn, ungdomar och vuxna ska få en utbildning av god kvalitet.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-12 col-lg-7"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-container"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item-link text-standard"</span>&gt;</span>
-                                Kontakt
-                                <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-arrow icon-arrow--white"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item-link text-standard"</span>&gt;</span>
-                                Om Skolverket
-                                <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-arrow icon-arrow--white"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item-link text-standard"</span>&gt;</span>
-                                Våra webbplatser
-                                <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-arrow icon-arrow--white"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item-link text-standard"</span>&gt;</span>
-                                Press
-                                <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-arrow icon-arrow--white"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item skv-footer__navigation-item--no-border-bottom"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item-link skv-footer__navigation-item-link--purple text-small"</span>&gt;</span>
-                                Om webbplatsen
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item skv-footer__navigation-item--no-border-bottom"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-footer__navigation-item-link skv-footer__navigation-item-link--purple text-small"</span>&gt;</span>
-                                Kakor
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span></pre>
+        <pre><!-- Error rendering component:  --></pre>
         
     </code>
 </div>
@@ -521,6 +452,15 @@
             <strong class="Meta-key">Filesystem Path:</strong>
             <span class="Meta-value">src/ui/framework/footer/footer.hbs</span>
         </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(1)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="nav-link--light.html">@<span>nav-link--light</span></a>
+            
+            </span>
+        </li class="Meta-item">
         
         
         <li class="Meta-item">
@@ -1268,8 +1208,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="btn--theme-secondary.html" data-pjax>
-                <span>Theme secondary</span>
+            <a class="Tree-entityLink" href="btn--secondary.html" data-pjax>
+                <span>Secondary</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1616,6 +1556,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="nav-link--extern.html" data-pjax>
                 <span>Extern</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="nav-link--light.html" data-pjax>
+                <span>Light</span>
                 
             </a>
         </li>
@@ -2263,6 +2213,16 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="navigation.html" data-pjax>
+                <span>Navigation</span>
+                
+            </a>
         </li>
         
     

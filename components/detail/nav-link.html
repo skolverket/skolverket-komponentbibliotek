@@ -191,6 +191,7 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.skv-nav-link</span> {
+  <span class="hljs-attribute">padding</span>: .<span class="hljs-number">2em</span>;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.2rem</span>;
   <span class="hljs-attribute">font-weight</span>: bold;
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.2</span>;
@@ -199,6 +200,21 @@
 
   &amp;:hover, &amp;:active, &amp;:focus {
     <span class="hljs-attribute">color</span>: lighten(<span class="hljs-variable">$color-primary-purple</span>, <span class="hljs-number">10%</span>);
+  }
+
+  &amp;--light {
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-white</span>;
+
+    &amp;:hover {
+      <span class="hljs-attribute">color</span>: darken(<span class="hljs-variable">$color-white</span>, <span class="hljs-number">10%</span>);
+    }
+
+    &amp;:focus {
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-primary-purple</span>;
+      <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color-white</span>;
+      <span class="hljs-attribute">outline</span>: none <span class="hljs-meta">!important</span>;
+      <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">3px</span>;
+    }
   }
 
   <span class="hljs-selector-class">.skv-icon</span> {
@@ -221,7 +237,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">270 Bytes</span>
+                    <span class="Meta-value">538 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -249,7 +265,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-20d56e0d90993cd548034423cea3481a-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-nav-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ url }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-nav-link </span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> theme}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">skv-nav-link--</span></span></span><span class="hljs-template-variable">{{theme}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ url }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
   </span><span class="hljs-template-variable">{{ label }}</span><span class="xml">
   </span><span class="hljs-template-variable">{{&gt; <a href="icon.html">@icon</a> name=icon inline=true label=null }}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span></pre>
@@ -261,7 +277,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-20d56e0d90993cd548034423cea3481a-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-nav-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-nav-link "</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
     Lorem ipsum dolor sit amet lorem ipsum dolor sit amet
 
     <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--inline"</span>&gt;</span>
@@ -285,7 +301,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(2)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="nav-link--default.html">
@@ -294,6 +310,10 @@
             
                 <a href="nav-link--extern.html">
                     <span>Extern</span>
+                </a>, 
+            
+                <a href="nav-link--light.html">
+                    <span>Ljus</span>
                 </a>
             
             </span>
@@ -332,12 +352,14 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(2)</em>:</strong>
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(3)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="news-list.html">@<span>news-list</span></a>, 
             
-                <a href="news-list--utan-titel.html">@<span>news-list--utan-titel</span></a>
+                <a href="news-list--utan-titel.html">@<span>news-list--utan-titel</span></a>, 
+            
+                <a href="footer.html">@<span>footer</span></a>
             
             </span>
         </li>
@@ -1078,8 +1100,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="btn--theme-secondary.html" data-pjax>
-                <span>Theme secondary</span>
+            <a class="Tree-entityLink" href="btn--secondary.html" data-pjax>
+                <span>Secondary</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1426,6 +1448,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="nav-link--extern.html" data-pjax>
                 <span>Extern</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="nav-link--light.html" data-pjax>
+                <span>Light</span>
                 
             </a>
         </li>
@@ -2073,6 +2105,16 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="navigation.html" data-pjax>
+                <span>Navigation</span>
+                
+            </a>
         </li>
         
     

@@ -220,26 +220,17 @@
   <span class="hljs-attribute">vertical-align</span>: middle;
   user-<span class="hljs-selector-tag">select</span>: none;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid transparent;
+  <span class="hljs-attribute">border-radius</span>: .<span class="hljs-number">2em</span>;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.3725rem</span> <span class="hljs-number">1.3125rem</span>;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-variable">$font-size-std</span>;
   <span class="hljs-attribute">line-height</span>: <span class="hljs-variable">$line-height-std</span>;
-  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0.1875rem</span>;
-  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.2s</span> ease-in-out;
+  <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-white</span>;
 
-  &amp;:hover {
-    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">7px</span> <span class="hljs-number">14px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">108</span>, <span class="hljs-number">39</span>, <span class="hljs-number">106</span>, <span class="hljs-number">0.4</span>);
-  }
-
-  &amp;:focus,
   &amp;<span class="hljs-selector-class">.focus</span> {
     <span class="hljs-attribute">outline</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-variable">$color-accent-orange</span>;
     <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$color-accent-orange</span>;
-
-    &amp;:hover {
-      <span class="hljs-attribute">box-shadow</span>: none;
-    }
   }
 
   <span class="hljs-comment">// Disabled comes first so active can properly restyle</span>
@@ -248,12 +239,10 @@
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-gray-background</span>;
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-gray-inactive</span>;
     <span class="hljs-attribute">cursor</span>: not-allowed;
-    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid transparent;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$color-gray-border</span>;
 
     &amp;:hover,
     &amp;:focus {
-      <span class="hljs-attribute">box-shadow</span>: none;
-      <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid transparent;
       <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-gray-background</span>;
     }
   }
@@ -272,12 +261,20 @@
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-white</span>;
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-primary-purple</span>;
     <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$color-primary-purple</span>;
+
+    &amp;:hover {
+      <span class="hljs-attribute">background-color</span>: darken(<span class="hljs-variable">$color-primary-purple</span>, <span class="hljs-number">5%</span>);
+    }
   }
 
   &amp;--secondary {
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-primary-purple</span>;
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-white</span>;
-    <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$color-complement-purple-light</span>;
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$color-primary-purple</span>;
+
+    &amp;:hover {
+      <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color-gray-background</span>;
+    }
   }
 
   &amp;--<span class="hljs-selector-tag">small</span> {
@@ -289,10 +286,6 @@
   &amp;--block {
     <span class="hljs-attribute">display</span>: block;
     <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-
-    &amp;:focus,
-    &amp;<span class="hljs-selector-class">.focus</span> {
-    }
 
     <span class="hljs-comment">// Vertically space out multiple block buttons</span>
     + <span class="hljs-selector-class">.skv-btn--block</span> {
@@ -315,7 +308,6 @@
       <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-complement-purple-light</span>;
     }
 
-    &amp;:focus,
     &amp;<span class="hljs-selector-class">.focus</span> {
       <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-complement-purple-light</span>;
       <span class="hljs-attribute">box-shadow</span>: none;
@@ -345,7 +337,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.5 KB</span>
+                    <span class="Meta-value">2.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -409,8 +401,8 @@
                     <span>Default</span>
                 </a>, 
             
-                <a href="btn--theme-secondary.html">
-                    <span>Theme Secondary</span>
+                <a href="btn--secondary.html">
+                    <span>Secondary</span>
                 </a>, 
             
                 <a href="">
@@ -1191,8 +1183,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="btn--theme-secondary.html" data-pjax>
-                <span>Theme secondary</span>
+            <a class="Tree-entityLink" href="btn--secondary.html" data-pjax>
+                <span>Secondary</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1539,6 +1531,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="nav-link--extern.html" data-pjax>
                 <span>Extern</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="nav-link--light.html" data-pjax>
+                <span>Light</span>
                 
             </a>
         </li>
@@ -2186,6 +2188,16 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="navigation.html" data-pjax>
+                <span>Navigation</span>
+                
+            </a>
         </li>
         
     
