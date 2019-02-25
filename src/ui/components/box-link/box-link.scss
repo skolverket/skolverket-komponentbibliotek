@@ -26,6 +26,10 @@
       font-size: 30px;
       line-height: 1.2em;
 
+      &:focus {
+        outline: none !important;
+      }
+
       &--boxed {
         position: relative;
         background-color: $color-primary-purple;

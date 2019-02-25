@@ -1,0 +1,15 @@
+.skv-header {
+  .skv-header__top {
+    border-top: 0;
+    background-color: $color-primary-purple;
+  }
+
+  path {
+    fill: $color-white;
+  }
+}
+
+.skv-header__list-item-mobilemenu,
+.skv-header__list-item-search {
+  display: none;
+}
