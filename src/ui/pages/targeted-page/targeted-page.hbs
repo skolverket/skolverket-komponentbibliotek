@@ -1,0 +1,15 @@
+<div class="container--header">
+  <div class="container">
+    <h2 class="h2 margin-tp-reset">{{pageTitle}}</h2>
+    <p class="text-large">{{pageSubtitle}}</p>
+    {{ render '@box-link-container' }}
+  </div>
+</div>
+<div class="container container--no-padding">
+  <div class="skv-box skv-box--no-padding">
+    {{ render '@content-navigation' contentNav }}
+    <div class="skv-section skv-section--boxed skv-section--first">
+      {{ render '@news-list' news merge=true }}
+    </div>
+  </div>
+</div>
