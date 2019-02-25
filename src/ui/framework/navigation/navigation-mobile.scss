@@ -29,7 +29,7 @@
   .skv-navigation__main-toggle-button {
     position: absolute;
     top: -60px;
-    right: 7px;
+    right: 0;
     z-index: 5;
     border: 0;
     padding: 0.375rem 0.75rem 0.375rem calc(12px + 1.5rem);
@@ -162,7 +162,7 @@
     }
 
     &:last-child {
-      border-bottom: 1px #491b3e;
+      border-bottom: 1px solid #491b3e;
     }
 
     &.skv-navigation__list-item--path {
@@ -296,8 +296,8 @@
 
   .skv-navigation__utility-list {
     display: none;
-    padding: 0;
-    margin: 0;
+    padding: 0 0 0 15px;
+    margin: 5px 0 0;
     list-style: none;
 
     .skv-navigation--open & {
@@ -307,7 +307,6 @@
   .skv-navigation__utility-list-item {
     a {
       display: inline-block;
-      width: 100%;
       font-size: $font-size-xs;
       line-height: $line-height-sm;
       color: $color-white;
@@ -329,6 +328,10 @@
     }
     &-translate {
       background-image: url('../assets/img/language-white.svg');
+      margin-right: 0.4375rem;
+    }
+    &-content-a-to-o {
+      background-image: url('../assets/img/A-O-white.svg');
       margin-right: 0.4375rem;
     }
   }

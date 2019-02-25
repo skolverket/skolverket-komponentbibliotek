@@ -9,6 +9,11 @@ module.exports = {
     },
     utilities: [
       {
+        text: 'Innehåll A-Ö',
+        url: '#',
+        type: 'content-a-to-o'
+      },
+      {
         text: 'Lyssna',
         url: '#',
         type: 'listen'
