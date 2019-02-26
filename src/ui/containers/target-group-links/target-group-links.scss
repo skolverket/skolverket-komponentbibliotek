@@ -9,9 +9,16 @@
 
   &__item {
     cursor: pointer;
-    width: 50%;
+    width: 100%;
     padding: 10px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+
+    @include media-min('sm') {
+      text-align: center;
+      display: block;
+      width: 50%;
+    }
 
     @include media-min('lg') {
       width: 25%;
@@ -22,7 +29,11 @@
     width: 70px;
     height: auto;
     display: block;
-    margin: 0 auto 10px;
+    margin: 0 10px 10px 0;
+
+    @include media-min('sm') {
+      margin: 0 auto 10px;
+    }
 
     @include media-min('md') {
       width: 100px;
