@@ -1,0 +1,38 @@
+.target-group-links {
+  list-style: none;
+  margin: -10px;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &__item {
+    cursor: pointer;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+
+    @include media-min('lg') {
+      width: 25%;
+    }
+  }
+
+  &__img {
+    width: 70px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+
+    @include media-min('md') {
+      width: 100px;
+    }
+  }
+
+  .skv-nav-link {
+
+    .target-group-links__item:hover & {
+      text-decoration: underline;
+    }
+  }
+}
