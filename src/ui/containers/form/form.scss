@@ -64,6 +64,7 @@ $color-input-bg: $color-complement-purple-light !default;
     background-size: 1.5rem;
     background-color: #fcf4f4;
     margin-bottom: 0.5rem;
+    outline: 100% solid gold;
 
     &-textarea {
       background-position: top 0.5rem right 0.625rem;
@@ -189,8 +190,8 @@ select.skv-form-control {
     background-color: $color-complement-purple-light;
   }
 
-  &:focus ~ .skv-custom-control__label::before {
-    outline: 1px solid #4d90fe;
+  &:focus ~ .skv-custom-control__label {
+    background-color: $color-accent-orange;
   }
 
   &:disabled {
@@ -208,10 +209,12 @@ select.skv-form-control {
 
 .skv-custom-control__label {
   margin-bottom: 0;
+  padding: 2px;
   font-weight: 400;
   cursor: pointer;
   font-size: rem(18px);
   line-height: rem(24px);
+  border-radius: 3px;
 
   @include media-min('md') {
     font-size: $font-size-std;

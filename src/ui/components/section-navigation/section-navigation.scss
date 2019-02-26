@@ -42,16 +42,14 @@ $label-padding-tb-md: 0.75rem;
         margin: 0.875rem 0;
         border-bottom: 0;
         background-color: $color-white;
-        &:hover,
-        &:focus {
+        &:hover {
           border-bottom: 1px solid $color-complement-purple-light;
         }
       }
       @include media-max('md') {
         &--no-border {
           border-bottom: 0;
-          &:hover,
-          &:focus {
+          &:hover {
             border-bottom: 0;
           }
         }
@@ -73,11 +71,8 @@ $label-padding-tb-md: 0.75rem;
           border: 2px solid transparent;
           box-shadow: 0 6px 14px 0 rgba(108, 39, 106, 0.25);
           transition: box-shadow 0.15s ease-in-out;
-          &:hover,
-          &:focus {
+          &:hover {
             border: 2px solid $color-primary-purple;
-            outline: none;
-            box-shadow: none;
           }
           & > .icon-arrow {
             display: none;
