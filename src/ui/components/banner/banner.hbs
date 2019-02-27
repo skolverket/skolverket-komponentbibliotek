@@ -1,0 +1,17 @@
+<div class="skv-banner {{#if global}}skv-banner--global{{else}}skv-banner--local{{/if}} skv-banner--{{theme}}">
+  <div class="skv-banner__inner-container">
+    <div class="skv-banner__icon-container">
+      {{> @icon name=icon inline=true label=null }}
+    </div>
+    <p class="skv-banner__body">
+      {{ body }}
+    </p>
+
+    {{#if dismissable}}
+      <button class="skv-banner__dismiss">
+        Stäng
+        {{> @icon name='close' }}
+      </button>
+    {{/if}}
+  </div>
+</div>
