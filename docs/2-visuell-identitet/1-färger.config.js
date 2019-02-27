@@ -138,6 +138,11 @@ module.exports = {
             name: 'Felmeddelande',
             hex: '#CD2126',
             variable: '$color-framework-red'
+          },
+          {
+            name: 'Konfirmeringsmeddelande',
+            hex: '#1D9A18',
+            variable: '$color-framework-green'
           }
         ]
       },
