@@ -3,8 +3,8 @@ module.exports = {
   handle: 'targeted-page',
   preview: '@layout--page',
   context: {
-    pageTitle: 'Skolbibliotekarie',
-    pageSubtitle: 'Som skolbibliotekarie kan du vara en resurs i undervisning och skolutveckling. Här finns stöd för ditt arbete.',
+    title: 'Skolbibliotekarie',
+    ingress: 'Som skolbibliotekarie kan du vara en resurs i undervisning och skolutveckling. Här finns stöd för ditt arbete.',
     linkList: {
       title: "Ta mig till...",
       isOutlined: true,
