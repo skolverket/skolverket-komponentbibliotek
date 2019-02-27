@@ -3,8 +3,26 @@ module.exports = {
   handle: 'targeted-page',
   preview: '@layout--page',
   context: {
-    pageTitle: 'Skolbibliotekare',
+    pageTitle: 'Skolbibliotekarie',
     pageSubtitle: 'Som skolbibliotekarie kan du vara en resurs i undervisning och skolutveckling. Här finns stöd för ditt arbete.',
+    linkList: {
+      title: "Ta mig till...",
+      isOutlined: true,
+      links: [
+        {
+          text: "Lorem Ipsum",
+          url: "#",
+        },
+        {
+          text: "Beställ nya böcker",
+          url: "#",
+        },
+        {
+          text: "Dolor Sit Amet",
+          url: "#",
+        }
+      ]
+    },
     contentNav: {
       title: 'Stöd för skolbibliotek',
       columnOne: [
@@ -15,9 +33,6 @@ module.exports = {
         { label: 'Skapa skolbibliotek för alla' },
         { label: 'Stärk elevers digitala kompetens' }
       ]
-    },
-    news: {
-      title: 'Aktuellt'
     }
   }
 }
