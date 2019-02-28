@@ -7,8 +7,8 @@
 
   <body class="Body--blue show-focus-outlines">
     {{ render '@inline-svg' }}
-    {{#if globalBanner}}
-      {{ render '@banner' globalBanner merge=true }}
+    {{#if _target.context.globalBanner}}
+      {{ render '@banner' _target.context.globalBanner merge=true }}
     {{/if}}
     {{ render '@header' }}
     {{{ yield }}}

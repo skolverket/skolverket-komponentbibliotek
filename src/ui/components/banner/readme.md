@@ -15,7 +15,6 @@ Den lokala bannern är tänkt att höra till ett mindre kontext, t ex ett formul
 | Attribut    | Beskrivning                                               |
 |-------------|-----------------------------------------------------------|
 | message     | Meddelandet                                               |
-| theme       | `info`, `warning`, `error`, `confirm`                     |
-| icon        | Namnet på den ikon som visas till vänster om meddelandet  |
+| type        | `info`, `warning`, `error`, `confirm`                     |
 | local       | Sätt bannerns beteende som global eller inte              |
 | dismissable | Ska bannern gå att ta bort via en knapp i högerkanten?    |

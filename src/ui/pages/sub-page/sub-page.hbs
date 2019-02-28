@@ -1,7 +1,7 @@
 {{> @hero title=heroTitle background='/styleguide/tmp/img/understart.png' }}
 {{ render '@section-navigation' sectionNavModel merge=true }}
 <div class="container">
-  <div class="skv-box skv-box--relative">
+  <div class="skv-box skv-box--relative skv-box--no-padding">
     {{ render '@banner' banner merge=true }}
     <div class="skv-section skv-section--boxed">
       <header class="skv-section__header">
@@ -14,7 +14,9 @@
         <img src="http://placehold.it/800x250/ffffff/E8D3E0?text=(Sektionens innehåll)" style="max-width: 100%" />
       </div>
     </div>
-    {{ render '@reveal' reveal merge=true }}
-    {{ render '@table' }}
+    <div class="skv-section skv-section--boxed">
+      {{ render '@reveal' reveal merge=true }}
+      {{ render '@table' }}
+    </div>
   </div>
 </div>

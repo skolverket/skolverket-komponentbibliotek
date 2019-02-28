@@ -1,14 +1,15 @@
 module.exports = {
   name: 'Understartsida',
-  preview: '@layout--page--with-banner',
+  preview: '@layout--page',
   context: {
     heroTitle: null,
     sectionNavModel: {
       shouldOverlap: true
     },
     globalBanner: {
-      global: true,
-      dismissable: true
+      type: 'error',
+      dismissable: true,
+      local: false
     },
     banner: {
       dismissable: false
