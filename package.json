@@ -44,6 +44,7 @@
     "gulp-uglify": "~3.0.0",
     "parallelshell": "~3.0.2",
     "release-it": "^8.2.0",
+    "stickybits": "^3.6.2",
     "vinyl-buffer": "~1.0.0",
     "vinyl-source-stream": "~1.1.0",
     "watchify": "~3.9.0"

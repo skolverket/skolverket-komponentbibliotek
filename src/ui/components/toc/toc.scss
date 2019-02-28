@@ -2,6 +2,7 @@
   position: absolute;
   right: 0;
   z-index: 1;
+  max-width: 360px;
 
   @include media-min('md') {
     position: static;
