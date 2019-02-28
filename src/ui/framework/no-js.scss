@@ -1,8 +1,15 @@
-@import '../core/scss/variables/colors';
+@import
+'../core/scss/variables/colors';
 
-@import '../components/reveal/reveal-no-js',
-  '../components/box-link/box-link-no-js', '../components/card/card-no-js',
-  '../components/toc/toc-no-js';
+@import
+'../components/reveal/reveal-no-js',
+'../components/box-link/box-link-no-js',
+'../components/card/card-no-js',
+'../components/toc/toc-no-js';
 
-@import '../framework/header/header-no-js.scss';
-@import '../framework/navigation/navigation-no-js';
+@import
+'../containers/target-group-links/target-group-links-no-js';
+
+@import
+'../framework/header/header-no-js.scss',
+'../framework/navigation/navigation-no-js';

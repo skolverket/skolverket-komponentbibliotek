@@ -5,6 +5,7 @@
   width: 100%;
   flex-wrap: wrap;
   background-color: $color-background-blue-light;
+  margin: 0;
 
   @include media-max('lg') {
     padding: 15px;
