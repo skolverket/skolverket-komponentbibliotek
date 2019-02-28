@@ -174,6 +174,9 @@ require('classlist-polyfill');
         button.setAttribute('aria-expanded', false);
         childList.classList.add('skv-navigation__list-item--collapse');
         this.root.removeAttribute('style');
+        if (this.isDesktop()) {
+          this.root.classList.remove('skv-navigation--open');
+        }
       }
     },
 
@@ -233,7 +236,7 @@ require('classlist-polyfill');
         !srcElementClassList.contains('skv-navigation--open') &&
         event.propertyName === 'height'
       ) {
-        this.closeOpenLists(this.root);
+        this.closeOpenLists('.skv-navigation');
       }
     }
   };

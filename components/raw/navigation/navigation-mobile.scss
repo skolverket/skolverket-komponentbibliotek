@@ -5,7 +5,7 @@
 
   .skv-navigation {
     position: relative;
-    z-index: 2;
+    z-index: 100;
     margin-bottom: -1.8rem;
     background-color: transparent;
     transition: background-color 300ms ease-in-out;
@@ -99,15 +99,7 @@
 
       > .skv-navigation__list-item--path {
         > .skv-navigation__list-toggle-button {
-          &:before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            border-left: 8px solid $color-background-yellow;
-            height: 100%;
-            content: '';
-          }
+          border-bottom: 8px solid $color-accent-orange;
         }
       }
     }
@@ -140,7 +132,7 @@
 
   .skv-navigation__list-item {
     position: relative;
-    border-top: 1px solid #491b3e;
+    border-top: 1px solid $color-gray-text;
     transition: border-top-color 300ms;
 
     > .skv-icon {
@@ -161,8 +153,8 @@
       display: none;
     }
 
-    &:last-child {
-      border-bottom: 1px solid #491b3e;
+    .skv-navigation__list--level-1 > &:last-child {
+      border-bottom: 1px solid $color-gray-text;
     }
 
     &.skv-navigation__list-item--path {
@@ -200,18 +192,15 @@
     }
 
     &:hover {
+      background-color: $color-complement-purple;
       span {
         text-decoration: underline;
-      }
-      & + .skv-icon {
-        border: 1px solid $color-white;
-        background-color: $color-white;
-        fill: $color-gray-text;
       }
     }
 
     .show-focus-outlines &:focus {
       outline: none;
+      background-color: $color-complement-purple;
 
       span {
         display: inline-block;
@@ -219,19 +208,25 @@
         outline: 4px solid $color-white;
         color: $color-gray-text;
       }
-      & + .skv-icon {
-        border: 1px solid $color-white;
-        background-color: $color-white;
-        fill: $color-gray-text;
-      }
     }
   }
 
   .skv-navigation__list-item-link {
     color: $color-primary-purple;
 
-    &.skv-navigation__list-item-link--active span {
-      font-weight: bold;
+    &.skv-navigation__list-item-link--active {
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        border-left: 8px solid $color-accent-orange;
+        display: block;
+        content: '';
+      }
+      span {
+        font-weight: bold;
+      }
     }
 
     &:hover {
@@ -271,6 +266,14 @@
       .skv-icon {
         fill: $color-white;
         top: -1px;
+      }
+
+      &:hover {
+        background-color: $color-complement-purple;
+
+        .skv-icon {
+          fill: $color-white;
+        }
       }
     }
 
