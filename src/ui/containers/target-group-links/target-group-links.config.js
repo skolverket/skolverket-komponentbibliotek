@@ -4,7 +4,6 @@ module.exports = {
   context: {
     links: [
       {
-        url: '#',
         img: {
           src: '/styleguide/assets/img/target-groups/students-and-guardians.svg',
           alt: 'Abstrakt grafik på ett barn och en förälder'
@@ -29,7 +28,6 @@ module.exports = {
         }
       },
       {
-        url: '#',
         img: {
           src: '/styleguide/assets/img/target-groups/counselor.svg',
           alt: 'Abstrakt grafik på en person som pekar åt olika håll'
@@ -42,7 +40,6 @@ module.exports = {
         }
       },
       {
-        url: '#',
         img: {
           src: '/styleguide/assets/img/target-groups/employer.svg',
           alt: 'Abstrakt grafik på personer med olika yrken'
