@@ -23,7 +23,7 @@ module.exports = {
         link: {
           theme: '',
           url: '#',
-          label: 'Skolbiblotikarier',
+          label: 'Skolbibliotekarie',
           attr: 'data-js-accessible-link-url'
         }
       },

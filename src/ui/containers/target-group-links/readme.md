@@ -3,7 +3,7 @@
 I en första version är komponenten utvecklad att stödja fyra ingångar; Elev, förälder eller vårdnadshavare, Skolbibliotekarie, Studie- och yrkesvägledare och Arbetsgivare.
 
 **Bakgrund:**   
-Huvudmenyn på skolverket.se tar höjd för de målgrupper som arbetar med “Undervisning” (pedagogisk personal), “Skolutveckling” (skolledning) och “Regler och ansvar” (huvudmän). Några målgrupper har egna samlingssidor med matnyttig information och länkar, men är för närvarande inte representerade i huvudmenyn.
+Huvudmenyn på skolverket.se tar höjd för de som undervisar/är pedagog, för de som skolutvecklar (rektor, förskolechef och huvudman) samt för de som vill veta vad som gäller (huvudman, rektor och förälder). Några utvalda målgrupper har egna samlingssidor med matnyttig information och länkar. Dessa är för närvarande inte representerade i huvudmenyn.
 
 ## För utvecklare
 
