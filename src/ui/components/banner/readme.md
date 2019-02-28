@@ -35,7 +35,8 @@ button.addEventListener('click', this.handleBannerClose);
 | Attribut    | Beskrivning                                               |
 |-------------|-----------------------------------------------------------|
 | id          | Det unika id som identifierar en banner                   |
-| message     | Meddelandet                                               |
+| title       | Meddelandet, eller titeln, som visas i bannern            |
+| body        | En utförligare text som presenteras under titeln          |
 | type        | `info`, `warning`, `error`, `confirm`                     |
 | local       | Sätt bannerns beteende som global eller inte              |
 | dismissable | Ska bannern gå att ta bort via en knapp i högerkanten?    |

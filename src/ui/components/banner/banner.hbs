@@ -3,9 +3,10 @@
     <div class="skv-banner__icon-container">
       {{> @icon name=type inline=true label=null }}
     </div>
-    <p class="skv-banner__body">
-      {{ message }}
-    </p>
+    <div class="skv-banner__content">
+      <h3>{{ title }}</h3>
+      {{#if body}}<p>{{ body }}</p>{{/if}}
+    </div>
 
     {{#if dismissable}}
       <button class="skv-banner__dismiss" aria-label="Stäng">

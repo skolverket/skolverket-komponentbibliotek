@@ -7,7 +7,7 @@ module.exports = {
       shouldOverlap: true
     },
     globalBanner: {
-      type: 'error',
+      type: 'warning',
       dismissable: true,
       local: false
     },
