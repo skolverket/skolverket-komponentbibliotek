@@ -1,11 +1,15 @@
 .target-group-links {
   list-style: none;
-  margin: -10px;
+  margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
+
+  @include media-min('sm') {
+    margin: -10px;
+  }
 
   &__item {
     cursor: pointer;
@@ -22,6 +26,20 @@
 
     @include media-min('lg') {
       width: 25%;
+    }
+
+    &--focused {
+      box-shadow: 0 0 0 3px $color-accent-orange;
+
+      .skv-nav-link {
+        outline: none !important;
+      }
+    }
+
+    &:hover {
+      .skv-nav-link {
+        text-decoration: underline;
+      }
     }
   }
 
