@@ -4,13 +4,13 @@ Använd den här komponenten för att kommunicera olika typer av upplysningar, v
 
 ## Global
 
-Den globala varianten av bannern är tänkt att ligga ovanför hela sajten och "trycka ner" allt innehåll. För att det ska vara möjligt måste banner ligga väldigt långt upp i roten. Antagligen precis efter det att `body`-taggen öppnas.
+Den globala varianten av bannern är tänkt att ligga ovanför hela sajten och "trycka ner" allt innehåll. För att det ska vara möjligt måste bannern ligga så tidigt i DOMen som möjligt. Antagligen precis efter det att `body`-taggen öppnas.
 
 ## Lokal
 
-Den lokala bannern är tänkt att höra till ett mindre kontext, t ex ett formulär.
+Den lokala bannern är tänkt att höra till ett mindre kontext, t ex ett formulär. Den tar i sig själv inte hänsyn till positionering. Se till att den omslutande föräldern inte har någon padding, vi vill att bannern ska ligga tryckte emot kanterna och toppen.
 
-## Stäng
+## Agera på knapptryck
 
 För att göra en banner borttagbar måste ett event bindas till den knapp som finns i bannern. Det kan se ut ungefär såhär för att stänga en specifik banner:
 
@@ -18,16 +18,16 @@ För att göra en banner borttagbar måste ett event bindas till den knapp som f
 var banner = document.querySelector('#banner-1');
 var closeButton = banner.querySelector('button');
 
-button.addEventListener('click', this.handleBannerClose);
+button.addEventListener('click', function(event) { ... });
 ```
 
-I fallet ovanför är det viktigt att själva hålla reda på om bannern i fråga har `dismissable = true` i sin modell vid rendering. Annars kommer in knappen existera däri. Alternativt, för att hantera alla borttagbara banners på samma sätt:
+I fallet ovanför är det viktigt att själva hålla reda på om bannern i fråga har `dismissable = true` i sin modell vid rendering. Annars existerar inte knappen. Alternativt, för att hantera alla borttagbara banners på samma sätt i ett svep:
 
 ```javascript
 var banner = document.querySelector('[data-js-banner][data-js-dismissable=true]');
 var closeButton = banner.querySelector('button');
 
-button.addEventListener('click', this.handleBannerClose);
+button.addEventListener('click', function(event) { ... });
 ```
 
 ## Kontext
