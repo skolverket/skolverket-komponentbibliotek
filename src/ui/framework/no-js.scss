@@ -1,5 +1,7 @@
 @import
-'../core/scss/variables/colors';
+'../core/scss/variables/breakpoints',
+'../core/scss/variables/colors',
+'../core/scss/mixins/media-mixins';
 
 @import
 '../components/reveal/reveal-no-js',
