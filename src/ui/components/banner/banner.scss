@@ -33,7 +33,7 @@
   }
 
   &--confirm {
-    background: green; // TODO: replace when new green lands in develop.
+    background: $color-framework-green;
     color: $color-white;
   }
 
