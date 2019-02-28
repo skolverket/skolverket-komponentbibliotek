@@ -6,6 +6,9 @@
     <div class="skv-banner__content">
       <h3>{{ title }}</h3>
       {{#if body}}<p>{{ body }}</p>{{/if}}
+      {{#if link}}
+        {{ render '@nav-link' link merge=true }}
+      {{/if}}
     </div>
 
     {{#if dismissable}}

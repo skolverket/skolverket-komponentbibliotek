@@ -40,6 +40,15 @@
       margin: 0;
       line-height: 1.2;
     }
+    p {
+      margin: .2em 0;
+    }
+  }
+
+  .skv-nav-link {
+    font-size: 1em;
+    color: inherit;
+    padding: 0;
   }
 
   &__dismiss {

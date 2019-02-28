@@ -30,6 +30,10 @@ var closeButton = banner.querySelector('button');
 button.addEventListener('click', function(event) { ... });
 ```
 
+## Anvisningar
+
+Generellt sett så rekommenderas brödtext och länk enbart i kombination med typen `info`. Det finns dock ingen teknisk begränsning som stoppar en egen komposition av t ex `error` och en länk till ytterligare information om det skulle vara nödvändigt.
+
 ## Kontext
 
 | Attribut    | Beskrivning                                               |
@@ -37,6 +41,7 @@ button.addEventListener('click', function(event) { ... });
 | id          | Det unika id som identifierar en banner                   |
 | title       | Meddelandet, eller titeln, som visas i bannern            |
 | body        | En utförligare text som presenteras under titeln          |
+| link        | En navigationslänk. Ett objekt med `label` och `url`      |
 | type        | `info`, `warning`, `error`, `confirm`                     |
 | local       | Sätt bannerns beteende som global eller inte              |
 | dismissable | Ska bannern gå att ta bort via en knapp i högerkanten?    |
