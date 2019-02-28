@@ -1,11 +1,10 @@
 @include media-min('md') {
   .skv-navigation {
     position: relative;
-    border-bottom: 4px solid transparent;
+    border-bottom: 4px solid $color-primary-purple;
     height: 50px;
     background-color: $color-background-blue-lighter;
-    overflow: hidden;
-    transition: height 300ms ease-in-out, border-bottom-color 200ms ease-in-out;
+    transition: height 300ms ease-in-out, border-bottom-color 500ms ease-in-out;
 
     &:after {
       content: '';
@@ -20,6 +19,7 @@
 
     &.skv-navigation--open {
       border-bottom-color: $color-primary-purple;
+      overflow: hidden;
     }
   }
 
@@ -195,24 +195,30 @@
       top: 0;
       left: 0;
       height: 100%;
-      border-left: 8px solid $color-background-yellow;
+      border-left: 8px solid $color-accent-orange;
       width: 8px;
       content: '';
     }
   }
 
   .skv-navigation__list--level-1 {
-    .skv-navigation__list-item--path > button span {
-      position: relative;
-      font-weight: normal;
-      &:before {
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        border-bottom: 8px solid $color-background-yellow;
-        height: 8px;
-        width: 100%;
-        content: '';
+    .skv-navigation__list-item--path > button {
+      span {
+        position: relative;
+        font-weight: normal;
+        &:before {
+          position: absolute;
+          left: 0;
+          bottom: -17px;
+          border-bottom: 8px solid $color-accent-orange;
+          height: 8px;
+          width: 100%;
+          z-index: 3;
+          content: '';
+        }
+      }
+      .show-focus-outlines &:focus span:before {
+        bottom: -15px;
       }
     }
   }
@@ -230,6 +236,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
 
     .skv-icon {
       position: relative;
@@ -262,6 +271,14 @@
         fill: $color-white;
         transform: rotate(180deg);
         top: -1px;
+      }
+
+      &:hover {
+        background-color: $color-complement-purple;
+
+        .skv-icon {
+          fill: $color-white;
+        }
       }
 
       &:after {
