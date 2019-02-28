@@ -1,0 +1,15 @@
+.target-group-links {
+  &__item {
+    cursor: default;
+
+    &:hover {
+      .skv-nav-link {
+        text-decoration: none;
+      }
+    }
+
+    .skv-nav-link:hover {
+      text-decoration: underline;
+    }
+  }
+}
