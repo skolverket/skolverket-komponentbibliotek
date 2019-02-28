@@ -9,7 +9,9 @@ module.exports = {
     globalBanner: {
       type: 'warning',
       dismissable: true,
-      local: false
+      title: 'Det här är en global varning. Information.',
+      body: null,
+      link: null
     },
     banner: {
       dismissable: false
