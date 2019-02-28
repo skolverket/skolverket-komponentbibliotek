@@ -239,5 +239,7 @@ require('classlist-polyfill');
   };
 
   const navigation = document.getElementById('main-navigation');
-  new Navigation(navigation);
+  if (navigation) {
+    new Navigation(navigation);
+  }
 })();
