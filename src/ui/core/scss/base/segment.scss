@@ -1,6 +1,10 @@
 .skv-segment {
   margin: 60px 0;
 
+  @include media-max('md') {
+    margin: 30px 0;
+  }
+
   &--small {
     margin: 30px 0;
 
