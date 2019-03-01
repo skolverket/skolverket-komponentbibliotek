@@ -61,6 +61,10 @@
 
     
     
+        
+        
+        
+    
 
 <div class="Pen" data-behaviour="pen" id="pen-409e95be906fcb4be6c6b3b74c2e4cf2">
 
@@ -93,14 +97,19 @@
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
-             <iframe
-                class="Preview-iframe"
-                data-role="window"
-                src="../preview/banner--default.html"
-                sandbox="allow-same-origin allow-scripts allow-forms"
-                 style=""
-                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
-            </iframe>
+<div class="Error Error--render">
+    <h4 class="Error-title">Error rendering component</h4>
+    <div class="Error-message Prose">
+        <p>Parse error on line 30:
+...f}}  </div></div>
+--------------------^
+Expecting &#39;OPEN_ENDBLOCK&#39;, got &#39;EOF&#39;</p>
+
+    </div>
+    
+</div>
+
+            
         </div>
         <div class="Preview-handle" data-role="resize-handle"></div>
         <div class="Preview-overlay"></div>
@@ -255,10 +264,9 @@ button.addEventListener(<span class="hljs-string">'click'</span>, <span class="h
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.skv-banner</span> {
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$page-padding</span> / <span class="hljs-number">2</span>;
   <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color-background-yellow-lighter</span>;
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-gray-text</span>;
-  <span class="hljs-attribute">font-size</span>: .<span class="hljs-number">9em</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.2</span>;
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">10</span>;
 
@@ -266,8 +274,17 @@ button.addEventListener(<span class="hljs-string">'click'</span>, <span class="h
     <span class="hljs-attribute">display</span>: flex;
     <span class="hljs-attribute">align-items</span>: center;
     <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">900px</span>;
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto; 
+    <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$page-padding</span> / <span class="hljs-number">2</span> <span class="hljs-variable">$page-padding</span>;
+
+    @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'xl'</span>) {
+      <span class="hljs-attribute">width</span>: <span class="hljs-variable">$page-max-width</span>;
+      <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+      <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+    }
+
+    @<span class="hljs-keyword">include</span> media-max(<span class="hljs-string">'md'</span>) {
+      <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$page-padding-small</span>;
+    }
   }
 
   &amp;--confirm {
@@ -285,31 +302,40 @@ button.addEventListener(<span class="hljs-string">'click'</span>, <span class="h
   }
 
   &amp;__icon-container {
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5em</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">15px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">32px</span>;
   }
 
   &amp;__content {
     <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-variable">$page-padding</span> / <span class="hljs-number">2</span>;
 
     <span class="hljs-selector-tag">h3</span>, <span class="hljs-selector-tag">p</span> {
       <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
       <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.2</span>;
     }
+    <span class="hljs-selector-tag">h3</span> {
+      <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+      <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
+    }
     <span class="hljs-selector-tag">p</span> {
       <span class="hljs-attribute">margin</span>: .<span class="hljs-number">2em</span> <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">font-size</span>: <span class="hljs-number">18px</span>;
+      <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">300</span>;
     }
   }
 
   <span class="hljs-selector-class">.skv-nav-link</span> {
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
-    <span class="hljs-attribute">color</span>: inherit;
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
+    <span class="hljs-attribute">font-weight</span>: normal;
+    <span class="hljs-attribute">text-decoration</span>: underline;
   }
 
   &amp;__dismiss {
+    <span class="hljs-attribute">align-self</span>: flex-start;
     <span class="hljs-attribute">display</span>: flex;
     <span class="hljs-attribute">align-items</span>: center;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20px</span>;
     <span class="hljs-attribute">padding</span>: .<span class="hljs-number">5em</span>;
     <span class="hljs-attribute">background</span>: none;
     <span class="hljs-attribute">border</span>: none;
@@ -322,8 +348,7 @@ button.addEventListener(<span class="hljs-string">'click'</span>, <span class="h
     }
 
     <span class="hljs-selector-class">.skv-icon</span> {
-      <span class="hljs-attribute">font-size</span>: .<span class="hljs-number">7em</span>;
-      <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1em</span>;
+      <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span>;
     }
   }
 }
@@ -343,7 +368,7 @@ button.addEventListener(<span class="hljs-string">'click'</span>, <span class="h
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.2 KB</span>
+                    <span class="Meta-value">1.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -379,9 +404,17 @@ button.addEventListener(<span class="hljs-string">'click'</span>, <span class="h
     <code class="Code Code--lang-handlebars">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-banner skv-banner--</span></span></span><span class="hljs-template-variable">{{type}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"status"</span> <span class="hljs-attr">data-js-banner</span> <span class="hljs-attr">data-js-dismissable</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> dismissable}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">true</span></span></span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">false</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-banner__inner-container"</span> <span class="hljs-attr">data-js-banner-container</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-banner__icon-container"</span>&gt;</span>
-      </span><span class="hljs-template-variable">{{&gt; <a href="icon.html">@icon</a> name=type inline=true label=null }}</span><span class="xml">
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;&lt;&lt;&lt;&lt;&lt;&lt; <span class="hljs-attr">HEAD</span>
+    </span></span><span class="hljs-template-tag">{{#<span class="hljs-name">eq</span> 'info' type}}</span><span class="xml"><span class="hljs-tag"></span></span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml"><span class="hljs-tag">
+      &lt;<span class="hljs-attr">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-banner__icon-container"</span>&gt;</span>
+          </span><span class="hljs-template-variable">{{&gt; <a href="icon.html">@icon</a> name=../type inline=true label=null }}</span><span class="xml">
+=======
+    </span><span class="hljs-template-tag">{{#<span class="hljs-name">eq</span> type 'info'}}</span><span class="xml"></span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml">
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-banner__icon-container"</span>&gt;</span>
+          </span><span class="hljs-template-variable">{{&gt; <a href="icon.html">@icon</a> name=type inline=true label=null }}</span><span class="xml">
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; d677a2e... never render an icon for the type 'info'
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    </span><span class="hljs-template-tag">{{/<span class="hljs-name">eq</span>}}</span><span class="xml">
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-banner__content"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span></span><span class="hljs-template-variable">{{ title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
       </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> body}}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ body }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
