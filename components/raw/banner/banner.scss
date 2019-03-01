@@ -1,0 +1,74 @@
+.skv-banner {
+  width: 100%;
+  padding: $page-padding / 2;
+  background: $color-background-yellow-lighter;
+  color: $color-gray-text;
+  font-size: .9em;
+  line-height: 1.2;
+  z-index: 10;
+
+  &__inner-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto; 
+  }
+
+  &--confirm {
+    background: $color-framework-green;
+    color: $color-white;
+  }
+
+  &--error {
+    background: $color-framework-red;
+    color: $color-white;
+  }
+
+  &--warning {
+    background: $color-background-yellow;
+  }
+
+  &__icon-container {
+    font-size: 1.5em;
+  }
+
+  &__content {
+    flex: 1;
+    margin: 0 $page-padding / 2;
+
+    h3, p {
+      margin: 0;
+      line-height: 1.2;
+    }
+    p {
+      margin: .2em 0;
+    }
+  }
+
+  .skv-nav-link {
+    font-size: 1em;
+    color: inherit;
+    padding: 0;
+  }
+
+  &__dismiss {
+    display: flex;
+    align-items: center;
+    padding: .5em;
+    background: none;
+    border: none;
+    color: inherit;
+    transition: background 250ms;
+
+    &:hover {
+      background: rgba(0,0,0,.1);
+      border-radius: 3px;
+    }
+
+    .skv-icon {
+      font-size: .7em;
+      margin: 0 0 0 1em;
+    }
+  }
+}

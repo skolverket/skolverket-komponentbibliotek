@@ -177,6 +177,16 @@
   <span class="hljs-attr">"sectionNavModel"</span>: {
     <span class="hljs-attr">"shouldOverlap"</span>: <span class="hljs-literal">true</span>
   },
+  <span class="hljs-attr">"globalBanner"</span>: {
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"warning"</span>,
+    <span class="hljs-attr">"dismissable"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Det här är en global varning. Information."</span>,
+    <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"link"</span>: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-attr">"banner"</span>: {
+    <span class="hljs-attr">"dismissable"</span>: <span class="hljs-literal">null</span>
+  },
   <span class="hljs-attr">"reveal"</span>: {
     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet"</span>,
     <span class="hljs-attr">"body"</span>: <span class="hljs-string">"table--minimal"</span>,
@@ -194,7 +204,8 @@
         <pre><span class="xml"></span><span class="hljs-template-variable">{{&gt; <a href="hero.html">@hero</a> title=heroTitle background='/styleguide/tmp/img/understart.png' }}</span><span class="xml">
 </span><span class="hljs-template-variable">{{ render '<a href="section-navigation.html">@section-navigation</a>' sectionNavModel merge=true }}</span><span class="xml">
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-box"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-box skv-box--relative skv-box--no-padding"</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{ render '<a href="banner.html">@banner</a>' banner merge=true }}</span><span class="xml">
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section skv-section--boxed"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section__header"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3 skv-section__header-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section__header-title-text"</span>&gt;</span>Sektionstitel<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
@@ -206,8 +217,15 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://placehold.it/800x250/ffffff/E8D3E0?text=(Sektionens innehåll)"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width: 100%"</span> /&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    </span><span class="hljs-template-variable">{{ render '<a href="reveal.html">@reveal</a>' reveal merge=true }}</span><span class="xml">
-    </span><span class="hljs-template-variable">{{ render '<a href="table.html">@table</a>' }}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section skv-section--boxed"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section__header"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3 skv-section__header-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section__header-title-text"</span>&gt;</span>Sektionstitel<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section__body"</span>&gt;</span>
+        </span><span class="hljs-template-variable">{{ render '<a href="reveal.html">@reveal</a>' reveal merge=true }}</span><span class="xml">
+        </span><span class="hljs-template-variable">{{ render '<a href="table.html">@table</a>' }}</span><span class="xml">
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
@@ -290,7 +308,31 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-box"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-box skv-box--relative skv-box--no-padding"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-banner skv-banner--info"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"status"</span> <span class="hljs-attr">data-js-banner</span> <span class="hljs-attr">data-js-dismissable</span>=<span class="hljs-string">"false"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-banner__inner-container"</span> <span class="hljs-attr">data-js-banner-container</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-banner__icon-container"</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--inline"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-info"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-banner__content"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>En banner har en titel i fetstil<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Och en brödtext. Aliquip sit minim duis cupidatat quis duis eiusmod excepteur. Ullamco fugiat fugiat sint aliqua culpa minim. Aute tempor mollit consectetur dolor cillum dolore. Ullamco proident mollit magna occaecat occaecat anim et<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-nav-link "</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+                        Läs mer om hur vi hanterar cookies
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--inline"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-chevron-right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section skv-section--boxed"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section__header"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3 skv-section__header-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section__header-title-text"</span>&gt;</span>Sektionstitel<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
@@ -302,63 +344,17 @@
                 <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://placehold.it/800x250/ffffff/E8D3E0?text=(Sektionens innehåll)"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width: 100%"</span> /&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal"</span> <span class="hljs-attr">data-js-reveal</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__header skv-reveal__header--open"</span> <span class="hljs-attr">data-js-reveal-header</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__title"</span>&gt;</span>Lorem ipsum dolor sit amet<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__toggle"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Lorem ipsum dolor sit amet"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"1321"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">data-js-reveal-trigger</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__toggle-text skv-reveal__toggle-text--close"</span>&gt;</span>Dölj<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__toggle-text skv-reveal__toggle-text--open"</span>&gt;</span>Visa<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__toggle-icon"</span>&gt;</span>
-
-                        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-expand-more"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section skv-section--boxed"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section__header"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h3 skv-section__header-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section__header-title-text"</span>&gt;</span>Sektionstitel<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__content-wrapper skv-reveal__content-wrapper--open"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"1321"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">data-js-reveal-container</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__content"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-table skv-table--minimal"</span>&gt;</span>
-
-                        <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Lorem Ipsum<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Dolor<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Sit Amet<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
-
-                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__content-toggle"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__toggle"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">""</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"1321"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">data-js-reveal-trigger</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__toggle-text"</span>&gt;</span>Dölj<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section__body"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal"</span> <span class="hljs-attr">data-js-reveal</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__header skv-reveal__header--open"</span> <span class="hljs-attr">data-js-reveal-header</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__title"</span>&gt;</span>Lorem ipsum dolor sit amet<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__toggle"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Lorem ipsum dolor sit amet"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"1321"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">data-js-reveal-trigger</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__toggle-text skv-reveal__toggle-text--close"</span>&gt;</span>Dölj<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__toggle-text skv-reveal__toggle-text--open"</span>&gt;</span>Visa<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__toggle-icon"</span>&gt;</span>
 
                                 <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon"</span>&gt;</span>
@@ -366,49 +362,102 @@
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__content-wrapper skv-reveal__content-wrapper--open"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"1321"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">data-js-reveal-container</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__content"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-table skv-table--minimal"</span>&gt;</span>
+
+                                <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Lorem Ipsum<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Dolor<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Sit Amet<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__content-toggle"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__toggle"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">""</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"1321"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">data-js-reveal-trigger</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__toggle-text"</span>&gt;</span>Dölj<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-reveal__toggle-icon"</span>&gt;</span>
+
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-expand-more"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-table"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">caption</span>&gt;</span>Lorem ipsum dolor sit amet<span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Lorem Ipsum<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Dolor<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Sit Amet<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-table"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">caption</span>&gt;</span>Lorem ipsum dolor sit amet<span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Lorem Ipsum<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Dolor<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Sit Amet<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sit ex magna sit occaecat laboris officia occaecat proident in exercitation velit.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
-
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
@@ -450,12 +499,14 @@
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(4)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(5)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="hero.html">@<span>hero</span></a>, 
             
                 <a href="section-navigation.html">@<span>section-navigation</span></a>, 
+            
+                <a href="banner.html">@<span>banner</span></a>, 
             
                 <a href="reveal.html">@<span>reveal</span></a>, 
             
@@ -499,7 +550,7 @@
         
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-docs-collection-kom-igang">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Kom igång</span>
+                <span>Kom igång</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -603,7 +654,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/kod/checklista-for-utvecklare.html" data-pjax>
-                <span>Checklista för utvecklare</span>
+                <span>Checklista för utvecklare</span>
                 
             </a>
         </li>
@@ -739,6 +790,142 @@
 
 
 <span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-banner">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Banner</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="banner--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="banner--borttagbar.html" data-pjax>
+                <span>Borttagbar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="banner--konfirmering.html" data-pjax>
+                <span>Konfirmering</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="banner--fel.html" data-pjax>
+                <span>Fel</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="banner--varning.html" data-pjax>
+                <span>Varning</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
 
 
 </div>
@@ -1089,6 +1276,78 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="icon--close.html" data-pjax>
+                <span>Close</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="icon--confirm.html" data-pjax>
+                <span>Confirm</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="icon--error.html" data-pjax>
+                <span>Error</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="icon--expand-more.html" data-pjax>
                 <span>Expand more</span>
                 
@@ -1115,6 +1374,54 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="icon--external.html" data-pjax>
                 <span>External</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="icon--info.html" data-pjax>
+                <span>Info</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="icon--warning.html" data-pjax>
+                <span>Warning</span>
                 
 
 <div class="Status Status--unlabelled">
