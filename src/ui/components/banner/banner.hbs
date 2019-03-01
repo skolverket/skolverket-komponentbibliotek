@@ -1,8 +1,8 @@
 <div class="skv-banner skv-banner--{{type}}" role="status" data-js-banner data-js-dismissable="{{#if dismissable}}true{{else}}false{{/if}}">
   <div class="skv-banner__inner-container" data-js-banner-container>
-    {{#eq type 'info'}}{{else}}
+    {{#eq 'info' type}}{{else}}
       <div class="skv-banner__icon-container">
-          {{> @icon name=type inline=true label=null }}
+          {{> @icon name=../type inline=true label=null }}
       </div>
     {{/eq}}
     <div class="skv-banner__content">
