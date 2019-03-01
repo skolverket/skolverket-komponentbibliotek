@@ -1,4 +1,4 @@
-<a class="skv-nav-link" href="{{ url }}">
+<a class="skv-nav-link {{#if theme}}skv-nav-link--{{theme}}{{/if}}" href="{{ url }}"{{#if attr}} {{ attr }}{{/if}}>
   {{ label }}
   {{> @icon name=icon inline=true label=null }}
 </a>

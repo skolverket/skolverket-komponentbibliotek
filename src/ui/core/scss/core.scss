@@ -13,11 +13,12 @@
 @import 'mixins/media-mixins';
 @import 'mixins/on-event';
 
+@import 'base/display';
+@import 'base/focus';
 @import 'base/grid';
 @import 'base/icons';
 @import 'base/links';
 @import 'base/scaffolding';
-@import 'base/section';
+@import 'base/segment';
 @import 'base/type';
 @import 'base/well';
-@import 'base/display';

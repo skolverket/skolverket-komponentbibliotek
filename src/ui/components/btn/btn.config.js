@@ -2,6 +2,7 @@ module.exports = {
   status: 'done',
   name: 'Knappar',
   handle: 'btn',
+  collated: false,
   context: {
     theme: 'primary',
     text: 'Knapp',
@@ -11,7 +12,7 @@ module.exports = {
   },
   variants: [
     {
-      name: 'theme-secondary',
+      name: 'secondary',
       context: {
         theme: 'secondary'
       }
@@ -19,7 +20,7 @@ module.exports = {
     {
       name: 'disabled',
       context: {
-        disabled: true
+        disabled: true,
       }
     },
     {

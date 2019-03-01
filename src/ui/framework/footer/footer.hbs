@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12 col-lg-5">
         <div class="skv-footer__header-container">
-          <a class="skv-footer__logo" href="#">{{ logoAlt }}</a>
+          <img class="skv-footer__logo" src="/styleguide/assets/img/skolverket-logotype-white.svg" alt="{{ logoAlt }}" />
           <div class="skv-footer__description text-standard">{{description}}</div>
         </div>
       </div>
@@ -12,17 +12,14 @@
           <ul class="skv-footer__navigation">
             {{#each navigation}}
             <li class="skv-footer__navigation-item">
-              <a href="{{url}}" class="skv-footer__navigation-item-link text-standard">
-                {{label}}
-                <i class="icon-arrow icon-arrow--white"></i>
-              </a>
+              {{ render '@nav-link--light' this merge=true }}
             </li>
             {{/each}}
           </ul>
           <ul class="skv-footer__navigation">
             {{#each links}}
             <li class="skv-footer__navigation-item skv-footer__navigation-item--no-border-bottom">
-              <a href="#5" class="skv-footer__navigation-item-link skv-footer__navigation-item-link--purple text-small">
+              <a href="#5" class="skv-footer__navigation-item-link text-small">
                 {{label}}
               </a>
             </li>

@@ -1,8 +1,17 @@
 @import
-"../core/scss/variables/colors";
+'../core/scss/variables/breakpoints',
+'../core/scss/variables/colors',
+'../core/scss/mixins/media-mixins';
 
 @import
-"../components/reveal/reveal-no-js",
-"../components/box-link/box-link-no-js",
-"../components/card/card-no-js",
-"../components/toc/toc-no-js";
+'../components/reveal/reveal-no-js',
+'../components/box-link/box-link-no-js',
+'../components/card/card-no-js',
+'../components/toc/toc-no-js';
+
+@import
+'../containers/target-group-links/target-group-links-no-js';
+
+@import
+'../framework/header/header-no-js.scss',
+'../framework/navigation/navigation-no-js';
