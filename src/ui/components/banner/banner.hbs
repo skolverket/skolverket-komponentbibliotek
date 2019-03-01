@@ -1,0 +1,21 @@
+<div class="skv-banner skv-banner--{{type}}" role="status" data-js-banner data-js-dismissable="{{#if dismissable}}true{{else}}false{{/if}}">
+  <div class="skv-banner__inner-container" data-js-banner-container>
+    <div class="skv-banner__icon-container">
+      {{> @icon name=type inline=true label=null }}
+    </div>
+    <div class="skv-banner__content">
+      <h3>{{ title }}</h3>
+      {{#if body}}<p>{{ body }}</p>{{/if}}
+      {{#if link}}
+        {{ render '@nav-link' link merge=true }}
+      {{/if}}
+    </div>
+
+    {{#if dismissable}}
+      <button class="skv-banner__dismiss" aria-label="Stäng">
+        Stäng
+        {{> @icon name='close' }}
+      </button>
+    {{/if}}
+  </div>
+</div>

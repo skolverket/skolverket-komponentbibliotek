@@ -6,7 +6,12 @@
   </head>
 
   <body class="Body--blue show-focus-outlines">
-    {{ render '@inline-svg' }} {{ render '@header' }} {{{ yield }}}
+    {{ render '@inline-svg' }}
+    {{#if _target.context.globalBanner}}
+      {{ render '@banner' _target.context.globalBanner merge=true }}
+    {{/if}}
+    {{ render '@header' }}
+    {{{ yield }}}
     {{ render '@footer' }}
     <script async defer src="/styleguide/js/main.min.js"></script>
   </body>
