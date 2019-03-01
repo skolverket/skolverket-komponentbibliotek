@@ -1,13 +1,17 @@
 <div class="container--header">
   <div class="container">
+    <div class="skv-segment skv-segment--first">
     <div class="row">
       <div class="col-12 col-md-10 col-lg-8">
         <h2 class="h2 margin-tp-reset">{{title}}</h2>
         <p class="text-large">{{ingress}}</p>
       </div>
     </div>
-    {{ render '@box-link-container' }}
-    <div class="skv-section--small skv-section--last">
+    </div>
+    <div class="skv-segment--small">
+      {{ render '@box-link-container' }}
+    </div>
+    <div class="skv-segment--small skv-segment--last">
       {{ render '@link-list--outlined' linkList merge=true }}
     </div>
   </div>
