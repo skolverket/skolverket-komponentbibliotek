@@ -8,7 +8,7 @@ module.exports = {
     title: 'Lorem ipsum dolor sit amet',
     body: 'Aliquip sit minim duis cupidatat quis duis eiusmod excepteur. Ullamco fugiat fugiat sint aliqua culpa minim. Aute tempor mollit consectetur dolor cillum dolore. Ullamco proident mollit magna occaecat occaecat anim et',
     link: {
-      label: 'Läs mer',
+      label: 'Läs mer om hur vi hanterar cookies',
       url: '#'
     },
     dismissable: false
