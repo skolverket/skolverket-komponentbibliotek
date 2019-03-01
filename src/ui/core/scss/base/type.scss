@@ -57,6 +57,10 @@
 .text-large {
   font-size: rem(20px);
   line-height: rem(26px);
+
+  &--tight {
+    margin: 0;
+  }
 }
 
 @include media-min('md') {
