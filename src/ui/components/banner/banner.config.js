@@ -27,7 +27,7 @@ module.exports = {
         type: 'confirm',
         title: 'Ditt konto har skapats, du har fått ett bekräfteslemail',
         body: null,
-        link: null
+        link: null,
       }
     },
     {
