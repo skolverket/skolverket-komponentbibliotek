@@ -18,13 +18,11 @@
     display: flex;
     align-items: center;
 
-    @include media-min('sm') {
-      text-align: center;
-      display: block;
+    @include media-min('lg') {
       width: 50%;
     }
 
-    @include media-min('lg') {
+    @include media-min('xl') {
       width: 25%;
     }
 
@@ -44,22 +42,14 @@
   }
 
   &__img {
-    width: 70px;
+    width: 22%;
+    max-width: 70px;
     height: auto;
     display: block;
-    margin: 0 10px 10px 0;
-
-    @include media-min('sm') {
-      margin: 0 auto 10px;
-    }
-
-    @include media-min('md') {
-      width: 100px;
-    }
+    margin: 0 10px 0 0;
   }
 
   .skv-nav-link {
-
     .target-group-links__item:hover & {
       text-decoration: underline;
     }
