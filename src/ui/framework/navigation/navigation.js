@@ -4,6 +4,7 @@ require('classlist-polyfill');
 (() => {
   const Navigation = function(element) {
     this.root = element;
+    this.expanded = false;
     this.hasChildLinksItems = this.root.querySelectorAll(
       '.skv-navigation__list--level-2 .skv-navigation__list-item--has-child-links'
     );
@@ -191,6 +192,16 @@ require('classlist-polyfill');
       } else {
         this.focusTrap = createFocusTrap('.skv-navigation');
         this.focusTrap.activate();
+        if (!this.expanded) {
+          this.expanded = true;
+          const levelOnePathButton = this.root.querySelector(
+            '.skv-navigation__list--level-1 > .skv-navigation__list-item--path > .skv-navigation__list-toggle-button'
+          );
+
+          if (levelOnePathButton) {
+            levelOnePathButton.click();
+          }
+        }
         button.setAttribute('aria-expanded', true);
       }
       document.body.classList.toggle('skv-navigation-body--open');
