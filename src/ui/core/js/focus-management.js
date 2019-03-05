@@ -1,11 +1,11 @@
 document.addEventListener('keydown', function(event) {
-  if (event.keyCode === 9) { // Tab
+  if (!event.metaKey) {
     document.querySelector('body').classList.add('show-focus-outlines');
   }
 });
 
-document.addEventListener('click', function(event) {
-  if(event.clientX) { // Tab
+document.addEventListener('mousedown', function(event) {
+  if (event.clientX) {
     document.querySelector('body').classList.remove('show-focus-outlines');
   }
 });

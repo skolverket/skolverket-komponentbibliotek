@@ -126,6 +126,7 @@
     text-align: left;
     display: inline-block;
     font-size: $font-size-std;
+    cursor: pointer;
 
     &:hover {
       text-decoration: underline;
@@ -239,6 +240,7 @@
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
+    cursor: pointer;
 
     .skv-icon {
       position: relative;

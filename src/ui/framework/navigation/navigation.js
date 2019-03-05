@@ -72,6 +72,7 @@ require('classlist-polyfill');
       this.mainToggleButton.classList.add('skv-navigation__main-toggle-button');
       this.mainToggleButton.innerHTML = `<span class="skv-navigation__main-toggle-button-text skv-navigation__main-toggle-button-text--open">Meny</span><span class="skv-navigation__main-toggle-button-text skv-navigation__main-toggle-button-text--close">Stäng</span>`;
       this.mainToggleButton.setAttribute('aria-expanded', false);
+      this.mainToggleButton.setAttribute('aria-haspopup', true);
       this.root.insertBefore(this.mainToggleButton, list);
       this.mainToggleButton.addEventListener(
         'click',
@@ -93,6 +94,7 @@ require('classlist-polyfill');
         }</span>`;
 
         button.setAttribute('aria-expanded', false);
+        button.setAttribute('aria-haspopup', true);
         element.parentNode.replaceChild(button, element);
 
         button.addEventListener(
@@ -116,6 +118,7 @@ require('classlist-polyfill');
         } else {
           button.setAttribute('aria-expanded', false);
         }
+        button.setAttribute('aria-haspopup', true);
         link.parentNode.insertBefore(button, link.nextSibling);
 
         button.addEventListener(
