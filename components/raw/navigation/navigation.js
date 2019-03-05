@@ -239,10 +239,7 @@ require('classlist-polyfill');
         srcElementClassList.contains('skv-navigation__list') &&
         srcElementClassList.contains('skv-navigation__list-item--collapse')
       ) {
-        srcElementClassList.remove(
-          'skv-navigation__list-item--open',
-          'skv-navigation__list-item--collapse'
-        );
+        srcElementClassList.remove('skv-navigation__list-item--open');
       }
 
       if (
