@@ -33,11 +33,21 @@
 
     .fixed & {
       position: fixed;
-      top: -4px;
-      right: 0;
+      top: 28px;
+      border-top: 3px solid $color-primary-purple;
+      width: 33%;
+      max-width: 360px;
 
       @include media-min('md') {
-        position: static;
+        position: fixed;
+        @supports (position: sticky) {
+          position: static;
+          top: -4px;
+          right: 0;
+          border-top: 3px solid $color-primary-purple;
+          width: auto;
+          max-width: none;
+        }
       }
     }
 
