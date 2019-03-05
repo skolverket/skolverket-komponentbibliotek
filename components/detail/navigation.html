@@ -346,6 +346,7 @@
     <span class="hljs-attribute">text-align</span>: left;
     <span class="hljs-attribute">display</span>: inline-block;
     <span class="hljs-attribute">font-size</span>: <span class="hljs-variable">$font-size-std</span>;
+    <span class="hljs-attribute">cursor</span>: pointer;
 
     &amp;:hover {
       <span class="hljs-attribute">text-decoration</span>: underline;
@@ -459,6 +460,7 @@
     <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">flex-basis</span>: auto;
+    <span class="hljs-attribute">cursor</span>: pointer;
 
     <span class="hljs-selector-class">.skv-icon</span> {
       <span class="hljs-attribute">position</span>: relative;
@@ -1187,6 +1189,7 @@
       <span class="hljs-keyword">this</span>.mainToggleButton.classList.add(<span class="hljs-string">'skv-navigation__main-toggle-button'</span>);
       <span class="hljs-keyword">this</span>.mainToggleButton.innerHTML = <span class="hljs-string">`&lt;span class="skv-navigation__main-toggle-button-text skv-navigation__main-toggle-button-text--open"&gt;Meny&lt;/span&gt;&lt;span class="skv-navigation__main-toggle-button-text skv-navigation__main-toggle-button-text--close"&gt;Stäng&lt;/span&gt;`</span>;
       <span class="hljs-keyword">this</span>.mainToggleButton.setAttribute(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-literal">false</span>);
+      <span class="hljs-keyword">this</span>.mainToggleButton.setAttribute(<span class="hljs-string">'aria-haspopup'</span>, <span class="hljs-literal">true</span>);
       <span class="hljs-keyword">this</span>.root.insertBefore(<span class="hljs-keyword">this</span>.mainToggleButton, list);
       <span class="hljs-keyword">this</span>.mainToggleButton.addEventListener(
         <span class="hljs-string">'click'</span>,
@@ -1208,6 +1211,7 @@
         }</span>&lt;/span&gt;`</span>;
 
         button.setAttribute(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-literal">false</span>);
+        button.setAttribute(<span class="hljs-string">'aria-haspopup'</span>, <span class="hljs-literal">true</span>);
         element.parentNode.replaceChild(button, element);
 
         button.addEventListener(
@@ -1231,6 +1235,7 @@
         } <span class="hljs-keyword">else</span> {
           button.setAttribute(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-literal">false</span>);
         }
+        button.setAttribute(<span class="hljs-string">'aria-haspopup'</span>, <span class="hljs-literal">true</span>);
         link.parentNode.insertBefore(button, link.nextSibling);
 
         button.addEventListener(
@@ -1388,7 +1393,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">8.7 KB</span>
+                    <span class="Meta-value">8.9 KB</span>
                 </li>
             </ul>
         </div>
@@ -1801,7 +1806,7 @@
                 Undervisning
             <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--middle"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--middle"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-expand-more"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
 
@@ -1811,7 +1816,7 @@
                         <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Förskolan<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--middle"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--middle"</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-expand-more"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
 
@@ -1868,7 +1873,7 @@
                         <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Grundskolan<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--middle"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--middle"</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-expand-more"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
 
@@ -1937,7 +1942,7 @@
                 Skolutveckling
             <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--middle"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--middle"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-expand-more"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
 
@@ -1984,7 +1989,7 @@
                 Regler och ansvar
             <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--middle"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--middle"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-expand-more"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
 
@@ -2031,7 +2036,7 @@
                 Om oss
             <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--middle"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--middle"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-expand-more"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
 
