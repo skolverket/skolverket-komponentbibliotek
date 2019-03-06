@@ -2,10 +2,12 @@ module.exports = {
   name: 'Målgruppsingångar',
   handle: 'target-group-links',
   context: {
+    title: 'För dig som är',
     links: [
       {
         img: {
-          src: '/styleguide/assets/img/target-groups/students-and-guardians.svg',
+          src:
+            '/styleguide/assets/img/target-groups/students-and-guardians.svg',
           alt: 'Abstrakt grafik på ett barn och en förälder'
         },
         link: {
@@ -53,4 +55,4 @@ module.exports = {
       }
     ]
   }
-}
+};

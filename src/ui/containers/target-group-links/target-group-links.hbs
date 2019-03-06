@@ -1,8 +1,19 @@
+<header class="skv-section__header">
+  {{> @section-heading label=title }}
+</header>
 <ul class="target-group-links">
-{{# each links }}
-  <li class="target-group-links__item" data-js-accessible-link data-js-accessible-link-focus-class="target-group-links__item--focused">
-    <img class="target-group-links__img" src="{{ img.src }}" alt="{{ img.alt }}"/>
+  {{# each links }}
+  <li
+    class="target-group-links__item"
+    data-js-accessible-link
+    data-js-accessible-link-focus-class="target-group-links__item--focused"
+  >
+    <img
+      class="target-group-links__img"
+      src="{{ img.src }}"
+      alt="{{ img.alt }}"
+    />
     {{ render '@nav-link' link merge=true }}
   </li>
-{{/each}}
+  {{/each}}
 </ul>
