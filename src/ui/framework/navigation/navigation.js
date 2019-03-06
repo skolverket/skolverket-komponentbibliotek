@@ -25,10 +25,19 @@ require('classlist-polyfill');
     registerEvents() {
       window.addEventListener('resize', this.resetHeight.bind(this));
       this.root.addEventListener('keydown', this.onKeyDown.bind(this));
+      this.root.addEventListener('scroll', this.onScroll.bind(this));
       this.root.addEventListener(
         'transitionend',
         this.onTransitionEnd.bind(this)
       );
+    },
+
+    onScroll(event) {
+      if (event.target.scrollTop !== 0) {
+        this.root.classList.add('skv-navigation--scrolled');
+      } else {
+        this.root.classList.remove('skv-navigation--scrolled');
+      }
     },
 
     onKeyDown(event) {
