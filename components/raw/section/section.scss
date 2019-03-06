@@ -86,4 +86,14 @@
     padding-top: 0;
     padding-bottom: 0;
   }
+
+  &--full-width {
+    display: block;
+    .skv-section__header {
+      @include media-min('lg') {
+        flex: 0 0 auto;
+        max-width: none;
+      }
+    }
+  }
 }

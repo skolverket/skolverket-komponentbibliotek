@@ -288,13 +288,11 @@ I en första version är komponenten utvecklad att stödja fyra ingångar; Elev,
     <span class="hljs-attribute">display</span>: flex;
     <span class="hljs-attribute">align-items</span>: center;
 
-    @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'sm'</span>) {
-      <span class="hljs-attribute">text-align</span>: center;
-      <span class="hljs-attribute">display</span>: block;
+    @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'lg'</span>) {
       <span class="hljs-attribute">width</span>: <span class="hljs-number">50%</span>;
     }
 
-    @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'lg'</span>) {
+    @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'xl'</span>) {
       <span class="hljs-attribute">width</span>: <span class="hljs-number">25%</span>;
     }
 
@@ -314,22 +312,14 @@ I en första version är komponenten utvecklad att stödja fyra ingångar; Elev,
   }
 
   &amp;__img {
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">70px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">22%</span>;
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">70px</span>;
     <span class="hljs-attribute">height</span>: auto;
     <span class="hljs-attribute">display</span>: block;
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">10px</span> <span class="hljs-number">10px</span> <span class="hljs-number">0</span>;
-
-    @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'sm'</span>) {
-      <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto <span class="hljs-number">10px</span>;
-    }
-
-    @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
-      <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
-    }
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">10px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
   }
 
   <span class="hljs-selector-class">.skv-nav-link</span> {
-
     <span class="hljs-selector-class">.target-group-links__item</span>:hover &amp; {
       <span class="hljs-attribute">text-decoration</span>: underline;
     }
@@ -351,7 +341,7 @@ I en första version är komponenten utvecklad att stödja fyra ingångar; Elev,
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1 KB</span>
+                    <span class="Meta-value">882 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -367,6 +357,7 @@ I en första version är komponenten utvecklad att stödja fyra ingångar; Elev,
         
             
             <pre>{
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"För dig som är"</span>,
   <span class="hljs-attr">"links"</span>: [
     {
       <span class="hljs-attr">"img"</span>: {
@@ -426,13 +417,24 @@ I en första version är komponenten utvecklad att stödja fyra ingångar; Elev,
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-371439125cfb47832e1bc7c7b6478252-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"target-group-links"</span>&gt;</span>
-</span><span class="hljs-template-tag">{{# <span class="hljs-name"><span class="hljs-builtin-name">each</span></span> links }}</span><span class="xml">
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"target-group-links__item"</span> <span class="hljs-attr">data-js-accessible-link</span> <span class="hljs-attr">data-js-accessible-link-focus-class</span>=<span class="hljs-string">"target-group-links__item--focused"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"target-group-links__img"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ img.src }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ img.alt }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>/&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-section__header"</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{&gt; <a href="section-heading.html">@section-heading</a> label=title }}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"target-group-links"</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{# <span class="hljs-name"><span class="hljs-builtin-name">each</span></span> links }}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"target-group-links__item"</span>
+    <span class="hljs-attr">data-js-accessible-link</span>
+    <span class="hljs-attr">data-js-accessible-link-focus-class</span>=<span class="hljs-string">"target-group-links__item--focused"</span>
+  &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"target-group-links__img"</span>
+      <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ img.src }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
+      <span class="hljs-attr">alt</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ img.alt }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
+    /&gt;</span>
     </span><span class="hljs-template-variable">{{ render '<a href="nav-link.html">@nav-link</a>' link merge=true }}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-</span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
+  </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -482,8 +484,10 @@ I en första version är komponenten utvecklad att stödja fyra ingångar; Elev,
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(1)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(2)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
+            
+                <a href="section-heading.html">@<span>section-heading</span></a>, 
             
                 <a href="nav-link.html">@<span>nav-link</span></a>
             

@@ -7,6 +7,7 @@
     position: relative;
     z-index: 100;
     background-color: transparent;
+    background-position: 26px 28px;
     transition: background-color 300ms ease-in-out;
 
     &.skv-navigation--open {
@@ -22,6 +23,11 @@
       background-repeat: no-repeat;
       background-size: 134px auto;
       overflow: auto;
+      transition: background-image 200ms, background-position 200ms;
+    }
+    &.skv-navigation--scrolled {
+      background-position: 26px 10px;
+      background-image: url(../assets/img/skolverket-logotype.svg);
     }
   }
 

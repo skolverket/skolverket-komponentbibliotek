@@ -161,7 +161,7 @@
     <div class="Prose Prose--condensed">
         
         <h1 id="navigation">Navigation</h1>
-<p style="font-size: 20px;">Huvudnavigationen på skolverket.se</p>
+<p style="font-size: 20px;">Huvudmenyn på skolverket.se tar höjd för de som undervisar/är pedagog, för de som skolutvecklar (rektor, förskolechef och huvudman) samt för de som vill veta vad som gäller (huvudman, rektor och förälder). Några utvalda målgrupper har egna samlingssidor med matnyttig information och länkar. Dessa är för närvarande inte representerade i huvudmenyn</p>
 
 <h2 id="tillg-nglighet">Tillgänglighet</h2>
 <p>Följande interaktionsprinciper förväntas:</p>
@@ -177,7 +177,7 @@
 <h3 id="no-js">No-js</h3>
 <p>Om man har stängt av javascript så skall man fortfarande kunna ta till sig innehållet. Detta görs genom att inkludera <code>/css/no-js.min.css</code> i <a href="/styleguide/components/detail/head">headern</a> i en noscript-tag.</p>
 <h3 id="print">Print</h3>
-<p>När man skriver ut sidan så visar vi allt innehåll som om komponenten är utfälld. Vi tar även bort knapptexten.</p>
+<p>När man skriver ut sidan så döljer vi hela navigationskomponenten</p>
 
         
     </div>
@@ -592,6 +592,7 @@
     <span class="hljs-attribute">position</span>: relative;
     <span class="hljs-attribute">z-index</span>: <span class="hljs-number">100</span>;
     <span class="hljs-attribute">background-color</span>: transparent;
+    <span class="hljs-attribute">background-position</span>: <span class="hljs-number">26px</span> <span class="hljs-number">28px</span>;
     <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">300ms</span> ease-in-out;
 
     &amp;<span class="hljs-selector-class">.skv-navigation--open</span> {
@@ -607,6 +608,11 @@
       <span class="hljs-attribute">background-repeat</span>: no-repeat;
       <span class="hljs-attribute">background-size</span>: <span class="hljs-number">134px</span> auto;
       <span class="hljs-attribute">overflow</span>: auto;
+      <span class="hljs-attribute">transition</span>: background-image <span class="hljs-number">200ms</span>, background-position <span class="hljs-number">200ms</span>;
+    }
+    &amp;<span class="hljs-selector-class">.skv-navigation--scrolled</span> {
+      <span class="hljs-attribute">background-position</span>: <span class="hljs-number">26px</span> <span class="hljs-number">10px</span>;
+      <span class="hljs-attribute">background-image</span>: url(../assets/img/skolverket-logotype.svg);
     }
   }
 
@@ -962,7 +968,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">8 KB</span>
+                    <span class="Meta-value">8.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -1142,10 +1148,19 @@
     registerEvents() {
       <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'resize'</span>, <span class="hljs-keyword">this</span>.resetHeight.bind(<span class="hljs-keyword">this</span>));
       <span class="hljs-keyword">this</span>.root.addEventListener(<span class="hljs-string">'keydown'</span>, <span class="hljs-keyword">this</span>.onKeyDown.bind(<span class="hljs-keyword">this</span>));
+      <span class="hljs-keyword">this</span>.root.addEventListener(<span class="hljs-string">'scroll'</span>, <span class="hljs-keyword">this</span>.onScroll.bind(<span class="hljs-keyword">this</span>));
       <span class="hljs-keyword">this</span>.root.addEventListener(
         <span class="hljs-string">'transitionend'</span>,
         <span class="hljs-keyword">this</span>.onTransitionEnd.bind(<span class="hljs-keyword">this</span>)
       );
+    },
+
+    onScroll(event) {
+      <span class="hljs-keyword">if</span> (event.target.scrollTop !== <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">this</span>.root.classList.add(<span class="hljs-string">'skv-navigation--scrolled'</span>);
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>.root.classList.remove(<span class="hljs-string">'skv-navigation--scrolled'</span>);
+      }
     },
 
     onKeyDown(event) {
@@ -1390,7 +1405,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">8.8 KB</span>
+                    <span class="Meta-value">9.1 KB</span>
                 </li>
             </ul>
         </div>
