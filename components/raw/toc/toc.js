@@ -108,6 +108,7 @@ const createFocusTrap = require('focus-trap');
     },
 
     onCloseButtonClick() {
+      this.focusTrap.deactivate();
       this.toggleButton.click();
     },
 
