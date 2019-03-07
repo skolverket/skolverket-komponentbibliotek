@@ -2,11 +2,11 @@
 
 <p style="font-size: 20px;">Använd den här komponenten för att kommunicera olika typer av upplysningar, varningar och fel. Den kan antingen används globalt över hela sajten, eller mer lokalt i ett mindre kontext. Se [Understartsida](http://localhost:3000/styleguide/components/preview/understartsida) för demo.</p>
 
-## Global
+## Global variant
 
-Den globala varianten av bannern är tänkt att ligga ovanför hela sajten och "trycka ner" allt innehåll. För att det ska vara möjligt måste bannern ligga så tidigt i DOMen som möjligt. Antagligen precis efter det att `body`-taggen öppnas.
+Den globala varianten av bannern är tänkt att ligga ovanför hela sajten och "trycka ner" allt innehåll. För att det ska vara möjligt måste bannern ligga så tidigt i DOMen som möjligt. Antagligen precis efter det att body-taggen öppnas.
 
-## Lokal
+## Lokal variant
 
 Den lokala bannern är tänkt att höra till ett mindre kontext, t ex ett formulär. Den tar i sig själv inte hänsyn till positionering. Se till att den omslutande föräldern inte har någon padding, vi vill att bannern ska ligga tryckte emot kanterna och toppen.
 
@@ -36,12 +36,12 @@ Generellt sett så rekommenderas brödtext och länk enbart i kombination med ty
 
 ## Kontext
 
-| Attribut    | Beskrivning                                               |
-|-------------|-----------------------------------------------------------|
-| id          | Det unika id som identifierar en banner                   |
-| title       | Meddelandet, eller titeln, som visas i bannern            |
-| body        | En utförligare text som presenteras under titeln          |
-| link        | En navigationslänk. Ett objekt med `label` och `url`      |
-| type        | `info`, `warning`, `error`, `confirm`                     |
-| local       | Sätt bannerns beteende som global eller inte              |
-| dismissable | Ska bannern gå att ta bort via en knapp i högerkanten?    |
+| Attribut    | Beskrivning                                            |
+| ----------- | ------------------------------------------------------ |
+| id          | Det unika id som identifierar en banner                |
+| title       | Meddelandet, eller titeln, som visas i bannern         |
+| body        | En utförligare text som presenteras under titeln       |
+| link        | En navigationslänk. Ett objekt med `label` och `url`   |
+| type        | `info`, `warning`, `error`, `confirm`                  |
+| local       | Sätt bannerns beteende som global eller inte           |
+| dismissable | Ska bannern gå att ta bort via en knapp i högerkanten? |
