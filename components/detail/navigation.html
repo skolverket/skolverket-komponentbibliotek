@@ -334,6 +334,18 @@
         <span class="hljs-attribute">font-weight</span>: bold;
       }
     }
+
+    &gt; <span class="hljs-selector-class">.skv-icon</span> {
+      <span class="hljs-attribute">position</span>: absolute;
+      <span class="hljs-attribute">top</span>: <span class="hljs-number">13px</span>;
+      <span class="hljs-attribute">right</span>: <span class="hljs-number">12px</span>;
+      <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid transparent;
+      <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">100%</span>;
+      <span class="hljs-attribute">width</span>: <span class="hljs-number">25px</span>;
+      <span class="hljs-attribute">height</span>: <span class="hljs-number">25px</span>;
+      fill: <span class="hljs-variable">$color-white</span>;
+      <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">300ms</span>, color <span class="hljs-number">300ms</span>, border-color <span class="hljs-number">300ms</span>;
+    }
   }
 
   <span class="hljs-selector-class">.skv-navigation__list-toggle-button</span> {
@@ -366,15 +378,12 @@
         <span class="hljs-attribute">outline</span>: <span class="hljs-number">4px</span> solid <span class="hljs-variable">$color-white</span>;
         <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-gray-text</span>;
       }
-      &amp; + <span class="hljs-selector-class">.skv-icon</span> {
-        <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$color-white</span>;
-        <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-white</span>;
-        fill: <span class="hljs-variable">$color-gray-text</span>;
-      }
     }
-
-    + <span class="hljs-selector-class">.skv-icon</span> {
-      <span class="hljs-attribute">display</span>: none;
+    <span class="hljs-selector-class">.skv-icon</span> {
+      <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">300ms</span>;
+    }
+    &amp;<span class="hljs-selector-attr">[aria-expanded='true']</span> <span class="hljs-selector-class">.skv-icon</span> {
+      <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">180deg</span>);
     }
   }
 
@@ -420,6 +429,10 @@
       <span class="hljs-attribute">width</span>: <span class="hljs-number">8px</span>;
       <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>;
     }
+  }
+
+  <span class="hljs-selector-class">.skv-navigation__list-item</span> &gt; <span class="hljs-selector-class">.skv-navigation__list-item-text</span> {
+    <span class="hljs-attribute">display</span>: none;
   }
 
   <span class="hljs-selector-class">.skv-navigation__list--level-1</span> {
@@ -570,7 +583,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">7.1 KB</span>
+                    <span class="Meta-value">7.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -593,7 +606,8 @@
     <span class="hljs-attribute">z-index</span>: <span class="hljs-number">100</span>;
     <span class="hljs-attribute">background-color</span>: transparent;
     <span class="hljs-attribute">background-position</span>: <span class="hljs-number">26px</span> <span class="hljs-number">28px</span>;
-    <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">300ms</span> ease-in-out;
+    <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">200ms</span> ease-in-out, background-image <span class="hljs-number">200ms</span>,
+      background-position <span class="hljs-number">200ms</span>;
 
     &amp;<span class="hljs-selector-class">.skv-navigation--open</span> {
       <span class="hljs-attribute">position</span>: fixed;
@@ -608,10 +622,9 @@
       <span class="hljs-attribute">background-repeat</span>: no-repeat;
       <span class="hljs-attribute">background-size</span>: <span class="hljs-number">134px</span> auto;
       <span class="hljs-attribute">overflow</span>: auto;
-      <span class="hljs-attribute">transition</span>: background-image <span class="hljs-number">200ms</span>, background-position <span class="hljs-number">200ms</span>;
     }
     &amp;<span class="hljs-selector-class">.skv-navigation--scrolled</span> {
-      <span class="hljs-attribute">background-position</span>: <span class="hljs-number">26px</span> <span class="hljs-number">10px</span>;
+      <span class="hljs-attribute">background-position</span>: <span class="hljs-number">26px</span> <span class="hljs-number">18px</span>;
       <span class="hljs-attribute">background-image</span>: url(../assets/img/skolverket-logotype.svg);
     }
   }
@@ -725,18 +738,6 @@
     <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$color-gray-text</span>;
     <span class="hljs-attribute">transition</span>: border-top-color <span class="hljs-number">300ms</span>;
 
-    &gt; <span class="hljs-selector-class">.skv-icon</span> {
-      <span class="hljs-attribute">position</span>: absolute;
-      <span class="hljs-attribute">top</span>: <span class="hljs-number">10px</span>;
-      <span class="hljs-attribute">right</span>: <span class="hljs-number">12px</span>;
-      <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid transparent;
-      <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">100%</span>;
-      <span class="hljs-attribute">width</span>: <span class="hljs-number">30px</span>;
-      <span class="hljs-attribute">height</span>: <span class="hljs-number">30px</span>;
-      fill: <span class="hljs-variable">$color-white</span>;
-      <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">300ms</span>, color <span class="hljs-number">300ms</span>, border-color <span class="hljs-number">300ms</span>;
-    }
-
     <span class="hljs-selector-class">.skv-navigation__list--level-2</span> &amp;,
     <span class="hljs-selector-class">.skv-navigation__list--level-3</span> &amp; {
       <span class="hljs-attribute">border-top-color</span>: transparent;
@@ -772,12 +773,28 @@
     }
   }
 
+  <span class="hljs-selector-class">.skv-navigation__list-item-text</span> {
+    <span class="hljs-attribute">position</span>: static;
+  }
+
   <span class="hljs-selector-class">.skv-navigation__list-toggle-button</span> {
     <span class="hljs-attribute">border</span>: none;
     <span class="hljs-attribute">background</span>: transparent;
     <span class="hljs-attribute">cursor</span>: pointer;
 
-    &amp;<span class="hljs-selector-attr">[aria-expanded='true']</span> + <span class="hljs-selector-class">.skv-icon</span> {
+    <span class="hljs-selector-class">.skv-icon</span> {
+      <span class="hljs-attribute">position</span>: absolute;
+      <span class="hljs-attribute">top</span>: <span class="hljs-number">10px</span>;
+      <span class="hljs-attribute">right</span>: <span class="hljs-number">12px</span>;
+      <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid transparent;
+      <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">100%</span>;
+      <span class="hljs-attribute">width</span>: <span class="hljs-number">30px</span>;
+      <span class="hljs-attribute">height</span>: <span class="hljs-number">30px</span>;
+      fill: <span class="hljs-variable">$color-white</span>;
+      <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">300ms</span>, color <span class="hljs-number">300ms</span>, border-color <span class="hljs-number">300ms</span>;
+    }
+
+    &amp;<span class="hljs-selector-attr">[aria-expanded='true']</span> <span class="hljs-selector-class">.skv-icon</span> {
       <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">180deg</span>);
     }
 
@@ -968,7 +985,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">8.2 KB</span>
+                    <span class="Meta-value">8.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -1215,19 +1232,24 @@
 
     createTopLevelButtons() {
       <span class="hljs-keyword">const</span> topLevelElements = <span class="hljs-built_in">document</span>.querySelectorAll(
-        <span class="hljs-string">'.skv-navigation__list-item-text'</span>
+        <span class="hljs-string">'.skv-navigation__list--level-1 &gt; .skv-navigation__list-item'</span>
       );
+
       <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; topLevelElements.length; i++) {
         <span class="hljs-keyword">const</span> element = topLevelElements[i];
+
+        <span class="hljs-keyword">const</span> svg = element.querySelector(<span class="hljs-string">'.skv-icon'</span>);
+        <span class="hljs-keyword">const</span> list = element.querySelector(<span class="hljs-string">'.skv-navigation__list'</span>);
+        <span class="hljs-keyword">const</span> text = element.querySelector(<span class="hljs-string">'.skv-navigation__list-item-text'</span>);
+        text.appendChild(svg);
+
         <span class="hljs-keyword">const</span> button = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'button'</span>);
         button.classList.add(<span class="hljs-string">'skv-navigation__list-toggle-button'</span>);
-        button.innerHTML = <span class="hljs-string">`&lt;span class="<span class="hljs-subst">${element.classList}</span>"&gt;<span class="hljs-subst">${
-          element.innerText
-        }</span>&lt;/span&gt;`</span>;
+        button.appendChild(text);
 
         button.setAttribute(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-literal">false</span>);
         button.setAttribute(<span class="hljs-string">'aria-haspopup'</span>, <span class="hljs-literal">true</span>);
-        element.parentNode.replaceChild(button, element);
+        element.insertBefore(button, list);
 
         button.addEventListener(
           <span class="hljs-string">'click'</span>,
@@ -1405,7 +1427,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">9.1 KB</span>
+                    <span class="Meta-value">9.3 KB</span>
                 </li>
             </ul>
         </div>

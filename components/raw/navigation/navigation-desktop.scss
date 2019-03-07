@@ -114,6 +114,18 @@
         font-weight: bold;
       }
     }
+
+    > .skv-icon {
+      position: absolute;
+      top: 13px;
+      right: 12px;
+      border: 1px solid transparent;
+      border-radius: 100%;
+      width: 25px;
+      height: 25px;
+      fill: $color-white;
+      transition: transform 300ms, color 300ms, border-color 300ms;
+    }
   }
 
   .skv-navigation__list-toggle-button {
@@ -146,15 +158,12 @@
         outline: 4px solid $color-white;
         color: $color-gray-text;
       }
-      & + .skv-icon {
-        border: 1px solid $color-white;
-        background-color: $color-white;
-        fill: $color-gray-text;
-      }
     }
-
-    + .skv-icon {
-      display: none;
+    .skv-icon {
+      transition: transform 300ms;
+    }
+    &[aria-expanded='true'] .skv-icon {
+      transform: rotate(180deg);
     }
   }
 
@@ -200,6 +209,10 @@
       width: 8px;
       content: '';
     }
+  }
+
+  .skv-navigation__list-item > .skv-navigation__list-item-text {
+    display: none;
   }
 
   .skv-navigation__list--level-1 {
