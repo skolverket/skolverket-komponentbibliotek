@@ -16,37 +16,25 @@ module.exports = {
             isPath: false,
             links: [
               {
-                text: 'Läroplan och kursplaner',
+                text: 'Läroplan för förskolan',
                 url: '#',
                 isActive: false,
                 isPath: false
               },
               {
-                text: 'Bedömning',
+                text: 'Förskollärarlegitimation',
                 url: '#',
                 isActive: false,
                 isPath: false
               },
               {
-                text: 'Nationella prov',
+                text: 'Stöd i arbetet',
                 url: '#',
                 isActive: false,
                 isPath: false
               },
               {
-                text: 'Betyg',
-                url: '#',
-                isActive: false,
-                isPath: false
-              },
-              {
-                text: 'IUP med omdömen',
-                url: '#',
-                isActive: false,
-                isPath: false
-              },
-              {
-                text: 'Lärarlegitimation',
+                text: 'Inspiration och reportage',
                 url: '#',
                 isActive: false,
                 isPath: false
@@ -62,12 +50,82 @@ module.exports = {
           {
             text: 'Förskoleklassen',
             url: '#',
-            isActive: false
+            isActive: false,
+            links: [
+              {
+                text: 'Läroplanen',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Kartläggning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Lärar- och förskollärarlegitimation',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Stöd i arbetet',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Inspiration och reportage',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Kompetensutveckling',
+                url: '#',
+                isActive: false,
+                isPath: false
+              }
+            ]
           },
           {
             text: 'Fritidshemmet',
             url: '#',
-            isActive: false
+            isActive: false,
+            links: [
+              {
+                text: 'Läroplan för fritidshemmet',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Lärar- och förskolärarlegitimation',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Inspiration och reportage',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Kompetensutveckling',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Stöd i arbetet',
+                url: '#',
+                isActive: false,
+                isPath: false
+              }
+            ]
           },
           {
             text: 'Grundskolan',
@@ -109,32 +167,351 @@ module.exports = {
           {
             text: 'Grundsärskolan',
             url: '#',
-            isActive: false
+            isActive: false,
+            links: [
+              {
+                text: 'Läroplan och kursplaner',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'IUP med omdömen',
+                url: '#'
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Lärarlegitimation',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Kompetensutveckling',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Stöd i arbetet',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Inspiration och reportage',
+                url: '#',
+                isActive: false,
+                isPath: false
+              }
+            ]
           },
           {
             text: 'Specialskolan',
             url: '#',
-            isActive: false
+            isActive: false,
+            links: [
+              {
+                text: 'Läroplan och kursplaner',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'IUP med omdömen',
+                url: '#'
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Lärarlegitimation',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Kompetensutveckling',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Stöd i arbetet',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Inspiration och reportage',
+                url: '#',
+                isActive: false,
+                isPath: false
+              }
+            ]
           },
           {
             text: 'Sameskolan',
             url: '#',
-            isActive: false
+            isActive: false,
+            links: [
+              {
+                text: 'Läroplan och kursplaner',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'IUP med omdömen',
+                url: '#'
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Lärarlegitimation',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Kompetensutveckling',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Stöd i arbetet',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Inspiration och reportage',
+                url: '#',
+                isActive: false,
+                isPath: false
+              }
+            ]
           },
           {
             text: 'Gymnasieskolan',
             url: '#',
-            isActive: false
+            isActive: false,
+            links: [
+              {
+                text: 'Läroplan, program och ämnen',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Lärarlegitimation',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Kompetensutveckling',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Stöd i arbetet',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Inspiration och reportage',
+                url: '#',
+                isActive: false,
+                isPath: false
+              }
+            ]
+          },
+          {
+            text: 'Gymnasiesärskolan',
+            url: '#',
+            isActive: false,
+            links: [
+              {
+                text: 'Läroplan, program och ämnen',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Lärarlegitimation',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Kompetensutveckling',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Stöd i arbetet',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Inspiration och reportage',
+                url: '#',
+                isActive: false,
+                isPath: false
+              }
+            ]
           },
           {
             text: 'Vuxenutbildningen',
             url: '#',
-            isActive: false
+            isActive: false,
+            links: [
+              {
+                text: 'Komvux svenska för invandrare (sfi)',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Komvux grundläggande',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Komvux gymnasial',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Särvux grundläggande',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Särvux gymnasial',
+                url: '#',
+                isActive: false,
+                isPath: false
+              }
+            ]
           },
           {
             text: 'Dansarutbildningen',
             url: '#',
-            isActive: false
+            isActive: false,
+            links: [
+              {
+                text: 'Styrdokument',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              }
+            ]
           }
         ]
       },
