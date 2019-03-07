@@ -156,6 +156,7 @@ const createFocusTrap = require('focus-trap');
 
     onLinksClick() {
       if (this.isExpanded) {
+        this.focusTrap.deactivate();
         this.toggleButton.click();
       }
     }
