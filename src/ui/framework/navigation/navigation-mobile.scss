@@ -8,7 +8,8 @@
     z-index: 100;
     background-color: transparent;
     background-position: 26px 28px;
-    transition: background-color 300ms ease-in-out;
+    transition: background-color 200ms ease-in-out, background-image 200ms,
+      background-position 200ms;
 
     &.skv-navigation--open {
       position: fixed;
@@ -23,10 +24,9 @@
       background-repeat: no-repeat;
       background-size: 134px auto;
       overflow: auto;
-      transition: background-image 200ms, background-position 200ms;
     }
     &.skv-navigation--scrolled {
-      background-position: 26px 10px;
+      background-position: 26px 18px;
       background-image: url(../assets/img/skolverket-logotype.svg);
     }
   }
@@ -140,18 +140,6 @@
     border-top: 1px solid $color-gray-text;
     transition: border-top-color 300ms;
 
-    > .skv-icon {
-      position: absolute;
-      top: 10px;
-      right: 12px;
-      border: 1px solid transparent;
-      border-radius: 100%;
-      width: 30px;
-      height: 30px;
-      fill: $color-white;
-      transition: transform 300ms, color 300ms, border-color 300ms;
-    }
-
     .skv-navigation__list--level-2 &,
     .skv-navigation__list--level-3 & {
       border-top-color: transparent;
@@ -187,12 +175,28 @@
     }
   }
 
+  .skv-navigation__list-item-text {
+    position: static;
+  }
+
   .skv-navigation__list-toggle-button {
     border: none;
     background: transparent;
     cursor: pointer;
 
-    &[aria-expanded='true'] + .skv-icon {
+    .skv-icon {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      border: 1px solid transparent;
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+      fill: $color-white;
+      transition: transform 300ms, color 300ms, border-color 300ms;
+    }
+
+    &[aria-expanded='true'] .skv-icon {
       transform: rotate(180deg);
     }
 

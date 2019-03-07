@@ -92,19 +92,24 @@ require('classlist-polyfill');
 
     createTopLevelButtons() {
       const topLevelElements = document.querySelectorAll(
-        '.skv-navigation__list-item-text'
+        '.skv-navigation__list--level-1 > .skv-navigation__list-item'
       );
+
       for (var i = 0; i < topLevelElements.length; i++) {
         const element = topLevelElements[i];
+
+        const svg = element.querySelector('.skv-icon');
+        const list = element.querySelector('.skv-navigation__list');
+        const text = element.querySelector('.skv-navigation__list-item-text');
+        text.appendChild(svg);
+
         const button = document.createElement('button');
         button.classList.add('skv-navigation__list-toggle-button');
-        button.innerHTML = `<span class="${element.classList}">${
-          element.innerText
-        }</span>`;
+        button.appendChild(text);
 
         button.setAttribute('aria-expanded', false);
         button.setAttribute('aria-haspopup', true);
-        element.parentNode.replaceChild(button, element);
+        element.insertBefore(button, list);
 
         button.addEventListener(
           'click',
