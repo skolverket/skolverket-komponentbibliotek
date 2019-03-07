@@ -1,6 +1,6 @@
 # Banner
 
-<p style="font-size: 20px;">Använd den här komponenten för att kommunicera olika typer av upplysningar, varningar och fel. Den kan antingen används globalt över hela sajten, eller mer lokalt i ett mindre kontext. Se [Understartsida](http://localhost:3000/styleguide/components/preview/understartsida) för demo.</p>
+<p style="font-size: 20px;">Använd den här komponenten för att kommunicera olika typer av upplysningar, varningar och fel. Den kan antingen används globalt över hela sajten, eller mer lokalt i ett mindre kontext. Se [Understartsida](/styleguide/components/preview/understartsida) för demo.</p>
 
 ## Global variant
 
