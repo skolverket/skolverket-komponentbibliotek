@@ -28,18 +28,26 @@
       .skv-toc--open &,
       .skv-toc--animate-out & {
         display: block;
+
+        &.skv-toc__title {
+          display: inline-block;
+        }
       }
     }
 
     .fixed & {
       position: fixed;
-      top: 28px;
+      top: -3px;
       border-top: 3px solid $color-primary-purple;
       width: 33%;
       max-width: 360px;
+      right: 0;
 
       @include media-min('md') {
         position: fixed;
+        right: auto;
+        top: 28px;
+
         @supports (position: sticky) {
           position: static;
           top: -4px;
@@ -59,7 +67,7 @@
     }
 
     .skv-toc--animate-in.fixed & {
-      transform: translate(0, 0);
+      transform: translate(0, 3px);
     }
 
     .skv-toc--animate-out & {
@@ -77,7 +85,7 @@
     }
 
     .skv-toc--open.fixed & {
-      transform: translate(0, 0);
+      transform: translate(0, 3px);
     }
 
     @include media-min('md') {

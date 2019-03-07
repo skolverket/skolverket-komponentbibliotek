@@ -1,3 +1,5 @@
+const createFocusTrap = require('focus-trap');
+
 (() => {
   const TOC = function(el) {
     this.root = el;
@@ -91,12 +93,17 @@
         this.toggleButton.focus({
           preventScroll: true
         });
+        this.focusTrap.deactivate();
       } else {
         this.root.classList.add(this.classList.tocOpen);
         this.root.classList.remove(this.classList.tocAnimateIn);
         this.innerHeader.focus({
           preventScroll: true
         });
+        setTimeout(() => {
+          this.focusTrap = createFocusTrap('.skv-toc__inner');
+          this.focusTrap.activate();
+        }, 200);
       }
     },
 
