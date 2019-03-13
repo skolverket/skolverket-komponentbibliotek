@@ -41,17 +41,23 @@
   }
 
   &__item {
-    margin: 10px 30px;
-    max-width: 23%;
+    margin: 10px;
+    max-width: none;
+    width: 100%;
 
-    @include media-max('lg') {
+    @include media-min('md') {
       margin: 10px;
-      max-width: 50%;
+      max-width: 55%;
     }
 
-    @include media-max('md') {
-      max-width: none;
-      width: 100%;
+    @include media-min('lg') {
+      margin: 10px 20px;
+      max-width: 45%;
+    }
+
+    @include media-min('xl') {
+      margin: 10px;
+      max-width: 22%;
     }
   }
 
@@ -62,6 +68,10 @@
 
     &:hover {
       color: $color-primary-purple;
+    }
+
+    .skv-icon {
+      transform: translateX(-6px);
     }
 
     &:focus {

@@ -48,13 +48,17 @@
     margin: 0 10px 0 0;
 
     @include media-min('xl') {
-      max-width: 54px;
+      max-width: 47px;
     }
   }
 
   .skv-nav-link {
+    font-size: $font-size-std;
     .target-group-links__item:hover & {
       text-decoration: underline;
+    }
+    .skv-icon {
+      transform: translateX(-6px);
     }
   }
 }
