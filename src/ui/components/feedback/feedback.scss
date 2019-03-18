@@ -4,9 +4,7 @@
   align-items: center;
   flex-direction: column;
 
-
-  // Different styling when textarea
-  &--textarea {
+  &.skv-feedback--textarea {
     max-width: 410px;
     display: block;
   }
@@ -15,15 +13,14 @@
     flex-direction: row;
   }
 
-  &__text {
+  .skv-feedback__text {
     display: flex;
     align-items: center;
     height: 100%;
-    margin-bottom: .875rem;
+    margin-bottom: 0.875rem;
     text-align: center;
 
-    &--standalone {
-      // Add more space when buttons aren't present
+    &.skv-feedback__text--standalone {
       margin-bottom: 0;
       text-align: center;
       padding: 1.4375rem 0;
@@ -33,33 +30,33 @@
       text-align: left;
       margin-bottom: 0;
 
-      &--standalone {
+      &.skv-feedback__text--standalone {
         text-align: left;
         padding: 0;
       }
     }
   }
 
-  &__buttons {
+  .skv-feedback__buttons {
     display: flex;
     align-items: center;
     height: 100%;
   }
 
-  &__button {
+  .skv-feedback__button {
     min-width: 84px;
 
     &:first-child {
-      margin: 0 .875rem;
+      margin: 0 0.875rem;
     }
   }
 
-  &__text-area {
-    padding-top: .6875rem;
-    padding-bottom: .6875rem;
+  .skv-feedback__text-area {
+    padding-top: 0.6875rem;
+    padding-bottom: 0.6875rem;
 
-    &--title {
-      margin-bottom: .125rem;
+    .skv-feedback__text-area--title {
+      margin-bottom: 0.125rem;
     }
   }
 }
