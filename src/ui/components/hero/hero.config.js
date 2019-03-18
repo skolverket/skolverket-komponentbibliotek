@@ -1,5 +1,7 @@
 module.exports = {
+  name: 'Largepuff',
   status: 'done',
+  default: 'Standard',
   context: {
     background: '/styleguide/tmp/img/bildstartsida.png',
     title: 'En lång rubrik som sträcker sig över flera rader',
@@ -8,10 +10,10 @@ module.exports = {
   },
   variants: [
     {
-      name: 'Without title',
+      name: 'Utan titel',
       context: {
         title: null,
-        background: '/styleguide/tmp/img/bildstartsida.png',
+        background: '/styleguide/tmp/img/bildstartsida.png'
       }
     }
   ]
