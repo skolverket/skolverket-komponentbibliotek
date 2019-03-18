@@ -1,20 +1,77 @@
 <div class="skv-reveal" data-js-reveal>
-  <header class="skv-reveal__header{{#if expanded}} skv-reveal__header--open{{/if}}" data-js-reveal-header>
+  <header
+    class="skv-reveal__header{{#if expanded}} skv-reveal__header--open{{/if}}"
+    data-js-reveal-header
+  >
     <h3 class="skv-reveal__title">{{ title }}</h3>
-    <button class="skv-reveal__toggle" aria-label="{{ title }}" aria-controls="{{ id }}" aria-expanded="{{#if expanded}}true{{else}}false{{/if}}" data-js-reveal-trigger>
-      <span class="skv-reveal__toggle-text skv-reveal__toggle-text--close">{{ toggleCloseText }}</span>
-      <span class="skv-reveal__toggle-text skv-reveal__toggle-text--open">{{ toggleOpenText }}</span>
+    <button
+      class="skv-reveal__toggle"
+      aria-label="{{ title }}"
+      aria-controls="{{ id }}"
+      aria-expanded="{{#if expanded}}true{{else}}false{{/if}}"
+      data-js-reveal-trigger
+    >
+      <span class="skv-reveal__toggle-text skv-reveal__toggle-text--close">{{
+        toggleCloseText
+      }}</span>
+      <span class="skv-reveal__toggle-text skv-reveal__toggle-text--open">{{
+        toggleOpenText
+      }}</span>
       <span class="skv-reveal__toggle-icon">
         {{> @icon name='expand-more' }}
       </span>
     </button>
   </header>
-  <div class="skv-reveal__content-wrapper{{#if expanded}} skv-reveal__content-wrapper--open{{/if}}" id="{{ id }}" tabindex="-1" data-js-reveal-container>
+  <div
+    class="skv-reveal__content-wrapper{{#if expanded}} skv-reveal__content-wrapper--open{{/if}}"
+    id="{{ id }}"
+    tabindex="-1"
+    data-js-reveal-container
+  >
     <div class="skv-reveal__content">
-      {{render (getView body) }}
+      <h1 class="h1">Rubrik 1</h1>
+      <p class="text-large">
+        Det här är en ingress på 25px. Maecenas faucibus mollis interdum.
+        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+        Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+        Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis
+        euismod semper.
+      </p>
 
+      <ul class="list text-standard">
+        <li>here is a bulleted list</li>
+        <li>this is another item in the list</li>
+        <li>and another item with a bit more text</li>
+      </ul>
+
+      <ol class="list text-standard">
+        <li>Understand that this is a numbered list.</li>
+        <li>Follow the second step in this numbered list.</li>
+        <li>Make sure each item is a full sentence ending with a full stop.</li>
+      </ol>
+
+      <p class="text-standard">
+        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+        ut fermentum massa justo sit amet risus. Donec sed odio dui. Donec id
+        elit non mi porta gravida at eget metus. Nullam id dolor id nibh
+        ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare
+        vel eu leo.
+      </p>
+      <p class="text-small">
+        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+        ut fermentum massa justo sit amet risus. Donec sed odio dui. Donec id
+        elit non mi porta gravida at eget metus. Nullam id dolor id nibh
+        ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare
+        vel eu leo.
+      </p>
       <div class="skv-reveal__content-toggle">
-        <button class="skv-reveal__toggle" aria-label="{{ hideContentLabel }}" aria-controls="{{ id }}" aria-expanded="{{#if expanded}}true{{else}}false{{/if}}" data-js-reveal-trigger>
+        <button
+          class="skv-reveal__toggle"
+          aria-label="{{ hideContentLabel }}"
+          aria-controls="{{ id }}"
+          aria-expanded="{{#if expanded}}true{{else}}false{{/if}}"
+          data-js-reveal-trigger
+        >
           <span class="skv-reveal__toggle-text">{{ toggleCloseText }}</span>
           <span class="skv-reveal__toggle-icon">
             {{> @icon name='expand-more' }}

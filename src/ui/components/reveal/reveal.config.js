@@ -2,13 +2,13 @@ module.exports = {
   name: 'Visa/Dölj',
   handle: 'reveal',
   status: 'done',
+  default: 'Standard',
   context: {
     id: 1321,
     title: 'Lorem ipsum dolor sit amet',
     toggleCloseText: 'Dölj',
     toggleOpenText: 'Visa',
-    expanded: false,
-    body: 'rich-text',
+    expanded: false
   },
   variants: [
     {
@@ -17,9 +17,10 @@ module.exports = {
     },
     {
       name: 'expanded',
+      label: 'Utfälld',
       context: {
         expanded: true
       }
     }
   ]
-}
+};
