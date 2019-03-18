@@ -20,7 +20,8 @@ const files = [
     ]
   },
   {
-    note: 'Fractals routes is now prefixed with "/styleguide/" during development',
+    note:
+      'Fractals routes is now prefixed with "/styleguide/" during development',
     path: '../../node_modules/@frctl/mandelbrot/src/theme.js',
     patches: [
       {
@@ -43,11 +44,11 @@ const files = [
     patches: [
       {
         pattern: `label: 'components',`,
-        replace: `label: 'exempel',`
+        replace: `label: 'bibliotek',`
       },
       {
         pattern: `title: 'Components',`,
-        replace: `title: 'Exempel',`
+        replace: `title: 'Bibliotek',`
       },
       {
         pattern: `label: 'documentation',`,
@@ -59,6 +60,6 @@ const files = [
       }
     ]
   }
-]
+];
 
-module.exports = files
+module.exports = files;
