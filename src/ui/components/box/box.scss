@@ -4,30 +4,34 @@
   box-shadow: 0 12px 24px 0 rgba(108, 39, 106, 0.25);
 
   @include box-padding;
+}
 
-  &--compact {
-    padding: rem(18px) rem(24px) rem(24px) rem(26px);
-    box-shadow: 0 6px 14px 0 rgba(108, 39, 106, 0.25);
+.skv-box--compact {
+  padding: rem(18px) rem(24px) rem(24px) rem(26px);
+  box-shadow: 0 6px 14px 0 rgba(108, 39, 106, 0.25);
 
-    @include media-min('md') {
-      padding: 28px 54px 40px 54px;
-    }
+  @include media-min('md') {
+    padding: 28px 54px 40px 54px;
   }
+}
 
-  &--margins {
-    margin: 0 12px 34px 0;
-  }
-  &--no-padding {
-    padding: 0;
-  }
-  &--no-border {
-    border: 0;
-  }
-  &--relative {
-    position: relative;
-  }
-  &--sticky {
-    position: sticky;
-    top: $baseline;
-  }
+.skv-box--margins {
+  margin: 0 12px 34px 0;
+}
+
+.skv-box--no-padding {
+  padding: 0;
+}
+
+.skv-box--no-border {
+  border: 0;
+}
+
+.skv-box--relative {
+  position: relative;
+}
+
+.skv-box--sticky {
+  position: sticky;
+  top: $baseline;
 }
