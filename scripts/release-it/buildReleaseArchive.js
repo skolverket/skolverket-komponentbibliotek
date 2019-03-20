@@ -7,10 +7,10 @@ const pkg = require('../../package.json');
 
 const archiveName = `skolverket-bundle-${pkg.version}`;
 const files = {
-  'build/dist/js/main.min.js': '/js/main.min.js',
-  'build/dist/css/main.min.css': '/css/main.min.css',
-  'build/dist/css/no-js.min.css': '/css/no-js.min.css',
-  'build/dist/assets/': 'assets/',
+  './build/dist/js/main.min.js': '/js/main.min.js',
+  './build/dist/css/main.min.css': '/css/main.min.css',
+  './build/dist/css/no-js.min.css': '/css/no-js.min.css',
+  './build/dist/assets/': 'assets/',
   'README.md': 'README.md'
 };
 
@@ -44,7 +44,9 @@ Object.entries(files).forEach(([source, destination]) => {
       zip.file(path.join(archiveName, filepath), data);
     });
   } else {
-    const sourceData = fs.readFileSync(path.resolve(__dirname, '..', source));
+    const sourceData = fs.readFileSync(
+      path.resolve(__dirname, '../..', source)
+    );
     zip.file(path.join(archiveName, destination), sourceData);
   }
 });
