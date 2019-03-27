@@ -11,7 +11,7 @@
     "dev": "parallelshell \"fractal start --sync\" \"gulp -s\"",
     "prebuild": "node scripts/fractal-patch/patch.js",
     "build": "gulp -s && fractal build",
-    "deploy": "NODE_ENV=production yarn build && gh-pages -d site",
+    "deploy": "NODE_ENV=production yarn build && gh-pages -d build/site",
     "postinstall": "node scripts/fractal-patch/patch.js",
     "prerelease": "NODE_ENV=production gulp",
     "release": "dotenv release-it",
