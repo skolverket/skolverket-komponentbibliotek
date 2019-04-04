@@ -203,10 +203,7 @@
     overflow-y: auto;
     height: calc(100% - 130px);
     overscroll-behavior: contain;
-
-    .fixed & {
-      height: calc(100% - 24px);
-    }
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 
     @include media-min('md') {
       height: calc(100vh - 100px);
