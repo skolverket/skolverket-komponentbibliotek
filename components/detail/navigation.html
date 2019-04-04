@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="../../theme/main.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Navigation | Skolverkets Komponentbilbiotek v1.4.0</title>
+<title>Navigation | Skolverkets Komponentbilbiotek v1.4.1</title>
 
 </head>
 <body>
@@ -40,7 +40,7 @@
 </svg>
 
     </button>
-    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.4.0</a>
+    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.4.1</a>
   </div>
 
   <div class="Header__links">
@@ -1306,6 +1306,23 @@
       }
     },
 
+    setRootLevelHeight(levelTwoList) {
+      <span class="hljs-keyword">const</span> levelThreeList = levelTwoList.querySelector(
+        <span class="hljs-string">'.skv-navigation__list-item--open'</span>
+      );
+
+      <span class="hljs-keyword">const</span> topLevelHeight = levelTwoList.parentNode.getBoundingClientRect()
+        .height;
+      <span class="hljs-keyword">const</span> levelTwoListHeight = levelTwoList.getBoundingClientRect().height;
+      <span class="hljs-keyword">const</span> levelThreeListHeight = levelThreeList
+        ? levelThreeList.getBoundingClientRect().height
+        : <span class="hljs-number">0</span>;
+
+      <span class="hljs-keyword">return</span> (
+        <span class="hljs-built_in">Math</span>.max(levelTwoListHeight, levelThreeListHeight) + topLevelHeight
+      );
+    },
+
     onTopLevelButtonClick(event) {
       <span class="hljs-keyword">const</span> button =
         event.target.nodeName === <span class="hljs-string">'SPAN'</span>
@@ -1325,8 +1342,7 @@
         childList.classList.add(<span class="hljs-string">'skv-navigation__list-item--open'</span>);
         <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isDesktop()) {
           <span class="hljs-keyword">this</span>.root.classList.add(<span class="hljs-string">'skv-navigation--open'</span>);
-          <span class="hljs-keyword">this</span>.root.style.height = <span class="hljs-string">`<span class="hljs-subst">${childList.getBoundingClientRect().height +
-            listItem.getBoundingClientRect().height}</span>px`</span>;
+          <span class="hljs-keyword">this</span>.root.style.height = <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>.setRootLevelHeight(childList)}</span>px`</span>;
         }
       } <span class="hljs-keyword">else</span> {
         button.setAttribute(<span class="hljs-string">'aria-expanded'</span>, <span class="hljs-literal">false</span>);
@@ -1367,7 +1383,6 @@
 
     onToggleButtonClick(event) {
       <span class="hljs-keyword">const</span> button = event.target;
-      <span class="hljs-keyword">const</span> listItem = button.parentElement;
       <span class="hljs-keyword">const</span> childList = button.parentNode.querySelector(
         <span class="hljs-string">'.skv-navigation__list'</span>
       );
@@ -1394,6 +1409,26 @@
         srcElementClassList.contains(<span class="hljs-string">'skv-navigation__list-item--collapse'</span>)
       ) {
         srcElementClassList.remove(<span class="hljs-string">'skv-navigation__list-item--open'</span>);
+
+        <span class="hljs-keyword">if</span> (srcElementClassList.contains(<span class="hljs-string">'skv-navigation__list--level-3'</span>)) {
+          <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isDesktop()) {
+            <span class="hljs-keyword">this</span>.root.style.height = <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>.setRootLevelHeight(
+              event.srcElement.parentElement.parentElement
+            )}</span>px`</span>;
+          }
+        }
+      }
+
+      <span class="hljs-keyword">if</span> (
+        <span class="hljs-keyword">this</span>.isDesktop() &amp;&amp;
+        srcElementClassList &amp;&amp;
+        srcElementClassList.contains(<span class="hljs-string">'skv-navigation__list'</span>) &amp;&amp;
+        srcElementClassList.contains(<span class="hljs-string">'skv-navigation__list-item--open'</span>) &amp;&amp;
+        srcElementClassList.contains(<span class="hljs-string">'skv-navigation__list--level-3'</span>)
+      ) {
+        <span class="hljs-keyword">this</span>.root.style.height = <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>.setRootLevelHeight(
+          event.srcElement.parentElement.parentElement
+        )}</span>px`</span>;
       }
 
       <span class="hljs-keyword">if</span> (
@@ -1427,7 +1462,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">9.3 KB</span>
+                    <span class="Meta-value">10.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -1960,6 +1995,133 @@
           <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
           <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
           <span class="hljs-attr">"links"</span>: [
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Styrdokument"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Bedömning"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Betyg"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Nationella prov"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            }
+          ]
+        },
+        {
+          <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Test för att se om höjden blir rätt"</span>,
+          <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+          <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-attr">"links"</span>: [
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Styrdokument"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Bedömning"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Betyg"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Nationella prov"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Styrdokument"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Bedömning"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Betyg"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Nationella prov"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Styrdokument"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Bedömning"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Betyg"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Nationella prov"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Styrdokument"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Bedömning"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Betyg"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
+            {
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Nationella prov"</span>,
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
+              <span class="hljs-attr">"isActive"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"isPath"</span>: <span class="hljs-literal">null</span>
+            },
             {
               <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Styrdokument"</span>,
               <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>,
@@ -2692,6 +2854,118 @@
                     <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
 
                     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list skv-navigation__list--level-3 "</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Styrdokument<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Bedömning<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Betyg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Nationella prov<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item  skv-navigation__list-item--has-child-links "</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Test för att se om höjden blir rätt<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-icon skv-icon--middle"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-expand-more"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list skv-navigation__list--level-3 "</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Styrdokument<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Bedömning<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Betyg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Nationella prov<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Styrdokument<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Bedömning<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Betyg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Nationella prov<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Styrdokument<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Bedömning<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Betyg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Nationella prov<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Styrdokument<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Bedömning<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Betyg<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Nationella prov<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item "</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-navigation__list-item-link"</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Styrdokument<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
