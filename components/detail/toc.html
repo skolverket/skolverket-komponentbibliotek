@@ -712,10 +712,7 @@
     <span class="hljs-attribute">overflow-y</span>: auto;
     <span class="hljs-attribute">height</span>: calc(<span class="hljs-number">100%</span> - <span class="hljs-number">130px</span>);
     overscroll-behavior: contain;
-
-    <span class="hljs-selector-class">.fixed</span> &amp; {
-      <span class="hljs-attribute">height</span>: calc(<span class="hljs-number">100%</span> - <span class="hljs-number">24px</span>);
-    }
+    -ms-<span class="hljs-attribute">overflow</span>-<span class="hljs-selector-tag">style</span>: -ms-autohiding-scrollbar;
 
     @<span class="hljs-keyword">include</span> media-min(<span class="hljs-string">'md'</span>) {
       <span class="hljs-attribute">height</span>: calc(<span class="hljs-number">100vh</span> - <span class="hljs-number">100px</span>);
