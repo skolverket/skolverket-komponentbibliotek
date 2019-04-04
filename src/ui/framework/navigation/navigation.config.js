@@ -512,6 +512,133 @@ module.exports = {
                 isPath: false
               }
             ]
+          },
+          {
+            text: 'Test för att se om höjden blir rätt',
+            url: '#',
+            isActive: false,
+            links: [
+              {
+                text: 'Styrdokument',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Styrdokument',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Styrdokument',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Styrdokument',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Styrdokument',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              }
+            ]
           }
         ]
       },
