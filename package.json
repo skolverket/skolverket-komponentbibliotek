@@ -13,12 +13,13 @@
     "build": "gulp -s && fractal build",
     "deploy": "NODE_ENV=production yarn build && gh-pages -d build/site",
     "postinstall": "node scripts/fractal-patch/patch.js",
-    "prerelease": "NODE_ENV=production gulp",
+    "prerelease": "NODE_ENV=production gulp && gulp tmp:clean",
     "release": "dotenv release-it",
     "postrelease": "rm skolverket-*.zip"
   },
   "dependencies": {
     "@frctl/fractal": "^1.1.7",
+    "archiver": "^3.0.0",
     "babel-core": "~6.26.0",
     "babel-polyfill": "~6.26.0",
     "babel-preset-es2015": "~6.24.1",
