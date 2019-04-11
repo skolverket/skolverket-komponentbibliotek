@@ -30,6 +30,10 @@
         outline: none !important;
       }
 
+      &:visited {
+        color: $color-white;
+      }
+
       &--boxed {
         position: relative;
         background-color: $color-primary-purple;
