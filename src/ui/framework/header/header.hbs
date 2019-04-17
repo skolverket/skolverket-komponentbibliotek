@@ -23,7 +23,7 @@
             <ul class="skv-header__list">
               {{#each utilities }}
               <li class="skv-header__list-item">
-                <a href="{{ uel }}" class="skv-header__list-item-{{ type }}">
+                <a href="{{ uel }}" {{#if lang }}lang="{{lang}}"{{/if}} class="skv-header__list-item-{{ type }}">
                   {{ text }}
                 </a>
               </li>

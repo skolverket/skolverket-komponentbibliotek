@@ -21,7 +21,8 @@ module.exports = {
       {
         text: 'Languages',
         url: '#',
-        type: 'translate'
+        type: 'translate',
+        lang: 'en'
       },
       {
         text: 'Sök',
