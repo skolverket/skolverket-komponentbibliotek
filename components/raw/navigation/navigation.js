@@ -101,21 +101,23 @@ require('classlist-polyfill');
         const svg = element.querySelector('.skv-icon');
         const list = element.querySelector('.skv-navigation__list');
         const text = element.querySelector('.skv-navigation__list-item-text');
-        text.appendChild(svg);
+        if (svg && text) {
+          text.appendChild(svg);
 
-        const button = document.createElement('button');
-        button.classList.add('skv-navigation__list-toggle-button');
-        button.appendChild(text);
+          const button = document.createElement('button');
+          button.classList.add('skv-navigation__list-toggle-button');
+          button.appendChild(text);
 
-        button.setAttribute('aria-expanded', false);
-        button.setAttribute('aria-haspopup', true);
-        element.insertBefore(button, list);
+          button.setAttribute('aria-expanded', false);
+          button.setAttribute('aria-haspopup', true);
+          element.insertBefore(button, list);
 
-        button.addEventListener(
-          'click',
-          this.onTopLevelButtonClick.bind(this),
-          false
-        );
+          button.addEventListener(
+            'click',
+            this.onTopLevelButtonClick.bind(this),
+            false
+          );
+        }
       }
     },
 

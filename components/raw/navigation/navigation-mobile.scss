@@ -107,6 +107,29 @@
           border-bottom: 8px solid $color-accent-orange;
         }
       }
+      > li > .skv-navigation__list-item-link--active {
+        border-bottom: 8px solid $color-accent-orange;
+        &:hover {
+          color: $color-white;
+        }
+        &:before {
+          display: none;
+        }
+        span {
+          font-weight: normal;
+        }
+        .show-focus-outlines &:focus {
+          outline: none;
+          background-color: $color-complement-purple;
+
+          span {
+            display: inline-block;
+            background-color: $color-white;
+            outline: 4px solid $color-white;
+            color: $color-gray-text;
+          }
+        }
+      }
     }
 
     &.skv-navigation__list--level-2,
@@ -221,7 +244,17 @@
   }
 
   .skv-navigation__list-item-link {
-    color: $color-primary-purple;
+    color: $color-white;
+
+    &:hover {
+      color: $color-white;
+      text-decoration: underline;
+    }
+
+    .skv-navigation__list--level-2 &,
+    .skv-navigation__list--level-3 & {
+      color: $color-primary-purple;
+    }
 
     &.skv-navigation__list-item-link--active {
       &:before {
