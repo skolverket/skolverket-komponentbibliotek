@@ -4,11 +4,20 @@
     <li
       class="skv-navigation__list-item {{#if links }} skv-navigation__list-item--has-child-links{{/if}} {{#if isPath }} skv-navigation__list-item--path{{/if}}"
     >
+      {{#if url }}
+      <a
+        href="{{ url }}"
+        class="skv-navigation__list-item-link{{#if isActive }} skv-navigation__list-item-link--active{{/if}} "
+      >
+        <span> {{ text }}</span>
+      </a>
+      {{else}}
       <span
         class="skv-navigation__list-item-text{{#if isActive }} skv-navigation__list-item-text--active{{/if}} "
       >
         {{ text }}
       </span>
+      {{/if }}
       {{#if links }} {{> @icon name='expand-more' middle=true }}
       <ul class="skv-navigation__list skv-navigation__list--level-2">
         {{# each links }}
