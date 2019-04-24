@@ -1,5 +1,16 @@
 module.exports = {
-  name: 'Återkoppling',
+  name: 'Hjälpte sidan dig',
   handle: 'feedback',
-  status: 'done'
-}
+  status: 'done',
+  default: 'Standard',
+  variants: [
+    {
+      name: 'input',
+      label: 'Formulär'
+    },
+    {
+      name: 'response',
+      label: 'Svar'
+    }
+  ]
+};
