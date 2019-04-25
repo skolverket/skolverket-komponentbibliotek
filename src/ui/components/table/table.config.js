@@ -1,18 +1,18 @@
 module.exports = {
   name: 'Tabell',
   handle: 'table',
-  status: 'done',
+  default: 'Standard',
   context: {
     title: 'Lorem ipsum dolor sit amet',
     isMinimal: false
   },
   variants: [
     {
-      name: 'minimal',
+      name: 'Minimal',
       context: {
         title: null,
         isMinimal: true
       }
     }
   ]
-}
+};
