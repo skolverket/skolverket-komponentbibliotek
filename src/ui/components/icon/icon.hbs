@@ -1,4 +1,13 @@
-{{#if label }}<span class="visually-hidden" aria-hidden="true">{{label}}</span>{{/if}}
-<svg focusable="false" class="skv-icon{{#if inline }} skv-icon--inline{{/if}}{{#if block }} skv-icon--block{{/if}}{{#if middle }} skv-icon--middle{{/if}}{{#if class }} {{ class }}{{/if}}"{{#if attr}} {{{ attr }}}{{/if}}>
-  <use xlink:href="#icon-{{ name }}"></use>
-</svg>
+{{#if name}}
+  {{#if label }}<span class="visually-hidden" aria-hidden="true">{{label}}</span>{{/if}}
+  <svg focusable="false" class="skv-icon{{#if inline }} skv-icon--inline{{/if}}{{#if block }} skv-icon--block{{/if}}{{#if middle }} skv-icon--middle{{/if}}{{#if class }} {{ class }}{{/if}}"{{#if attr}} {{{ attr }}}{{/if}}>
+    <use xlink:href="#icon-{{ name }}"></use>
+  </svg>
+{{ else }}
+  {{#each icons }}
+    {{#if label }}<span class="visually-hidden" aria-hidden="true">{{label}}</span>{{/if}}
+    <svg focusable="false" class="skv-icon{{#if inline }} skv-icon--inline{{/if}}{{#if block }} skv-icon--block{{/if}}{{#if middle }} skv-icon--middle{{/if}}{{#if class }} {{ class }}{{/if}}"{{#if attr}} {{{ attr }}}{{/if}}>
+      <use xlink:href="#icon-{{ name }}"></use>
+    </svg>
+  {{/each}}
+{{/if}}

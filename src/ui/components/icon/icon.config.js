@@ -1,26 +1,23 @@
-const fs = require('fs')
-const path = require('path')
-const icons = fs.readdirSync(path.join(__dirname, '../../assets/svg'))
+const fs = require('fs');
+const path = require('path');
+const icons = fs.readdirSync(path.join(__dirname, '../../assets/svg'));
 
 const getIconVariants = () => {
-  return icons.filter(file => file.includes('.svg')).map(icon => {
-    const name = icon.split('.')[0]
-    return { name, status: 'done', context: { name, label: null } }
-  })
-}
+  return icons
+    .filter(file => file.includes('.svg'))
+    .map(icon => {
+      const name = icon.split('.')[0];
+      return { name, status: 'done', context: { name, label: null } };
+    });
+};
 
 module.exports = {
-  name: 'Ikon',
+  name: 'Ikoner',
   handle: 'icon',
-  status: 'done',
+  default: 'Alla',
+  preview: '@layout--icon',
   context: {
-    name: 'expand-more',
-    label: 'Högerpil',
-    inline: false,
-    block: false,
-    middle: false,
-    class: null,
-    attr: null
+    icons: getIconVariants()
   },
   variants: getIconVariants()
-}
+};
