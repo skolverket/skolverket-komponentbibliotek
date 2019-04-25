@@ -1,4 +1,4 @@
-.skv-box-link {
+.skv-card--medium {
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -43,8 +43,8 @@
         left: 0.2em;
       }
 
-      .skv-box-link:hover &,
-      .skv-box-link--focused & {
+      .skv-card--medium:hover &,
+      .skv-card--medium--focused & {
         text-decoration: underline;
         color: $color-white;
       }

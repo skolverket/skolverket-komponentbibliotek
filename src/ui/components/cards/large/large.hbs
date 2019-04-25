@@ -1,0 +1,19 @@
+<div
+  class="skv-card--large{{#if shouldOverlap}} skv-card--large--overlap{{/if}}"
+>
+  <img src="{{ background }}" width="100%" alt="Ett klassrum med en lärare som står och pekar på en text på tavlan" />
+  <div class="skv-card--large__banner">
+    {{#if title}}
+    <div class="skv-card--large__banner-body">
+      <div class="col-sm-9 col-md-8 col-lg-7">
+        <a href="{{ url }}" class="skv-card--large__banner-body-text">
+          <span class="skv-card--large__banner-body-text-stripe"
+            >{{ title }}
+            {{> @icon name='chevron-right' middle=true }}
+          </span>
+        </a>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</div>

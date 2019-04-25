@@ -1,0 +1,44 @@
+<div
+  class="skv-card--medium"
+  data-js-accessible-link
+  data-js-accessible-link-focus-class="skv-card--medium--focused"
+>
+  <figure class="skv-card--medium__figure">
+    {{#eq layout 'imageLink' }}
+    <img
+      class="skv-card--medium__image"
+      src="{{ ../image.src }}@1x.jpg"
+      srcset="{{ ../image.src }}@1x.jpg 600w, {{ ../image.src }}@2x.jpg 1200w"
+      sizes="auto"
+      alt="{{ image.alt }}"
+    />
+    {{else}}
+    <div
+      class="skv-card--medium__image skv-card--medium__image--pattern-{{ ../pattern }} skv-card--medium__image--color-{{ ../color }}"
+    ></div>
+    {{/eq}}
+  </figure>
+  <div
+    class="skv-card--medium__content{{#eq layout 'textLink' }} skv-card--medium__content--center{{/eq}}"
+  >
+    <h2 class="skv-card--medium__headline">
+      <a
+        class="skv-card--medium__headline-link{{#eq layout 'imageLink' }} skv-card--medium__headline-link--boxed{{/eq}}"
+        href="{{ url }}"
+        data-js-accessible-link-url
+      >
+        {{ headline }}
+        {{#eq linkType 'external' }}
+        {{> @icon name='external' inline=true }}
+        {{ else }}
+        {{> @icon name='chevron-right' middle=true }}
+        {{/eq}}
+      </a>
+    </h2>
+    {{#if teaser}}
+    {{#eq layout 'textLink' }}
+    <p class="skv-card--medium__teaser">{{{ ../teaser }}}</p>
+    {{/eq}}
+    {{/if}}
+  </div>
+</div>
