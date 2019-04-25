@@ -8,7 +8,7 @@ Det finns tre typer av knappar:
 
 - Primär: Är den mest visuellt utmärkande och _skall_ användas för det viktigaste valet om flera knappar används
 - Sekundär: En alternativ knapp som _bör_ användas för att märka ut att det här inte är det primära valet
-- Avstängd: _Skall_ användas där interaktion inte är möjlig _men snart kommer vara det_, om användaren aldrig kan aktivera den genom t.ex. andra formulärval på sidan så skall knappen inte visas alls.
+- Inaktiv: _Skall_ användas där interaktion inte är möjlig _men snart kommer vara det_, om användaren aldrig kan aktivera den genom t.ex. andra formulärval på sidan så skall knappen inte visas alls.
 
 ```html
 <button class="btn btn--primary">Primär knapp</button>

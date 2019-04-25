@@ -1,8 +1,7 @@
 module.exports = {
-  status: 'done',
   name: 'Knappar',
   handle: 'btn',
-  collated: false,
+  default: 'Primär',
   context: {
     theme: 'primary',
     text: 'Knapp',
@@ -12,30 +11,35 @@ module.exports = {
   },
   variants: [
     {
+      label: 'Sekundär',
       name: 'secondary',
       context: {
         theme: 'secondary'
       }
     },
     {
+      label: 'Inaktiv',
       name: 'disabled',
       context: {
-        disabled: true,
+        disabled: true
       }
     },
     {
+      label: 'Liten',
       name: 'small',
       context: {
         small: true
       }
     },
     {
+      label: 'Fullbredd',
       name: 'block',
       context: {
         block: true
       }
     },
     {
+      label: 'Fullbred, liten',
       name: 'small-block',
       context: {
         small: true,
@@ -43,4 +47,4 @@ module.exports = {
       }
     }
   ]
-}
+};
