@@ -1,5 +1,4 @@
 module.exports = {
-  status: 'done',
   name: 'Dragspelsmeny',
   handle: 'accordion',
   context: {
@@ -26,4 +25,4 @@ module.exports = {
       }
     ]
   }
-}
+};

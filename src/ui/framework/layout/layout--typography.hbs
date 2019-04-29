@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    {{ render '@head' }}
+    {{ render '@favicon' }}
+    <style></style>
+  </head>
+
+  <body class="">
+    {{ render '@inline-svg' }}
+    <div class="container container--margins">
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <div class="skv-box skv-box--compact skv-box--no-border">
+            {{{ yield }}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

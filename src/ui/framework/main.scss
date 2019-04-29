@@ -2,12 +2,12 @@
 '../core/scss/core';
 
 @import
-'../framework/footer/footer',
-'../framework/header/header',
+'../containers/footer/footer',
+'../containers/header/header',
 '../framework/navigation/navigation';
 
 @import 
-'../components/accordion/accordion', 
+'../components/deprecated/accordion/accordion', 
 '../components/banner/banner',  
 '../components/box/box',  
 '../components/cards/medium/medium', 
@@ -18,7 +18,7 @@
 '../components/icon/icon',
 '../components/nav-link/nav-link',
 '../components/reveal/reveal',
-'../components/section-navigation/section-navigation',
+'../components/deprecated/section-navigation/section-navigation',
 '../components/section/section',
 '../components/loading-indicator/spinner',
 '../components/loading-indicator/throbber',
@@ -27,8 +27,8 @@
 '../components/toc/toc';
 
 @import
-'../containers/box-link-container/box-link-container',
-'../containers/card-container/card-container',
+'../containers/medium-card-container/medium-card-container',
+'../containers/small-card-container/small-card-container',
 '../containers/content-navigation/content-navigation',
 '../containers/form/form',
 '../containers/link-list/link-list',

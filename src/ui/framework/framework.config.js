@@ -1,3 +1,4 @@
 module.exports = {
-  name: 'Ramverk'
-}
+  name: 'Ramverk',
+  hidden: true
+};

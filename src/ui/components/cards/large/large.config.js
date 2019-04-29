@@ -1,5 +1,4 @@
 module.exports = {
-  status: 'done',
   default: 'Standard',
   context: {
     background: '/styleguide/tmp/img/bildstartsida.png',

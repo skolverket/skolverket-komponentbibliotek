@@ -1,7 +1,6 @@
 module.exports = {
   name: 'Hjälpte sidan dig',
   handle: 'feedback',
-  status: 'done',
   default: 'Standard',
   variants: [
     {

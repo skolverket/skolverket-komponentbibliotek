@@ -17,7 +17,6 @@ const patterns = {
 };
 
 module.exports = {
-  status: 'done',
   default: 'Standard',
   context: {
     url: '#',
