@@ -1,6 +1,6 @@
 module.exports = {
-  name: 'Målgruppsingångar',
-  handle: 'target-group-links',
+  name: 'target-group-links',
+  label: 'Målgruppsingångar',
   context: {
     title: 'För dig som är',
     links: [

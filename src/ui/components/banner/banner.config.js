@@ -1,7 +1,6 @@
 module.exports = {
   name: 'Notiser',
   handle: 'banner',
-  status: 'wip',
   default: 'Standard',
   context: {
     id: 'banner-1',

@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'Kortbehållare',
-  handle: 'card-container',
-  status: 'wip'
-}
+  name: 'Behållare för small kort',
+  label: 'Behållare för small kort',
+  handle: 'small-card-container'
+};

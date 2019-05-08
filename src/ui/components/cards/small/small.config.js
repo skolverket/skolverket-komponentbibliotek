@@ -30,7 +30,7 @@ module.exports = {
       }
     },
     {
-      label: 'Grafik - ',
+      label: 'Grafik - diagram',
       name: 'with-graphics-charts',
       context: {
         image: {

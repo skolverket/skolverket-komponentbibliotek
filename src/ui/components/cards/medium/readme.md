@@ -17,7 +17,7 @@ På grund av hur boxen behöver skala om sig i olika format så behöver bilden 
 
 - Format: 16:9
 - Upplösning: Ladda gärna upp bilderna med upplösning av **1200**x**676**px. Detta gör att vi kommer kunna visa bilder med hög upplösning för de enheter som stödjer det.
-- Utnitt: Försök att placera det viktigaste i mitten av bilden. Om det finns viktig information på sidorna så kommer dessa beskäras i mobil-läget. Dra i fönstret ovan för att se hur det här fungerar.
+- Utsnitt: Försök att placera det viktigaste i mitten av bilden. Om det finns viktig information på sidorna så kommer dessa beskäras i mobil-läget. Dra i fönstret ovan för att se hur det här fungerar.
 
 ## För utvecklare
 

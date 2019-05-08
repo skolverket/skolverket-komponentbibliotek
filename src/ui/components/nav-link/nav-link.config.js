@@ -1,6 +1,7 @@
 module.exports = {
   name: 'Länk',
   handle: 'nav-link',
+  default: 'Standard',
   context: {
     url: '#',
     label: 'Lorem ipsum dolor sit amet lorem ipsum dolor sit amet',
@@ -22,4 +23,4 @@ module.exports = {
       }
     }
   ]
-}
+};

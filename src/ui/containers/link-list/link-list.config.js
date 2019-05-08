@@ -1,7 +1,7 @@
 module.exports = {
   name: 'Länklista',
   handle: 'link-list',
-  status: 'wip',
+  default: 'Standard',
   context: {
     title: 'Många frågar om...',
     isOutlined: false,
@@ -27,6 +27,7 @@ module.exports = {
   variants: [
     {
       name: 'outlined',
+      label: 'Med ram',
       context: {
         title: 'Ta mig till...',
         isOutlined: true,
@@ -51,4 +52,4 @@ module.exports = {
       }
     }
   ]
-}
+};

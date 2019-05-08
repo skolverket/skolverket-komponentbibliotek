@@ -1,13 +1,14 @@
 module.exports = {
-  name: "Laddningsindikator",
-  default: "spinner",
-  status: 'wip',
+  name: 'Laddningsindikator',
+  default: 'spinner',
   variants: [
     {
-      name: "spinner"
+      name: 'spinner',
+      label: 'Standard'
     },
     {
-      name: "throbber"
+      name: 'throbber',
+      label: 'Liggande'
     }
   ]
 };

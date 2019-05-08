@@ -662,5 +662,17 @@ module.exports = {
         type: 'translate'
       }
     ]
-  }
+  },
+  variants: [
+    {
+      label: 'Med en nivå',
+      name: 'one',
+      context: {
+        text: 'Om oss',
+        url: '#',
+        isActive: false,
+        isPath: false
+      }
+    }
+  ]
 };

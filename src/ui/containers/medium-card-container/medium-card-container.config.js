@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'Behållare för mediumkort',
-  label: 'Behållare för mediumkort',v
+  name: 'Behållare för medium kort',
+  label: 'Behållare för medium kort',
   handle: 'medium-card-container'
 };
