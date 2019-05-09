@@ -263,7 +263,7 @@ require('classlist-polyfill');
     },
 
     onTransitionEnd(event) {
-      const srcElementClassList = event.srcElement.classList;
+      const srcElementClassList = event.target.classList;
 
       if (
         srcElementClassList &&
@@ -275,7 +275,7 @@ require('classlist-polyfill');
         if (srcElementClassList.contains('skv-navigation__list--level-3')) {
           if (this.isDesktop()) {
             this.root.style.height = `${this.setRootLevelHeight(
-              event.srcElement.parentElement.parentElement
+              event.target.parentElement.parentElement
             )}px`;
           }
         }
@@ -289,7 +289,7 @@ require('classlist-polyfill');
         srcElementClassList.contains('skv-navigation__list--level-3')
       ) {
         this.root.style.height = `${this.setRootLevelHeight(
-          event.srcElement.parentElement.parentElement
+          event.target.parentElement.parentElement
         )}px`;
       }
 
