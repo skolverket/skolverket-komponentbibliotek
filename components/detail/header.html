@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="../../theme/main.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Sidhuvud | Skolverkets Komponentbilbiotek v1.7.0</title>
+<title>Sidhuvud | Skolverkets Komponentbilbiotek v2.0.0</title>
 
 </head>
 <body>
@@ -40,7 +40,7 @@
 </svg>
 
     </button>
-    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.7.0</a>
+    <a href="../../index.html" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v2.0.0</a>
   </div>
 
   <div class="Header__links">
@@ -62,7 +62,7 @@
     
     
 
-<div class="Pen" data-behaviour="pen" id="pen-b18c79387efecf6707f7c64702c40642">
+<div class="Pen" data-behaviour="pen" id="pen-56379a5f849918a2aee693c2bd06b51f">
 
     
 
@@ -83,7 +83,7 @@
 </div>
 
 
-    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-b18c79387efecf6707f7c64702c40642">
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-56379a5f849918a2aee693c2bd06b51f">
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
@@ -105,7 +105,7 @@
     <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
 
     <div class="Pen-panel Pen-info" data-role="info">
-    <div class="Browser" data-behaviour="browser" id="browser-b18c79387efecf6707f7c64702c40642">
+    <div class="Browser" data-behaviour="browser" id="browser-56379a5f849918a2aee693c2bd06b51f">
 
     
 
@@ -114,7 +114,7 @@
         
         
         <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-b18c79387efecf6707f7c64702c40642-panel-notes">Anteckningar</a>
+            <a href="#browser-56379a5f849918a2aee693c2bd06b51f-panel-notes">Anteckningar</a>
         </li>
         
         
@@ -122,7 +122,7 @@
         
         
         <li class="Browser-tab Browser-tab--resources" data-role="tab">
-            <a href="#browser-b18c79387efecf6707f7c64702c40642-panel-assets">Resurser</a>
+            <a href="#browser-56379a5f849918a2aee693c2bd06b51f-panel-assets">Resurser</a>
         </li>
         
         
@@ -130,25 +130,25 @@
         
         
         <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-b18c79387efecf6707f7c64702c40642-panel-context">Modell</a>
+            <a href="#browser-56379a5f849918a2aee693c2bd06b51f-panel-context">Modell</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--view" data-role="tab">
-            <a href="#browser-b18c79387efecf6707f7c64702c40642-panel-view">Vy</a>
+            <a href="#browser-56379a5f849918a2aee693c2bd06b51f-panel-view">Vy</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--html" data-role="tab">
-            <a href="#browser-b18c79387efecf6707f7c64702c40642-panel-html">HTML</a>
+            <a href="#browser-56379a5f849918a2aee693c2bd06b51f-panel-html">HTML</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-b18c79387efecf6707f7c64702c40642-panel-info">Info</a>
+            <a href="#browser-56379a5f849918a2aee693c2bd06b51f-panel-info">Info</a>
         </li>
         
         
@@ -157,11 +157,27 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-b18c79387efecf6707f7c64702c40642-panel-notes">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-56379a5f849918a2aee693c2bd06b51f-panel-notes">
     <div class="Prose Prose--condensed">
         
         <h1 id="sidhuvud">Sidhuvud</h1>
 <p>Sidhuvudet hjälper användare att se vart hon är och ge en snabbt, organiserat sätt att nå huvudsektionerna på sidan. Sidhuvudet är en viktig identitesbärare så att användare känner igen skolverkets sidor.</p>
+<h2 id="huvudnavigationen-p-skolverket-se">Huvudnavigationen på skolverket.se</h2>
+<h3 id="tillg-nglighet">Tillgänglighet</h3>
+<p>Följande interaktionsprinciper förväntas:</p>
+<h3 id="knapptryck-eller-fokus-p-knapp-enter-mellanslag">Knapptryck eller fokus på knapp + enter/mellanslag</h3>
+<p>Ska fälla ut/ihop underliggande navigationslista</p>
+<h3 id="fokus-p-inneh-ll-escape">Fokus på innehåll + Escape</h3>
+<p>Ska fälla ihop innehållet och sätta fokus på knappen</p>
+<h3 id="fokus-utanf-r-inneh-ll">Fokus utanför innehåll</h3>
+<p>Innehållet lyssnar inte längre på knapptryck</p>
+<h3 id="fokus-trap">Fokus trap</h3>
+<p>I den mobila version så öppnas navigationen modalt och då ska fokus inte lämna det modala fönstret.</p>
+<h2 id="f-r-utvecklare">För utvecklare</h2>
+<h3 id="no-js">No-js</h3>
+<p>Om man har stängt av javascript så skall man fortfarande kunna ta till sig innehållet. Detta görs genom att inkludera <code>/css/no-js.min.css</code> i <a href="/styleguide/components/detail/head">headern</a> i en noscript-tag.</p>
+<h3 id="print">Print</h3>
+<p>När man skriver ut sidan så visar vi allt innehåll som om komponenten är utfälld. Vi tar även bort knapptexten.</p>
 
         
     </div>
@@ -171,28 +187,28 @@
     
 
 
-<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-b18c79387efecf6707f7c64702c40642-panel-assets">
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-56379a5f849918a2aee693c2bd06b51f-panel-assets">
     <div class="FileBrowser">
 
         <div class="FileBrowser-selectWrapper">
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-33e94fecd324786121d67d07cda46ca9">header-no-js.scss</option>
+                <option value="file-c345defd09afb79689f30c4cc64ab0fa">header-no-js.scss</option>
                 
-                <option value="file-e8109730abbe74c7c439ad81c47a849e">header.js</option>
+                <option value="file-b338dd814d46ff301c9040554b985968">header.js</option>
                 
-                <option value="file-9d9b4098c75baec55637d734c1e7539e">header.scss</option>
+                <option value="file-2454e1368abd98d719e4b6e4a89162c3">header.scss</option>
                 
-                <option value="file-c5031dff936cb4c6f4e103289a1b74a9">mobile-menu-no-js.scss</option>
+                <option value="file-7ea1f25d72968d7f04b00cbb5764219d">mobile-menu-no-js.scss</option>
                 
-                <option value="file-cbe65cdc94840a4b155798c161af7359">mobile-menu.scss</option>
+                <option value="file-cf518c6534680d47b7c636b67fe763b2">mobile-menu.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-33e94fecd324786121d67d07cda46ca9" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-c345defd09afb79689f30c4cc64ab0fa" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -222,7 +238,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/ui/framework/header/header-no-js.scss</span>
+                    <span class="Meta-value">src/ui/containers/header/header-no-js.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -231,7 +247,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-e8109730abbe74c7c439ad81c47a849e" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-b338dd814d46ff301c9040554b985968" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -260,7 +276,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/ui/framework/header/header.js</span>
+                    <span class="Meta-value">src/ui/containers/header/header.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -269,7 +285,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-9d9b4098c75baec55637d734c1e7539e" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-2454e1368abd98d719e4b6e4a89162c3" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -497,7 +513,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/ui/framework/header/header.scss</span>
+                    <span class="Meta-value">src/ui/containers/header/header.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -506,7 +522,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-c5031dff936cb4c6f4e103289a1b74a9" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-7ea1f25d72968d7f04b00cbb5764219d" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -532,7 +548,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/ui/framework/header/mobile-menu-no-js.scss</span>
+                    <span class="Meta-value">src/ui/containers/header/mobile-menu-no-js.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -541,7 +557,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-cbe65cdc94840a4b155798c161af7359" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-cf518c6534680d47b7c636b67fe763b2" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -646,7 +662,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/ui/framework/header/mobile-menu.scss</span>
+                    <span class="Meta-value">src/ui/containers/header/mobile-menu.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -661,7 +677,7 @@
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-b18c79387efecf6707f7c64702c40642-panel-context">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-56379a5f849918a2aee693c2bd06b51f-panel-context">
     <code class="Code Code--lang-json">
         
             
@@ -701,7 +717,7 @@
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-b18c79387efecf6707f7c64702c40642-panel-view">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-56379a5f849918a2aee693c2bd06b51f-panel-view">
     <code class="Code Code--lang-handlebars">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-header"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-header__top"</span>&gt;</span>
@@ -728,7 +744,7 @@
             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-header__list"</span>&gt;</span>
               </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> utilities }}</span><span class="xml">
               <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-header__list-item"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ uel }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> lang }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">lang</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{lang}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-header__list-item-</span></span></span><span class="hljs-template-variable">{{ type }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ uel }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-header__list-item-</span></span></span><span class="hljs-template-variable">{{ type }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
                   </span><span class="hljs-template-variable">{{ text }}</span><span class="xml">
                 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -746,7 +762,7 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-b18c79387efecf6707f7c64702c40642-panel-html">
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-56379a5f849918a2aee693c2bd06b51f-panel-html">
     <code class="Code Code--lang-html">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-header"</span>&gt;</span>
@@ -772,7 +788,7 @@
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-header__list-item"</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-header__list-item-translate"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skv-header__list-item-translate"</span>&gt;</span>
                                     Languages
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -1529,7 +1545,7 @@
 </div>
 
     
-    <div class="Browser-panel" data-role="tab-panel" id="browser-b18c79387efecf6707f7c64702c40642-panel-info">
+    <div class="Browser-panel" data-role="tab-panel" id="browser-56379a5f849918a2aee693c2bd06b51f-panel-info">
     <ul class="Meta">
         <li class="Meta-item">
             <strong class="Meta-key">Handle:</strong>
@@ -1559,7 +1575,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/ui/framework/header/header.hbs</span>
+            <span class="Meta-value">src/ui/containers/header/header.hbs</span>
         </li>
         
         <li class="Meta-item">
@@ -1784,9 +1800,9 @@
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-banner">
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-utfasade">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Banner</span>
+                <span>Utfasade</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -1797,23 +1813,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="banner--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="accordion.html" data-pjax>
+                <span>Dragspelsmeny </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1821,95 +1823,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="banner--borttagbar.html" data-pjax>
-                <span>Borttagbar </span>
+            <a class="Tree-entityLink" href="section-navigation.html" data-pjax>
+                <span>Sektionsnavigering </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="banner--konfirmering.html" data-pjax>
-                <span>Konfirmering </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="banner--fel.html" data-pjax>
-                <span>Fel </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="banner--varning.html" data-pjax>
-                <span>Varning </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1925,269 +1841,7 @@
             <a class="Tree-entityLink" href="box.html" data-pjax>
                 <span>Box </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-box-link">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Boxlänk</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="box-link--default.html" data-pjax>
-                <span>Default </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="box-link--external-link.html" data-pjax>
-                <span>External Link </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="box-link--text-link-green-squares.html" data-pjax>
-                <span>Text Link Green Squares </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="box-link--text-link-green-waves.html" data-pjax>
-                <span>Text Link Green Waves </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="box-link--text-link-purple-squares.html" data-pjax>
-                <span>Text Link Purple Squares </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="box-link--text-link-purple-waves.html" data-pjax>
-                <span>Text Link Purple Waves </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="accordion.html" data-pjax>
-                <span>Dragspelsmeny </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-hero">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Hero</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="hero--default.html" data-pjax>
-                <span>Default </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="hero--without-title.html" data-pjax>
-                <span>Without Title </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -2208,20 +1862,6 @@
             <a class="Tree-entityLink" href="feedback--standard.html" data-pjax>
                 <span>Standard </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2232,20 +1872,6 @@
             <a class="Tree-entityLink" href="feedback--input.html" data-pjax>
                 <span>Formulär </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2256,20 +1882,6 @@
             <a class="Tree-entityLink" href="feedback--response.html" data-pjax>
                 <span>Svar </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2282,7 +1894,7 @@
         
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-icon">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Ikon</span>
+                <span>Ikoner</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -2293,23 +1905,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="icon--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="icon--alla.html" data-pjax>
+                <span>Alla </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2512,30 +2110,6 @@
         
     
         
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="toc.html" data-pjax>
-                <span>Innehallsforteckning </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-btn">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Knappar</span>
@@ -2549,23 +2123,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="btn--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="btn--primar.html" data-pjax>
+                <span>Primar </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2574,22 +2134,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="btn--secondary.html" data-pjax>
-                <span>Secondary </span>
+                <span>Sekundär </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2598,22 +2144,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="btn--disabled.html" data-pjax>
-                <span>Disabled </span>
+                <span>Inaktiv </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2622,22 +2154,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="btn--small.html" data-pjax>
-                <span>Small </span>
+                <span>Liten </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2646,22 +2164,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="btn--block.html" data-pjax>
-                <span>Block </span>
+                <span>Fullbredd </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2670,22 +2174,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="btn--small-block.html" data-pjax>
-                <span>Small Block </span>
+                <span>Fullbred, liten </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2696,7 +2186,7 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-card">
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-kort">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Kort</span>
             </h4>
@@ -2707,25 +2197,22 @@
             
     
         
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-skv-card-large">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Large</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="skv-card-large--standard.html" data-pjax>
+                <span>Standard </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2733,23 +2220,35 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card--image.html" data-pjax>
-                <span>Image </span>
+            <a class="Tree-entityLink" href="skv-card-large--no-title.html" data-pjax>
+                <span>Utan titel </span>
                 
+            </a>
+        </li>
+        
+    
 
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-skv-card-medium">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Medium</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="skv-card-medium--standard.html" data-pjax>
+                <span>Standard </span>
+                
             </a>
         </li>
         
@@ -2757,23 +2256,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card--with-graphics-charts.html" data-pjax>
-                <span>With Graphics Charts </span>
+            <a class="Tree-entityLink" href="skv-card-medium--external-link.html" data-pjax>
+                <span>Extern länk </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2781,23 +2266,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card--with-graphics-computer.html" data-pjax>
-                <span>With Graphics Computer </span>
+            <a class="Tree-entityLink" href="skv-card-medium--text-link-green-squares.html" data-pjax>
+                <span>Gröna fyrkanter </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2805,24 +2276,101 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card--with-graphics-calendar.html" data-pjax>
-                <span>With Graphics Calendar </span>
+            <a class="Tree-entityLink" href="skv-card-medium--text-link-green-waves.html" data-pjax>
+                <span>Gröna vågor </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="skv-card-medium--text-link-purple-squares.html" data-pjax>
+                <span>Lila fyrkanter </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="skv-card-medium--text-link-purple-waves.html" data-pjax>
+                <span>Lila vågor </span>
+                
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-skv-card-small">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Small</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="skv-card-small--standard.html" data-pjax>
+                <span>Standard </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="skv-card-small--image.html" data-pjax>
+                <span>Bild </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="skv-card-small--with-graphics-charts.html" data-pjax>
+                <span>Grafik - diagram </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="skv-card-small--with-graphics-computer.html" data-pjax>
+                <span>Grafik - dator </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="skv-card-small--with-graphics-calendar.html" data-pjax>
+                <span>Grafik - kalender </span>
+                
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -2846,22 +2394,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="laddningsindikator--spinner.html" data-pjax>
-                <span>Spinner </span>
+                <span>Standard </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2870,22 +2404,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="laddningsindikator--throbber.html" data-pjax>
-                <span>Throbber </span>
+                <span>Liggande </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -2909,8 +2429,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="nav-link--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="nav-link--standard.html" data-pjax>
+                <span>Standard </span>
                 
             </a>
         </li>
@@ -2942,10 +2462,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-banner">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Notiser</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="rich-text.html" data-pjax>
-                <span>Rich Text </span>
+            <a class="Tree-entityLink" href="banner--standard.html" data-pjax>
+                <span>Standard </span>
                 
             </a>
         </li>
@@ -2954,10 +2485,45 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="search.html" data-pjax>
-                <span>Search </span>
+            <a class="Tree-entityLink" href="banner--borttagbar.html" data-pjax>
+                <span>Borttagbar </span>
                 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="banner--konfirmering.html" data-pjax>
+                <span>Konfirmering </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="banner--fel.html" data-pjax>
+                <span>Fel </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="banner--varning.html" data-pjax>
+                <span>Varning </span>
+                
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -2975,8 +2541,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="section--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="section--standard.html" data-pjax>
+                <span>Standard </span>
                 
             </a>
         </li>
@@ -2986,7 +2552,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="section--flera-sektioner.html" data-pjax>
-                <span>Flera Sektioner </span>
+                <span>Flera sektioner </span>
                 
             </a>
         </li>
@@ -2994,16 +2560,6 @@
     
 
             </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="section-navigation.html" data-pjax>
-                <span>Sektionsnavigering </span>
-                
-            </a>
         </li>
         
     
@@ -3031,23 +2587,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="table--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="table--standard.html" data-pjax>
+                <span>Standard </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3058,20 +2600,32 @@
             <a class="Tree-entityLink" href="table--minimal.html" data-pjax>
                 <span>Minimal </span>
                 
+            </a>
+        </li>
+        
+    
 
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-typografi">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Typografi</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="rich-text.html" data-pjax>
+                <span>Standard </span>
+                
             </a>
         </li>
         
@@ -3095,23 +2649,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="reveal--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="reveal--standard.html" data-pjax>
+                <span>Standard </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3120,22 +2660,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="reveal--expanded.html" data-pjax>
-                <span>Expanded </span>
+                <span>Utfälld </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3175,8 +2701,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="article-navigation--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="article-navigation--standard.html" data-pjax>
+                <span>Standard </span>
                 
             </a>
         </li>
@@ -3186,7 +2712,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="article-navigation--utan-bilder.html" data-pjax>
-                <span>Utan Bilder </span>
+                <span>Utan bilder </span>
                 
             </a>
         </li>
@@ -3196,7 +2722,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="article-navigation--tva-bildpuffar.html" data-pjax>
-                <span>Tva Bildpuffar </span>
+                <span>Två bildpuffar </span>
                 
             </a>
         </li>
@@ -3206,7 +2732,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="article-navigation--tre-bildpuffar.html" data-pjax>
-                <span>Tre Bildpuffar </span>
+                <span>Tre bildpuffar </span>
                 
             </a>
         </li>
@@ -3220,23 +2746,19 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="box-link-container.html" data-pjax>
-                <span>Boxlanksbehallare </span>
+            <a class="Tree-entityLink" href="medium-card-container.html" data-pjax>
+                <span>Behållare för medium kort </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="small-card-container.html" data-pjax>
+                <span>Behållare för small kort </span>
+                
             </a>
         </li>
         
@@ -3255,8 +2777,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="form--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="form--text.html" data-pjax>
+                <span>Inmatningsfält </span>
                 
             </a>
         </li>
@@ -3266,7 +2788,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="form--checkboxes.html" data-pjax>
-                <span>Checkboxes </span>
+                <span>Kryssrutor </span>
                 
             </a>
         </li>
@@ -3276,7 +2798,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="form--radiobuttons.html" data-pjax>
-                <span>Radiobuttons </span>
+                <span>Radioknappar </span>
                 
             </a>
         </li>
@@ -3286,7 +2808,17 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="form--select.html" data-pjax>
-                <span>Select </span>
+                <span>Rullgardiner </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="form--search.html" data-pjax>
+                <span>Sökfält </span>
                 
             </a>
         </li>
@@ -3311,8 +2843,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="content-navigation--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="content-navigation--standard.html" data-pjax>
+                <span>Standard </span>
                 
             </a>
         </li>
@@ -3322,7 +2854,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="content-navigation--med-lanktext.html" data-pjax>
-                <span>Med Lanktext </span>
+                <span>Med länktext </span>
                 
             </a>
         </li>
@@ -3330,30 +2862,6 @@
     
 
             </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="card-container.html" data-pjax>
-                <span>Kortbehallare </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
         </li>
         
     
@@ -3371,23 +2879,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="link-list--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="link-list--standard.html" data-pjax>
+                <span>Standard </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3396,38 +2890,14 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="link-list--outlined.html" data-pjax>
-                <span>Outlined </span>
+                <span>Med ram </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
     
 
             </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="target-group-links.html" data-pjax>
-                <span>Malgruppsingangar </span>
-                
-            </a>
         </li>
         
     
@@ -3495,112 +2965,6 @@
         </li>
         
     
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-ramverk">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Ramverk</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="favicon.html" data-pjax>
-                <span>Favicon </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="head.html" data-pjax>
-                <span>Head </span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="inline-svg.html" data-pjax>
-                <span>Inline Svg </span>
-                
-            </a>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-layout">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Layout</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="layout--default.html" data-pjax>
-                <span>Default </span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="layout--page.html" data-pjax>
-                <span>Page </span>
-                
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="navigation.html" data-pjax>
-                <span>Navigation </span>
-                
-            </a>
-        </li>
-        
-    
         
         
         <li class="Tree-item Tree-entity" data-role="item">
@@ -3616,6 +2980,16 @@
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-pjax>
                 <span>Sidhuvud </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="target-group-links.html" data-pjax>
+                <span>Målgruppsingångar </span>
                 
             </a>
         </li>
@@ -3641,7 +3015,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="innehallssida.html" data-pjax>
-                <span>Innehallssida </span>
+                <span>Innehållssida </span>
                 
             </a>
         </li>
@@ -3651,7 +3025,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="targeted-page.html" data-pjax>
-                <span>Malgruppssida </span>
+                <span>Målgruppssida </span>
                 
             </a>
         </li>
@@ -3661,7 +3035,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="oversikt.html" data-pjax>
-                <span>Oversikt </span>
+                <span>Översikt </span>
                 
             </a>
         </li>

@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="theme/main.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Skolverkets Komponentbilbiotek v1.7.0</title>
+<title>Skolverkets Komponentbilbiotek v2.0.0</title>
 
 </head>
 <body>
@@ -40,7 +40,7 @@
 </svg>
 
     </button>
-    <a href="" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v1.7.0</a>
+    <a href="" class="Header-title" data-pjax>Skolverkets Komponentbilbiotek v2.0.0</a>
   </div>
 
   <div class="Header__links">
@@ -88,11 +88,24 @@
     background: #feefff;
     color: purple;
   }
+  p {
+    margin: 2em 0;
+  }
 </style>
 
 <div class="navigation-container">
-  <a class="large-button" href="/styleguide/docs/kom-igang/snabbstart">Kom igång!</a>
-  <a class="large-button" href="https://github.com/skolverket/styleguide/issues/new" target="_blank">Rapportera en bugg!</a>
+  <p>Syftet med Skolverkets komponentbibliotek är att ge stöd åt designers och utvecklare så att alla webbplatser och tjänster kopplade till Skolverket förmedlar en enhetlig upplevese. I biblioteket finns allt från kosdstandarder och tillgänglighetskrav till färger och typsnitt. Det är ett levande dokument och uppdateras kontinuerligt.</p>
+  <p>I komponentsbiblioteket finns exemepl på komponenter, moduler och sidor tillsammans med riktlinjer om hur dessa ska användas.</p>
+  <p>Mer information om hur Skolverkets identitet används inom digitala kanaler, nedladdning av logotyp m.m. finns under Visuell identitet.</p>
+
+  <h2>Komponentbiblioteks uppbyggnad</h2>
+
+  <p><b>Komponenter</b> är en samling element som är uppbyggda till komponenter. De används tillsammans med andra komponenter i gränssnittet.</p>
+  <p><b>Moduler</b> är en samling av element som är uppbyggda till moduler (mer komplexa än komponenter) och innehåller komponenter som används som en sektion på en sida.</p>
+  <p><b>Sidor</b> visar upp hur gränssnittet kan se ut i sin helhel med alla obligatoriska element, komponenter och moduler som kan finnas på en sida tillsammans. Sidor demonstrerar ofta hur något tillslut kommer att se ut och man får en känsla för hur komponenterna och moduler används tillsammans.</p>
+
+<a class="large-button" href="/styleguide/docs/kom-igang/snabbstart">Kom igång!</a>
+
 </div>
 
     
@@ -295,9 +308,9 @@
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-banner">
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-utfasade">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Banner</span>
+                <span>Utfasade</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -308,23 +321,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/banner--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="components/detail/accordion.html" data-pjax>
+                <span>Dragspelsmeny </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -332,95 +331,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/banner--borttagbar.html" data-pjax>
-                <span>Borttagbar </span>
+            <a class="Tree-entityLink" href="components/detail/section-navigation.html" data-pjax>
+                <span>Sektionsnavigering </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/banner--konfirmering.html" data-pjax>
-                <span>Konfirmering </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/banner--fel.html" data-pjax>
-                <span>Fel </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/banner--varning.html" data-pjax>
-                <span>Varning </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -436,269 +349,7 @@
             <a class="Tree-entityLink" href="components/detail/box.html" data-pjax>
                 <span>Box </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-box-link">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Boxlänk</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/box-link--default.html" data-pjax>
-                <span>Default </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/box-link--external-link.html" data-pjax>
-                <span>External Link </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/box-link--text-link-green-squares.html" data-pjax>
-                <span>Text Link Green Squares </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/box-link--text-link-green-waves.html" data-pjax>
-                <span>Text Link Green Waves </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/box-link--text-link-purple-squares.html" data-pjax>
-                <span>Text Link Purple Squares </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/box-link--text-link-purple-waves.html" data-pjax>
-                <span>Text Link Purple Waves </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/accordion.html" data-pjax>
-                <span>Dragspelsmeny </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-hero">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Hero</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/hero--default.html" data-pjax>
-                <span>Default </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/hero--without-title.html" data-pjax>
-                <span>Without Title </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -719,20 +370,6 @@
             <a class="Tree-entityLink" href="components/detail/feedback--standard.html" data-pjax>
                 <span>Standard </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -743,20 +380,6 @@
             <a class="Tree-entityLink" href="components/detail/feedback--input.html" data-pjax>
                 <span>Formulär </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -767,20 +390,6 @@
             <a class="Tree-entityLink" href="components/detail/feedback--response.html" data-pjax>
                 <span>Svar </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -793,7 +402,7 @@
         
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-icon">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Ikon</span>
+                <span>Ikoner</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -804,23 +413,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/icon--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="components/detail/icon--alla.html" data-pjax>
+                <span>Alla </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1023,30 +618,6 @@
         
     
         
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/toc.html" data-pjax>
-                <span>Innehallsforteckning </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-btn">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Knappar</span>
@@ -1060,23 +631,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/btn--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="components/detail/btn--primar.html" data-pjax>
+                <span>Primar </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1085,22 +642,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/btn--secondary.html" data-pjax>
-                <span>Secondary </span>
+                <span>Sekundär </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1109,22 +652,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/btn--disabled.html" data-pjax>
-                <span>Disabled </span>
+                <span>Inaktiv </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1133,22 +662,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/btn--small.html" data-pjax>
-                <span>Small </span>
+                <span>Liten </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1157,22 +672,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/btn--block.html" data-pjax>
-                <span>Block </span>
+                <span>Fullbredd </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1181,22 +682,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/btn--small-block.html" data-pjax>
-                <span>Small Block </span>
+                <span>Fullbred, liten </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1207,7 +694,7 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-card">
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-kort">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Kort</span>
             </h4>
@@ -1218,25 +705,22 @@
             
     
         
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-skv-card-large">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Large</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/card--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="components/detail/skv-card-large--standard.html" data-pjax>
+                <span>Standard </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1244,23 +728,35 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/card--image.html" data-pjax>
-                <span>Image </span>
+            <a class="Tree-entityLink" href="components/detail/skv-card-large--no-title.html" data-pjax>
+                <span>Utan titel </span>
                 
+            </a>
+        </li>
+        
+    
 
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-skv-card-medium">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Medium</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/skv-card-medium--standard.html" data-pjax>
+                <span>Standard </span>
+                
             </a>
         </li>
         
@@ -1268,23 +764,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/card--with-graphics-charts.html" data-pjax>
-                <span>With Graphics Charts </span>
+            <a class="Tree-entityLink" href="components/detail/skv-card-medium--external-link.html" data-pjax>
+                <span>Extern länk </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1292,23 +774,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/card--with-graphics-computer.html" data-pjax>
-                <span>With Graphics Computer </span>
+            <a class="Tree-entityLink" href="components/detail/skv-card-medium--text-link-green-squares.html" data-pjax>
+                <span>Gröna fyrkanter </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1316,24 +784,101 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/card--with-graphics-calendar.html" data-pjax>
-                <span>With Graphics Calendar </span>
+            <a class="Tree-entityLink" href="components/detail/skv-card-medium--text-link-green-waves.html" data-pjax>
+                <span>Gröna vågor </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/skv-card-medium--text-link-purple-squares.html" data-pjax>
+                <span>Lila fyrkanter </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/skv-card-medium--text-link-purple-waves.html" data-pjax>
+                <span>Lila vågor </span>
+                
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-skv-card-small">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Small</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/skv-card-small--standard.html" data-pjax>
+                <span>Standard </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/skv-card-small--image.html" data-pjax>
+                <span>Bild </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/skv-card-small--with-graphics-charts.html" data-pjax>
+                <span>Grafik - diagram </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/skv-card-small--with-graphics-computer.html" data-pjax>
+                <span>Grafik - dator </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/skv-card-small--with-graphics-calendar.html" data-pjax>
+                <span>Grafik - kalender </span>
+                
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -1357,22 +902,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/laddningsindikator--spinner.html" data-pjax>
-                <span>Spinner </span>
+                <span>Standard </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1381,22 +912,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/laddningsindikator--throbber.html" data-pjax>
-                <span>Throbber </span>
+                <span>Liggande </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1420,8 +937,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/nav-link--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="components/detail/nav-link--standard.html" data-pjax>
+                <span>Standard </span>
                 
             </a>
         </li>
@@ -1453,10 +970,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-banner">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Notiser</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/rich-text.html" data-pjax>
-                <span>Rich Text </span>
+            <a class="Tree-entityLink" href="components/detail/banner--standard.html" data-pjax>
+                <span>Standard </span>
                 
             </a>
         </li>
@@ -1465,10 +993,45 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/search.html" data-pjax>
-                <span>Search </span>
+            <a class="Tree-entityLink" href="components/detail/banner--borttagbar.html" data-pjax>
+                <span>Borttagbar </span>
                 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/banner--konfirmering.html" data-pjax>
+                <span>Konfirmering </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/banner--fel.html" data-pjax>
+                <span>Fel </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/banner--varning.html" data-pjax>
+                <span>Varning </span>
+                
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -1486,8 +1049,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/section--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="components/detail/section--standard.html" data-pjax>
+                <span>Standard </span>
                 
             </a>
         </li>
@@ -1497,7 +1060,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/section--flera-sektioner.html" data-pjax>
-                <span>Flera Sektioner </span>
+                <span>Flera sektioner </span>
                 
             </a>
         </li>
@@ -1505,16 +1068,6 @@
     
 
             </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/section-navigation.html" data-pjax>
-                <span>Sektionsnavigering </span>
-                
-            </a>
         </li>
         
     
@@ -1542,23 +1095,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/table--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="components/detail/table--standard.html" data-pjax>
+                <span>Standard </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1569,20 +1108,32 @@
             <a class="Tree-entityLink" href="components/detail/table--minimal.html" data-pjax>
                 <span>Minimal </span>
                 
+            </a>
+        </li>
+        
+    
 
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-typografi">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Typografi</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/rich-text.html" data-pjax>
+                <span>Standard </span>
+                
             </a>
         </li>
         
@@ -1606,23 +1157,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/reveal--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="components/detail/reveal--standard.html" data-pjax>
+                <span>Standard </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1631,22 +1168,8 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/reveal--expanded.html" data-pjax>
-                <span>Expanded </span>
+                <span>Utfälld </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1686,8 +1209,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/article-navigation--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="components/detail/article-navigation--standard.html" data-pjax>
+                <span>Standard </span>
                 
             </a>
         </li>
@@ -1697,7 +1220,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/article-navigation--utan-bilder.html" data-pjax>
-                <span>Utan Bilder </span>
+                <span>Utan bilder </span>
                 
             </a>
         </li>
@@ -1707,7 +1230,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/article-navigation--tva-bildpuffar.html" data-pjax>
-                <span>Tva Bildpuffar </span>
+                <span>Två bildpuffar </span>
                 
             </a>
         </li>
@@ -1717,7 +1240,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/article-navigation--tre-bildpuffar.html" data-pjax>
-                <span>Tre Bildpuffar </span>
+                <span>Tre bildpuffar </span>
                 
             </a>
         </li>
@@ -1731,23 +1254,19 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/box-link-container.html" data-pjax>
-                <span>Boxlanksbehallare </span>
+            <a class="Tree-entityLink" href="components/detail/medium-card-container.html" data-pjax>
+                <span>Behållare för medium kort </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/small-card-container.html" data-pjax>
+                <span>Behållare för small kort </span>
+                
             </a>
         </li>
         
@@ -1766,8 +1285,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/form--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="components/detail/form--text.html" data-pjax>
+                <span>Inmatningsfält </span>
                 
             </a>
         </li>
@@ -1777,7 +1296,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/form--checkboxes.html" data-pjax>
-                <span>Checkboxes </span>
+                <span>Kryssrutor </span>
                 
             </a>
         </li>
@@ -1787,7 +1306,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/form--radiobuttons.html" data-pjax>
-                <span>Radiobuttons </span>
+                <span>Radioknappar </span>
                 
             </a>
         </li>
@@ -1797,7 +1316,17 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/form--select.html" data-pjax>
-                <span>Select </span>
+                <span>Rullgardiner </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/form--search.html" data-pjax>
+                <span>Sökfält </span>
                 
             </a>
         </li>
@@ -1822,8 +1351,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/content-navigation--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="components/detail/content-navigation--standard.html" data-pjax>
+                <span>Standard </span>
                 
             </a>
         </li>
@@ -1833,7 +1362,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/content-navigation--med-lanktext.html" data-pjax>
-                <span>Med Lanktext </span>
+                <span>Med länktext </span>
                 
             </a>
         </li>
@@ -1841,30 +1370,6 @@
     
 
             </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/card-container.html" data-pjax>
-                <span>Kortbehallare </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
         </li>
         
     
@@ -1882,23 +1387,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/link-list--default.html" data-pjax>
-                <span>Default </span>
+            <a class="Tree-entityLink" href="components/detail/link-list--standard.html" data-pjax>
+                <span>Standard </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -1907,38 +1398,14 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/link-list--outlined.html" data-pjax>
-                <span>Outlined </span>
+                <span>Med ram </span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #e90303;" title="Testas"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
     
 
             </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/target-group-links.html" data-pjax>
-                <span>Malgruppsingangar </span>
-                
-            </a>
         </li>
         
     
@@ -2006,112 +1473,6 @@
         </li>
         
     
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-ramverk">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Ramverk</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/favicon.html" data-pjax>
-                <span>Favicon </span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #01A501;" title="Godkänd"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/head.html" data-pjax>
-                <span>Head </span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/inline-svg.html" data-pjax>
-                <span>Inline Svg </span>
-                
-            </a>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-layout">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Layout</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/layout--default.html" data-pjax>
-                <span>Default </span>
-                
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/layout--page.html" data-pjax>
-                <span>Page </span>
-                
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="components/detail/navigation.html" data-pjax>
-                <span>Navigation </span>
-                
-            </a>
-        </li>
-        
-    
         
         
         <li class="Tree-item Tree-entity" data-role="item">
@@ -2127,6 +1488,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/header.html" data-pjax>
                 <span>Sidhuvud </span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/target-group-links.html" data-pjax>
+                <span>Målgruppsingångar </span>
                 
             </a>
         </li>
@@ -2152,7 +1523,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/innehallssida.html" data-pjax>
-                <span>Innehallssida </span>
+                <span>Innehållssida </span>
                 
             </a>
         </li>
@@ -2162,7 +1533,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/targeted-page.html" data-pjax>
-                <span>Malgruppssida </span>
+                <span>Målgruppssida </span>
                 
             </a>
         </li>
@@ -2172,7 +1543,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/oversikt.html" data-pjax>
-                <span>Oversikt </span>
+                <span>Översikt </span>
                 
             </a>
         </li>

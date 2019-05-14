@@ -1,0 +1,103 @@
+.skv-card--medium {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  min-height: 350px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+
+  &:hover,
+  &--focused {
+    transition-duration: 0.2s;
+  }
+
+  &--focused {
+    box-shadow: 0 0 0 3px $color-accent-orange;
+  }
+
+  &__headline {
+    margin: 0;
+
+    &-link {
+      outline: none;
+      color: $color-white;
+      font-size: 30px;
+      line-height: 1.2em;
+
+      &:focus {
+        outline: none !important;
+      }
+
+      &:visited {
+        color: $color-white;
+      }
+
+      &--boxed {
+        position: relative;
+        background-color: $color-primary-purple;
+        display: inline;
+        line-height: 1.9em;
+        box-shadow: 0.3em 0 0 $color-primary-purple,
+          -0.3em 0 0 $color-primary-purple;
+        box-decoration-break: clone;
+        font-size: 22px;
+        padding: 0.2em 0;
+        left: 0.2em;
+      }
+
+      .skv-card--medium:hover &,
+      .skv-card--medium--focused & {
+        text-decoration: underline;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__content {
+    color: $color-white;
+    padding: 30px;
+    z-index: 1;
+
+    @include media-max('sm') {
+      padding: 20px;
+    }
+
+    &--center {
+      align-self: center;
+    }
+  }
+
+  &__teaser {
+    margin: 15px 0 0 0;
+    font-size: 20px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &--pattern {
+      &-green-squares {
+        background-image: url('../assets/img/patterns/pattern-green-squares.png');
+      }
+
+      &-green-waves {
+        background-image: url('../assets/img/patterns/pattern-green-waves.png');
+      }
+
+      &-purple-squares {
+        background-image: url('../assets/img/patterns/pattern-purple-squares.png');
+      }
+
+      &-purple-waves {
+        background-image: url('../assets/img/patterns/pattern-purple-waves.png');
+      }
+    }
+  }
+}
