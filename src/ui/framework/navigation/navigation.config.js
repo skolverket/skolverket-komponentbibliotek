@@ -1,6 +1,7 @@
 module.exports = {
   name: 'Navigation',
   handle: 'navigation',
+  default: 'Standard',
   context: {
     links: [
       {
@@ -749,17 +750,5 @@ module.exports = {
         type: 'translate'
       }
     ]
-  },
-  variants: [
-    {
-      label: 'Med en nivå',
-      name: 'one',
-      context: {
-        text: 'Om oss',
-        url: '#',
-        isActive: false,
-        isPath: false
-      }
-    }
-  ]
+  }
 };
