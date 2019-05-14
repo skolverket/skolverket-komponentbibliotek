@@ -10,5 +10,5 @@
   "npm": {
     "publish": false
   },
-  "buildCommand": "./buildReleaseArchive.js"
+  "buildCommand": "./scripts/release-it/buildReleaseArchive.js"
 }

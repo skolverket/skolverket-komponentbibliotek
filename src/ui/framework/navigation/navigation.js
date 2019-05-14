@@ -101,21 +101,23 @@ require('classlist-polyfill');
         const svg = element.querySelector('.skv-icon');
         const list = element.querySelector('.skv-navigation__list');
         const text = element.querySelector('.skv-navigation__list-item-text');
-        text.appendChild(svg);
+        if (svg && text) {
+          text.appendChild(svg);
 
-        const button = document.createElement('button');
-        button.classList.add('skv-navigation__list-toggle-button');
-        button.appendChild(text);
+          const button = document.createElement('button');
+          button.classList.add('skv-navigation__list-toggle-button');
+          button.appendChild(text);
 
-        button.setAttribute('aria-expanded', false);
-        button.setAttribute('aria-haspopup', true);
-        element.insertBefore(button, list);
+          button.setAttribute('aria-expanded', false);
+          button.setAttribute('aria-haspopup', true);
+          element.insertBefore(button, list);
 
-        button.addEventListener(
-          'click',
-          this.onTopLevelButtonClick.bind(this),
-          false
-        );
+          button.addEventListener(
+            'click',
+            this.onTopLevelButtonClick.bind(this),
+            false
+          );
+        }
       }
     },
 
@@ -166,6 +168,23 @@ require('classlist-polyfill');
       }
     },
 
+    setRootLevelHeight(levelTwoList) {
+      const levelThreeList = levelTwoList.querySelector(
+        '.skv-navigation__list-item--open'
+      );
+
+      const topLevelHeight = levelTwoList.parentNode.getBoundingClientRect()
+        .height;
+      const levelTwoListHeight = levelTwoList.getBoundingClientRect().height;
+      const levelThreeListHeight = levelThreeList
+        ? levelThreeList.getBoundingClientRect().height
+        : 0;
+
+      return (
+        Math.max(levelTwoListHeight, levelThreeListHeight) + topLevelHeight
+      );
+    },
+
     onTopLevelButtonClick(event) {
       const button =
         event.target.nodeName === 'SPAN'
@@ -185,8 +204,7 @@ require('classlist-polyfill');
         childList.classList.add('skv-navigation__list-item--open');
         if (this.isDesktop()) {
           this.root.classList.add('skv-navigation--open');
-          this.root.style.height = `${childList.getBoundingClientRect().height +
-            listItem.getBoundingClientRect().height}px`;
+          this.root.style.height = `${this.setRootLevelHeight(childList)}px`;
         }
       } else {
         button.setAttribute('aria-expanded', false);
@@ -227,7 +245,6 @@ require('classlist-polyfill');
 
     onToggleButtonClick(event) {
       const button = event.target;
-      const listItem = button.parentElement;
       const childList = button.parentNode.querySelector(
         '.skv-navigation__list'
       );
@@ -246,7 +263,7 @@ require('classlist-polyfill');
     },
 
     onTransitionEnd(event) {
-      const srcElementClassList = event.srcElement.classList;
+      const srcElementClassList = event.target.classList;
 
       if (
         srcElementClassList &&
@@ -254,6 +271,26 @@ require('classlist-polyfill');
         srcElementClassList.contains('skv-navigation__list-item--collapse')
       ) {
         srcElementClassList.remove('skv-navigation__list-item--open');
+
+        if (srcElementClassList.contains('skv-navigation__list--level-3')) {
+          if (this.isDesktop()) {
+            this.root.style.height = `${this.setRootLevelHeight(
+              event.target.parentElement.parentElement
+            )}px`;
+          }
+        }
+      }
+
+      if (
+        this.isDesktop() &&
+        srcElementClassList &&
+        srcElementClassList.contains('skv-navigation__list') &&
+        srcElementClassList.contains('skv-navigation__list-item--open') &&
+        srcElementClassList.contains('skv-navigation__list--level-3')
+      ) {
+        this.root.style.height = `${this.setRootLevelHeight(
+          event.target.parentElement.parentElement
+        )}px`;
       }
 
       if (

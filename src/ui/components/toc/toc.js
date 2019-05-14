@@ -122,7 +122,8 @@ const createFocusTrap = require('focus-trap');
     },
 
     findTopHeading() {
-      let topHeading;
+      let topHeading = 0;
+
       for (var i = 0; i < this.headings.length; i++) {
         const offset = this.headings[i].getBoundingClientRect();
         if (offset.top < 20) {

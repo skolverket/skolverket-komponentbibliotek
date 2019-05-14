@@ -16,6 +16,10 @@ module.exports = gulp => {
     return del('build/dist/assets');
   });
 
+  gulp.task('tmp:clean', () => {
+    return del('build/dist/tmp');
+  });
+
   gulp.task('assets:root', () => {
     return gulp
       .src(rootSource)

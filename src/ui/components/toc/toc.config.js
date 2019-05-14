@@ -6,6 +6,10 @@ module.exports = {
     title: 'Innehåll på denna sida',
     headings: [
       {
+        url: '#h-aktuellaregelandringar',
+        title: 'Öka säkerheten och krisberedskapen'
+      },
+      {
         url: '#h-Darforskaskolorochforskolorarbetamedsakerhetochkrisberedskap',
         title:
           'Därför ska skolor och förskolor arbeta med säkerhet och krisberedskap'

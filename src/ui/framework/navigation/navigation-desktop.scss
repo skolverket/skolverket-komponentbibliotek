@@ -169,6 +169,40 @@
 
   .skv-navigation__list-item-link {
     font-size: $font-size-std;
+    color: $color-white;
+
+    &:hover {
+      color: $color-white;
+      text-decoration: underline;
+    }
+
+    .skv-navigation__list--level-1 > li > & {
+      position: relative;
+      border: none;
+      width: 100%;
+      padding: 11px 10px;
+      background: transparent;
+      color: #fff;
+      text-align: left;
+      display: inline-block;
+      font-size: 1.25rem;
+      cursor: pointer;
+
+      span {
+        font-weight: 400;
+      }
+
+      .show-focus-outlines &:focus {
+        outline: none;
+
+        span {
+          background-color: $color-white;
+          outline: 4px solid $color-white;
+          color: $color-gray-text;
+          display: inline-block;
+        }
+      }
+    }
 
     &.skv-navigation__list-item-link--active span {
       font-weight: bold;
@@ -215,8 +249,12 @@
     display: none;
   }
 
-  .skv-navigation__list--level-1 {
-    .skv-navigation__list-item--path > button {
+  .skv-navigation__list--level-1 > {
+    .skv-navigation__list-item--path > button,
+    .skv-navigation__list-item > .skv-navigation__list-item-link--active {
+      &:before {
+        display: none;
+      }
       span {
         position: relative;
         font-weight: normal;

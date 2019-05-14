@@ -1,6 +1,6 @@
 {
   "name": "skolverket-styleguide",
-  "version": "1.2.0",
+  "version": "1.7.0",
   "engines": {
     "node": "^8.12.0",
     "yarn": "^1.10.0"
@@ -11,14 +11,15 @@
     "dev": "parallelshell \"fractal start --sync\" \"gulp -s\"",
     "prebuild": "node scripts/fractal-patch/patch.js",
     "build": "gulp -s && fractal build",
-    "deploy": "NODE_ENV=production yarn build && gh-pages -d site",
+    "deploy": "NODE_ENV=production yarn build && gh-pages -d build/site",
     "postinstall": "node scripts/fractal-patch/patch.js",
-    "prerelease": "NODE_ENV=production gulp",
-    "release": "dotenv release-it --config ./scripts/release-it/.release-it.json",
+    "prerelease": "NODE_ENV=production gulp && gulp tmp:clean",
+    "release": "dotenv release-it",
     "postrelease": "rm skolverket-*.zip"
   },
   "dependencies": {
     "@frctl/fractal": "^1.1.7",
+    "archiver": "^3.0.0",
     "babel-core": "~6.26.0",
     "babel-polyfill": "~6.26.0",
     "babel-preset-es2015": "~6.24.1",

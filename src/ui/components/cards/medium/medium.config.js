@@ -19,7 +19,7 @@ const patterns = {
 module.exports = {
   default: 'Standard',
   context: {
-    url: '#',
+    url: 'https://www.skolverket.se/',
     linkType: linkTypes.internal,
     layout: layouts.imageLink,
     pattern: null,

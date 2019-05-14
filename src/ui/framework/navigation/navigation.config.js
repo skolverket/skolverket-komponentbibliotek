@@ -5,7 +5,6 @@ module.exports = {
     links: [
       {
         text: 'Undervisning',
-        url: '#',
         isActive: false,
         isPath: true,
         links: [
@@ -512,12 +511,138 @@ module.exports = {
                 isPath: false
               }
             ]
+          },
+          {
+            text: 'Test för att se om höjden blir rätt',
+            url: '#',
+            isActive: false,
+            links: [
+              {
+                text: 'Styrdokument',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Styrdokument',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Styrdokument',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Styrdokument',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Styrdokument',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Bedömning',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Betyg',
+                url: '#',
+                isActive: false,
+                isPath: false
+              },
+              {
+                text: 'Nationella prov',
+                url: '#',
+                isActive: false,
+                isPath: false
+              }
+            ]
           }
         ]
       },
       {
         text: 'Skolutveckling',
-        url: '#',
         isActive: false,
         isPath: false,
         links: [
@@ -560,7 +685,6 @@ module.exports = {
       },
       {
         text: 'Regler och ansvar',
-        url: '#',
         isActive: false,
         isPath: false,
         links: [
@@ -603,46 +727,9 @@ module.exports = {
       },
       {
         text: 'Om oss',
-        url: '#',
-        isActive: false,
-        isPath: false,
-        links: [
-          {
-            text: 'Organisation och verksamhet',
-            url: '#',
-            isActive: false
-          },
-          {
-            text: 'Kontakta oss',
-            url: '#',
-            isActive: false
-          },
-          {
-            text: 'Jobba hos oss',
-            url: '#',
-            isActive: false
-          },
-          {
-            text: 'Publikationer och nyhetsbrev',
-            url: '#',
-            isActive: false
-          },
-          {
-            text: 'Webbplatser och sociala kanaler',
-            url: '#',
-            isActive: false
-          },
-          {
-            text: 'Skolverkets hantering av personuppgifter',
-            url: '#',
-            isActive: false
-          },
-          {
-            text: 'Press',
-            url: '#',
-            isActive: false
-          }
-        ]
+        url: 'https://www.skolverket.se',
+        isActive: true,
+        isPath: false
       }
     ],
     utilities: [
